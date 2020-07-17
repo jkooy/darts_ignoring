@@ -49,7 +49,7 @@ This project suppports multi-gpu. The larger batch size and learning rate are re
 - Search
 
 ```
-python search.py --name cifar10-mg --dataset cifar10 --gpus 0,1,2,3 \
+python search.py --name cifar10-mg --dataset cifar10 --gpus all \
     --batch_size 256 --workers 16 --print_freq 10 \
     --w_lr 0.1 --w_lr_min 0.004 --alpha_lr 0.0012
 ```
@@ -166,6 +166,3 @@ https://github.com/quark0/darts (official implementation)
 - No RNN
 
 and so on.
-# darts_ignoring
-# darts_ignoring
-# darts_ignoring
