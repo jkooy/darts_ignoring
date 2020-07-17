@@ -1,0 +1,4 @@
+*.pyc
+*.swp
+data/cifar-10-python.tar.gz
+searchs/cifar10/tb/
