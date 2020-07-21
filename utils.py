@@ -11,8 +11,11 @@ import preproc
 def get_data(dataset, data_path, cutout_length, validation):
     """ Get torchvision dataset """
     dataset = dataset.lower()
-
-    if dataset == 'cifar10':
+    
+    if dataset == 'cifar100':
+        dset_cls = dset.CIFAR100
+        n_classes = 100
+    elif dataset == 'cifar10':
         dset_cls = dset.CIFAR10
         n_classes = 10
     elif dataset == 'mnist':
