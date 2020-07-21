@@ -52,11 +52,27 @@ def main():
     optimizer = torch.optim.SGD(model.parameters(), config.lr, momentum=config.momentum,
                                 weight_decay=config.weight_decay)
 
+    
+    n_train = len(train_data)
+    split = n_train // 2
+    indices = list(range(n_train))
+    train_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[:9])
     train_loader = torch.utils.data.DataLoader(train_data,
-                                               batch_size=config.batch_size,
-                                               shuffle=True,
-                                               num_workers=config.workers,
-                                               pin_memory=True)
+#                                                batch_size=config.batch_size,
+                                           batch_size=10,
+                                           sampler=train_sampler,
+                                           num_workers=config.workers,
+                                           pin_memory=True)
+    
+    
+    
+    
+    
+#     train_loader = torch.utils.data.DataLoader(train_data,
+#                                                batch_size=config.batch_size,
+#                                                shuffle=True,
+#                                                num_workers=config.workers,
+#                                                pin_memory=True)
     valid_loader = torch.utils.data.DataLoader(valid_data,
                                                batch_size=config.batch_size,
                                                shuffle=False,
