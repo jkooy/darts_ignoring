@@ -56,7 +56,9 @@ def main():
     n_train = len(train_data)
     split = n_train // 2
     indices = list(range(n_train))
-    train_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[:9])
+#     train_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[:9])
+    
+    '''
     train_loader = torch.utils.data.DataLoader(train_data,
 #                                                batch_size=config.batch_size,
                                            batch_size=10,
@@ -64,15 +66,14 @@ def main():
                                            num_workers=config.workers,
                                            pin_memory=True)
     
+    '''
     
+    train_loader = torch.utils.data.DataLoader(train_data,
+                                               batch_size=config.batch_size,
+                                               shuffle=True,
+                                               num_workers=config.workers,
+                                               pin_memory=True)
     
-    
-    
-#     train_loader = torch.utils.data.DataLoader(train_data,
-#                                                batch_size=config.batch_size,
-#                                                shuffle=True,
-#                                                num_workers=config.workers,
-#                                                pin_memory=True)
     valid_loader = torch.utils.data.DataLoader(valid_data,
                                                batch_size=config.batch_size,
                                                shuffle=False,
