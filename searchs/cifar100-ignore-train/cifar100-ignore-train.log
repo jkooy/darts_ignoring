@@ -1,0 +1,1582 @@
+07/23 07:47:41 AM | 
+07/23 07:47:41 AM | Parameters:
+07/23 07:47:41 AM | ALPHA_LR=0.0003
+07/23 07:47:41 AM | ALPHA_WEIGHT_DECAY=0.001
+07/23 07:47:41 AM | BATCH_SIZE=64
+07/23 07:47:41 AM | DATA_PATH=./data/
+07/23 07:47:41 AM | DATASET=cifar100
+07/23 07:47:41 AM | EPOCHS=50
+07/23 07:47:41 AM | GPUS=[0]
+07/23 07:47:41 AM | INIT_CHANNELS=16
+07/23 07:47:41 AM | LAYERS=8
+07/23 07:47:41 AM | NAME=cifar100-ignore-train
+07/23 07:47:41 AM | PATH=searchs/cifar100-ignore-train
+07/23 07:47:41 AM | PLOT_PATH=searchs/cifar100-ignore-train/plots
+07/23 07:47:41 AM | PRINT_FREQ=50
+07/23 07:47:41 AM | SEED=2
+07/23 07:47:41 AM | W_GRAD_CLIP=5.0
+07/23 07:47:41 AM | W_LR=0.025
+07/23 07:47:41 AM | W_LR_MIN=0.001
+07/23 07:47:41 AM | W_MOMENTUM=0.9
+07/23 07:47:41 AM | W_WEIGHT_DECAY=0.0003
+07/23 07:47:41 AM | WORKERS=4
+07/23 07:47:41 AM | 
+07/23 07:47:41 AM | Logger is set - training start
+####### ALPHA #######
+# Alpha - normal
+tensor([[0.1249, 0.1252, 0.1249, 0.1249, 0.1249, 0.1252, 0.1249, 0.1250],
+        [0.1249, 0.1251, 0.1250, 0.1250, 0.1252, 0.1249, 0.1250, 0.1250]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1249, 0.1253, 0.1250, 0.1250, 0.1249, 0.1250, 0.1250, 0.1249],
+        [0.1251, 0.1247, 0.1249, 0.1253, 0.1248, 0.1249, 0.1251, 0.1253],
+        [0.1250, 0.1250, 0.1249, 0.1251, 0.1252, 0.1250, 0.1251, 0.1249]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1249, 0.1250, 0.1250, 0.1250, 0.1251, 0.1249, 0.1251],
+        [0.1250, 0.1249, 0.1251, 0.1249, 0.1249, 0.1253, 0.1252, 0.1248],
+        [0.1250, 0.1250, 0.1251, 0.1248, 0.1251, 0.1250, 0.1251, 0.1250],
+        [0.1250, 0.1251, 0.1250, 0.1251, 0.1251, 0.1251, 0.1249, 0.1248]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1250, 0.1249, 0.1249, 0.1251, 0.1250, 0.1249, 0.1252],
+        [0.1250, 0.1252, 0.1252, 0.1248, 0.1250, 0.1249, 0.1248, 0.1251],
+        [0.1251, 0.1251, 0.1250, 0.1251, 0.1248, 0.1250, 0.1249, 0.1249],
+        [0.1249, 0.1250, 0.1250, 0.1253, 0.1251, 0.1251, 0.1247, 0.1249],
+        [0.1251, 0.1251, 0.1252, 0.1249, 0.1249, 0.1251, 0.1250, 0.1249]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+
+# Alpha - reduce
+tensor([[0.1248, 0.1249, 0.1249, 0.1251, 0.1250, 0.1250, 0.1251, 0.1251],
+        [0.1250, 0.1248, 0.1249, 0.1252, 0.1249, 0.1250, 0.1249, 0.1251]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1251, 0.1249, 0.1252, 0.1249, 0.1250, 0.1250, 0.1249, 0.1250],
+        [0.1250, 0.1249, 0.1250, 0.1251, 0.1251, 0.1249, 0.1250, 0.1251],
+        [0.1250, 0.1250, 0.1250, 0.1249, 0.1250, 0.1250, 0.1250, 0.1252]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1251, 0.1247, 0.1249, 0.1252, 0.1252, 0.1249, 0.1251, 0.1249],
+        [0.1250, 0.1250, 0.1250, 0.1251, 0.1253, 0.1249, 0.1249, 0.1248],
+        [0.1250, 0.1252, 0.1250, 0.1250, 0.1251, 0.1248, 0.1251, 0.1249],
+        [0.1250, 0.1251, 0.1251, 0.1249, 0.1248, 0.1251, 0.1250, 0.1250]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1249, 0.1251, 0.1251, 0.1251, 0.1249, 0.1250, 0.1250],
+        [0.1252, 0.1249, 0.1251, 0.1251, 0.1250, 0.1249, 0.1249, 0.1249],
+        [0.1249, 0.1250, 0.1251, 0.1250, 0.1249, 0.1250, 0.1250, 0.1252],
+        [0.1250, 0.1249, 0.1250, 0.1251, 0.1250, 0.1251, 0.1250, 0.1249],
+        [0.1249, 0.1251, 0.1250, 0.1251, 0.1248, 0.1251, 0.1249, 0.1251]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+#####################
+07/23 07:48:01 AM | loss = 0.01209782250225544
+07/23 07:48:01 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 63
+07/23 07:48:02 AM | Train: [ 1/50] Step 000/390 Loss 0.012 Prec@(1,5) (1.6%, 9.4%)
+07/23 07:48:05 AM | loss = 0.011956313624978065
+07/23 07:48:05 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 127
+07/23 07:48:09 AM | loss = 0.012063859030604362
+07/23 07:48:09 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 191
+07/23 07:48:13 AM | loss = 0.0119617385789752
+07/23 07:48:13 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 255
+07/23 07:48:18 AM | loss = 0.011703782714903355
+07/23 07:48:18 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 319
+07/23 07:48:22 AM | loss = 0.012041032314300537
+07/23 07:48:22 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 383
+07/23 07:48:26 AM | loss = 0.011935890652239323
+07/23 07:48:26 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 447
+07/23 07:48:31 AM | loss = 0.011976719833910465
+07/23 07:48:31 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 511
+07/23 07:48:35 AM | loss = 0.011953398585319519
+07/23 07:48:35 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 575
+07/23 07:48:40 AM | loss = 0.012104575522243977
+07/23 07:48:40 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 639
+07/23 07:48:44 AM | loss = 0.011940079741179943
+07/23 07:48:44 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 703
+07/23 07:48:48 AM | loss = 0.012064056470990181
+07/23 07:48:48 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 767
+07/23 07:48:53 AM | loss = 0.012101246044039726
+07/23 07:48:53 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 831
+07/23 07:48:57 AM | loss = 0.012043244205415249
+07/23 07:48:57 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 895
+07/23 07:49:01 AM | loss = 0.011831192299723625
+07/23 07:49:01 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 959
+07/23 07:49:05 AM | loss = 0.011983122676610947
+07/23 07:49:05 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1023
+07/23 07:49:09 AM | loss = 0.011791259981691837
+07/23 07:49:09 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1087
+07/23 07:49:13 AM | loss = 0.011976920999586582
+07/23 07:49:13 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1151
+07/23 07:49:20 AM | loss = 0.011844230815768242
+07/23 07:49:20 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1215
+07/23 07:49:24 AM | loss = 0.01183520257472992
+07/23 07:49:24 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1279
+07/23 07:49:28 AM | loss = 0.012063219211995602
+07/23 07:49:28 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1343
+07/23 07:49:32 AM | loss = 0.011923725716769695
+07/23 07:49:32 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1407
+07/23 07:49:37 AM | loss = 0.01158974226564169
+07/23 07:49:37 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1471
+07/23 07:49:42 AM | loss = 0.012084735557436943
+07/23 07:49:42 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1535
+07/23 07:49:46 AM | loss = 0.011976584792137146
+07/23 07:49:46 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1599
+07/23 07:49:50 AM | loss = 0.011652213521301746
+07/23 07:49:50 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1663
+07/23 07:49:55 AM | loss = 0.01217313576489687
+07/23 07:49:55 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1727
+07/23 07:50:00 AM | loss = 0.011945349164307117
+07/23 07:50:00 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1791
+07/23 07:50:04 AM | loss = 0.011884927749633789
+07/23 07:50:04 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1855
+07/23 07:50:08 AM | loss = 0.01189415156841278
+07/23 07:50:08 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1919
+07/23 07:50:12 AM | loss = 0.011861568316817284
+07/23 07:50:12 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 1983
+07/23 07:50:16 AM | loss = 0.012012473307549953
+07/23 07:50:16 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2047
+07/23 07:50:20 AM | loss = 0.011822604574263096
+07/23 07:50:20 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2111
+07/23 07:50:25 AM | loss = 0.01194859854876995
+07/23 07:50:25 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2175
+07/23 07:50:29 AM | loss = 0.011993524618446827
+07/23 07:50:29 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2239
+07/23 07:50:33 AM | loss = 0.0119773019105196
+07/23 07:50:33 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2303
+07/23 07:50:37 AM | loss = 0.01206626370549202
+07/23 07:50:37 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2367
+07/23 07:50:41 AM | loss = 0.012099712155759335
+07/23 07:50:41 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2431
+07/23 07:50:45 AM | loss = 0.01162317581474781
+07/23 07:50:45 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2495
+07/23 07:50:48 AM | loss = 0.011927294544875622
+07/23 07:50:48 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2559
+07/23 07:50:53 AM | loss = 0.011925308965146542
+07/23 07:50:53 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2623
+07/23 07:50:57 AM | loss = 0.011945207603275776
+07/23 07:50:57 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2687
+07/23 07:51:01 AM | loss = 0.011735671199858189
+07/23 07:51:01 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2751
+07/23 07:51:05 AM | loss = 0.012041568756103516
+07/23 07:51:05 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2815
+07/23 07:51:09 AM | loss = 0.011831922456622124
+07/23 07:51:09 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2879
+07/23 07:51:13 AM | loss = 0.011909892782568932
+07/23 07:51:13 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 2943
+07/23 07:51:18 AM | loss = 0.011990329250693321
+07/23 07:51:18 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3007
+07/23 07:51:23 AM | loss = 0.012147985398769379
+07/23 07:51:23 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3071
+07/23 07:51:27 AM | loss = 0.011961784213781357
+07/23 07:51:27 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3135
+07/23 07:51:31 AM | loss = 0.011878523044288158
+07/23 07:51:31 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3199
+07/23 07:51:35 AM | loss = 0.01195826381444931
+07/23 07:51:35 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3263
+07/23 07:51:35 AM | Train: [ 1/50] Step 050/390 Loss 0.012 Prec@(1,5) (1.0%, 5.2%)
+07/23 07:51:39 AM | loss = 0.01176986563950777
+07/23 07:51:39 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3327
+07/23 07:51:44 AM | loss = 0.012030234560370445
+07/23 07:51:44 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3391
+07/23 07:51:50 AM | loss = 0.012035971507430077
+07/23 07:51:50 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3455
+07/23 07:51:55 AM | loss = 0.011886228807270527
+07/23 07:51:55 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3519
+07/23 07:52:00 AM | loss = 0.011756448075175285
+07/23 07:52:00 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3583
+07/23 07:52:04 AM | loss = 0.011903506703674793
+07/23 07:52:04 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3647
+07/23 07:52:09 AM | loss = 0.011894937604665756
+07/23 07:52:09 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3711
+07/23 07:52:12 AM | loss = 0.011884915642440319
+07/23 07:52:12 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3775
+07/23 07:52:16 AM | loss = 0.012015081010758877
+07/23 07:52:16 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3839
+07/23 07:52:21 AM | loss = 0.012008353136479855
+07/23 07:52:21 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3903
+07/23 07:52:24 AM | loss = 0.011910855770111084
+07/23 07:52:24 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 3967
+07/23 07:52:28 AM | loss = 0.011977305635809898
+07/23 07:52:28 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4031
+07/23 07:52:32 AM | loss = 0.011905224993824959
+07/23 07:52:32 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4095
+07/23 07:52:36 AM | loss = 0.011978940106928349
+07/23 07:52:36 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4159
+07/23 07:52:41 AM | loss = 0.01162137184292078
+07/23 07:52:41 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4223
+07/23 07:52:45 AM | loss = 0.012159266509115696
+07/23 07:52:45 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4287
+07/23 07:52:50 AM | loss = 0.012117446400225163
+07/23 07:52:50 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4351
+07/23 07:52:54 AM | loss = 0.011850384064018726
+07/23 07:52:54 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4415
+07/23 07:52:59 AM | loss = 0.011925656348466873
+07/23 07:52:59 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4479
+07/23 07:53:03 AM | loss = 0.011842149309813976
+07/23 07:53:03 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4543
+07/23 07:53:07 AM | loss = 0.012035775929689407
+07/23 07:53:07 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4607
+07/23 07:53:11 AM | loss = 0.011961049400269985
+07/23 07:53:11 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4671
+07/23 07:53:15 AM | loss = 0.011801982298493385
+07/23 07:53:15 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4735
+07/23 07:53:19 AM | loss = 0.011856832541525364
+07/23 07:53:19 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4799
+07/23 07:53:24 AM | loss = 0.011963950470089912
+07/23 07:53:24 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4863
+07/23 07:53:28 AM | loss = 0.011879795230925083
+07/23 07:53:28 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4927
+07/23 07:53:33 AM | loss = 0.01191760040819645
+07/23 07:53:33 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 4991
+07/23 07:53:39 AM | loss = 0.01218885462731123
+07/23 07:53:39 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5055
+07/23 07:53:45 AM | loss = 0.012005100026726723
+07/23 07:53:45 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5119
+07/23 07:53:52 AM | loss = 0.01176290400326252
+07/23 07:53:52 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5183
+07/23 07:53:58 AM | loss = 0.011880292557179928
+07/23 07:53:58 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5247
+07/23 07:54:03 AM | loss = 0.012027869932353497
+07/23 07:54:03 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5311
+07/23 07:54:08 AM | loss = 0.011768083088099957
+07/23 07:54:08 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5375
+07/23 07:54:12 AM | loss = 0.011707961559295654
+07/23 07:54:12 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5439
+07/23 07:54:16 AM | loss = 0.011957013979554176
+07/23 07:54:16 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5503
+07/23 07:54:20 AM | loss = 0.011719536036252975
+07/23 07:54:20 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5567
+07/23 07:54:24 AM | loss = 0.011839430779218674
+07/23 07:54:24 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5631
+07/23 07:54:29 AM | loss = 0.011825467459857464
+07/23 07:54:29 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5695
+07/23 07:54:34 AM | loss = 0.011856275610625744
+07/23 07:54:34 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5759
+07/23 07:54:38 AM | loss = 0.011894693598151207
+07/23 07:54:38 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5823
+07/23 07:54:42 AM | loss = 0.011936790309846401
+07/23 07:54:42 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5887
+07/23 07:54:47 AM | loss = 0.011832519434392452
+07/23 07:54:47 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 5951
+07/23 07:54:52 AM | loss = 0.011886018328368664
+07/23 07:54:52 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6015
+07/23 07:54:56 AM | loss = 0.011743052862584591
+07/23 07:54:56 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6079
+07/23 07:55:00 AM | loss = 0.011837870813906193
+07/23 07:55:00 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6143
+07/23 07:55:04 AM | loss = 0.01184057630598545
+07/23 07:55:04 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6207
+07/23 07:55:09 AM | loss = 0.011941805481910706
+07/23 07:55:09 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6271
+07/23 07:55:13 AM | loss = 0.011744199320673943
+07/23 07:55:13 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6335
+07/23 07:55:17 AM | loss = 0.011857214383780956
+07/23 07:55:17 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6399
+07/23 07:55:21 AM | loss = 0.011777518317103386
+07/23 07:55:21 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6463
+07/23 07:55:21 AM | Train: [ 1/50] Step 100/390 Loss 0.012 Prec@(1,5) (1.2%, 5.5%)
+07/23 07:55:25 AM | loss = 0.011882130987942219
+07/23 07:55:25 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6527
+07/23 07:55:32 AM | loss = 0.011894435621798038
+07/23 07:55:32 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6591
+07/23 07:55:36 AM | loss = 0.011746983975172043
+07/23 07:55:36 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6655
+07/23 07:55:40 AM | loss = 0.011991710402071476
+07/23 07:55:40 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6719
+07/23 07:55:45 AM | loss = 0.0116619523614645
+07/23 07:55:45 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6783
+07/23 07:55:50 AM | loss = 0.011779491789638996
+07/23 07:55:50 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6847
+07/23 07:55:55 AM | loss = 0.011825306341052055
+07/23 07:55:55 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6911
+07/23 07:56:01 AM | loss = 0.011929873377084732
+07/23 07:56:01 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 6975
+07/23 07:56:06 AM | loss = 0.011823794804513454
+07/23 07:56:06 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7039
+07/23 07:56:11 AM | loss = 0.011806444264948368
+07/23 07:56:11 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7103
+07/23 07:56:17 AM | loss = 0.01200163085013628
+07/23 07:56:17 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7167
+07/23 07:56:21 AM | loss = 0.01183848362416029
+07/23 07:56:21 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7231
+07/23 07:56:25 AM | loss = 0.01174456998705864
+07/23 07:56:25 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7295
+07/23 07:56:29 AM | loss = 0.011642125435173512
+07/23 07:56:29 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7359
+07/23 07:56:33 AM | loss = 0.011659878306090832
+07/23 07:56:33 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7423
+07/23 07:56:37 AM | loss = 0.011771577410399914
+07/23 07:56:37 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7487
+07/23 07:56:41 AM | loss = 0.011692899279296398
+07/23 07:56:41 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7551
+07/23 07:56:44 AM | loss = 0.011796745471656322
+07/23 07:56:44 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7615
+07/23 07:56:49 AM | loss = 0.011670065112411976
+07/23 07:56:49 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7679
+07/23 07:56:53 AM | loss = 0.011793337762355804
+07/23 07:56:53 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7743
+07/23 07:56:58 AM | loss = 0.011880314908921719
+07/23 07:56:58 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7807
+07/23 07:57:02 AM | loss = 0.01169725600630045
+07/23 07:57:02 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7871
+07/23 07:57:07 AM | loss = 0.01172715611755848
+07/23 07:57:07 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7935
+07/23 07:57:11 AM | loss = 0.0115829361602664
+07/23 07:57:11 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 7999
+07/23 07:57:15 AM | loss = 0.011749612167477608
+07/23 07:57:15 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8063
+07/23 07:57:19 AM | loss = 0.011801446788012981
+07/23 07:57:19 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8127
+07/23 07:57:23 AM | loss = 0.0118548683822155
+07/23 07:57:23 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8191
+07/23 07:57:27 AM | loss = 0.011862674728035927
+07/23 07:57:27 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8255
+07/23 07:57:31 AM | loss = 0.011685063131153584
+07/23 07:57:31 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8319
+07/23 07:57:35 AM | loss = 0.011839610524475574
+07/23 07:57:35 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8383
+07/23 07:57:39 AM | loss = 0.011903143487870693
+07/23 07:57:39 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8447
+07/23 07:57:44 AM | loss = 0.0117300134152174
+07/23 07:57:44 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8511
+07/23 07:57:49 AM | loss = 0.011755699291825294
+07/23 07:57:49 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8575
+07/23 07:57:53 AM | loss = 0.011846382170915604
+07/23 07:57:53 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8639
+07/23 07:57:58 AM | loss = 0.011821834370493889
+07/23 07:57:58 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8703
+07/23 07:58:03 AM | loss = 0.01172797940671444
+07/23 07:58:03 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8767
+07/23 07:58:07 AM | loss = 0.0116652250289917
+07/23 07:58:07 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8831
+07/23 07:58:12 AM | loss = 0.01174978632479906
+07/23 07:58:12 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8895
+07/23 07:58:17 AM | loss = 0.011819995008409023
+07/23 07:58:17 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 8959
+07/23 07:58:21 AM | loss = 0.011797793209552765
+07/23 07:58:21 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9023
+07/23 07:58:24 AM | loss = 0.01164630614221096
+07/23 07:58:24 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9087
+07/23 07:58:28 AM | loss = 0.011669772677123547
+07/23 07:58:28 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9151
+07/23 07:58:32 AM | loss = 0.01183440163731575
+07/23 07:58:32 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9215
+07/23 07:58:36 AM | loss = 0.011816353537142277
+07/23 07:58:36 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9279
+07/23 07:58:41 AM | loss = 0.011587212793529034
+07/23 07:58:41 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9343
+07/23 07:58:45 AM | loss = 0.01190018281340599
+07/23 07:58:45 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9407
+07/23 07:58:49 AM | loss = 0.011877238750457764
+07/23 07:58:49 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9471
+07/23 07:58:53 AM | loss = 0.011634386144578457
+07/23 07:58:53 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9535
+07/23 07:58:57 AM | loss = 0.011456960812211037
+07/23 07:58:57 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9599
+07/23 07:59:01 AM | loss = 0.011607185006141663
+07/23 07:59:01 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9663
+07/23 07:59:02 AM | Train: [ 1/50] Step 150/390 Loss 0.012 Prec@(1,5) (1.3%, 5.9%)
+07/23 07:59:05 AM | loss = 0.011734485626220703
+07/23 07:59:05 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9727
+07/23 07:59:10 AM | loss = 0.011540083214640617
+07/23 07:59:10 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9791
+07/23 07:59:14 AM | loss = 0.011708931997418404
+07/23 07:59:14 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9855
+07/23 07:59:18 AM | loss = 0.011741735972464085
+07/23 07:59:18 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9919
+07/23 07:59:21 AM | loss = 0.011665289290249348
+07/23 07:59:21 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 9983
+07/23 07:59:25 AM | loss = 0.011781261302530766
+07/23 07:59:25 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10047
+07/23 07:59:29 AM | loss = 0.011805202811956406
+07/23 07:59:29 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10111
+07/23 07:59:33 AM | loss = 0.011932136490941048
+07/23 07:59:33 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10175
+07/23 07:59:39 AM | loss = 0.011809909716248512
+07/23 07:59:39 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10239
+07/23 07:59:43 AM | loss = 0.011879678815603256
+07/23 07:59:43 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10303
+07/23 07:59:48 AM | loss = 0.011524493806064129
+07/23 07:59:48 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10367
+07/23 07:59:53 AM | loss = 0.011697630397975445
+07/23 07:59:53 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10431
+07/23 07:59:58 AM | loss = 0.011926358565688133
+07/23 07:59:58 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10495
+07/23 08:00:04 AM | loss = 0.011675972491502762
+07/23 08:00:04 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10559
+07/23 08:00:08 AM | loss = 0.011929554864764214
+07/23 08:00:08 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10623
+07/23 08:00:13 AM | loss = 0.011943156830966473
+07/23 08:00:13 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10687
+07/23 08:00:19 AM | loss = 0.011775365099310875
+07/23 08:00:19 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10751
+07/23 08:00:23 AM | loss = 0.011701480485498905
+07/23 08:00:23 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10815
+07/23 08:00:28 AM | loss = 0.011911658570170403
+07/23 08:00:28 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10879
+07/23 08:00:31 AM | loss = 0.011895283125340939
+07/23 08:00:31 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 10943
+07/23 08:00:35 AM | loss = 0.011632920242846012
+07/23 08:00:35 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11007
+07/23 08:00:40 AM | loss = 0.011812849901616573
+07/23 08:00:40 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11071
+07/23 08:00:44 AM | loss = 0.011802059598267078
+07/23 08:00:44 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11135
+07/23 08:00:48 AM | loss = 0.011953536421060562
+07/23 08:00:48 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11199
+07/23 08:00:52 AM | loss = 0.011632873676717281
+07/23 08:00:52 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11263
+07/23 08:00:56 AM | loss = 0.011769418604671955
+07/23 08:00:56 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11327
+07/23 08:00:59 AM | loss = 0.011530237272381783
+07/23 08:00:59 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11391
+07/23 08:01:03 AM | loss = 0.011588772758841515
+07/23 08:01:03 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11455
+07/23 08:01:07 AM | loss = 0.01151427160948515
+07/23 08:01:07 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11519
+07/23 08:01:12 AM | loss = 0.01169914286583662
+07/23 08:01:12 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11583
+07/23 08:01:16 AM | loss = 0.011409440077841282
+07/23 08:01:16 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11647
+07/23 08:01:20 AM | loss = 0.011657141149044037
+07/23 08:01:20 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11711
+07/23 08:01:24 AM | loss = 0.011743592098355293
+07/23 08:01:24 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11775
+07/23 08:01:28 AM | loss = 0.011453240178525448
+07/23 08:01:28 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11839
+07/23 08:01:32 AM | loss = 0.012054470367729664
+07/23 08:01:32 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11903
+07/23 08:01:38 AM | loss = 0.011890757828950882
+07/23 08:01:38 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 11967
+07/23 08:01:42 AM | loss = 0.011591863818466663
+07/23 08:01:42 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12031
+07/23 08:01:46 AM | loss = 0.011688263155519962
+07/23 08:01:47 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12095
+07/23 08:01:51 AM | loss = 0.01187696773558855
+07/23 08:01:51 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12159
+07/23 08:01:55 AM | loss = 0.01157207041978836
+07/23 08:01:55 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12223
+07/23 08:02:00 AM | loss = 0.011716549284756184
+07/23 08:02:00 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12287
+07/23 08:02:05 AM | loss = 0.011832956224679947
+07/23 08:02:05 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12351
+07/23 08:02:10 AM | loss = 0.011499294079840183
+07/23 08:02:10 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12415
+07/23 08:02:15 AM | loss = 0.01158872339874506
+07/23 08:02:15 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12479
+07/23 08:02:21 AM | loss = 0.011816377751529217
+07/23 08:02:21 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12543
+07/23 08:02:25 AM | loss = 0.011807980015873909
+07/23 08:02:25 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12607
+07/23 08:02:30 AM | loss = 0.011526891961693764
+07/23 08:02:30 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12671
+07/23 08:02:34 AM | loss = 0.011925462633371353
+07/23 08:02:34 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12735
+07/23 08:02:38 AM | loss = 0.011812450364232063
+07/23 08:02:38 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12799
+07/23 08:02:42 AM | loss = 0.011679504066705704
+07/23 08:02:42 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12863
+07/23 08:02:43 AM | Train: [ 1/50] Step 200/390 Loss 0.012 Prec@(1,5) (1.3%, 6.2%)
+07/23 08:02:46 AM | loss = 0.01203221920877695
+07/23 08:02:46 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12927
+07/23 08:02:50 AM | loss = 0.011796897277235985
+07/23 08:02:50 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 12991
+07/23 08:02:54 AM | loss = 0.011901218444108963
+07/23 08:02:54 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13055
+07/23 08:02:59 AM | loss = 0.0116522666066885
+07/23 08:02:59 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13119
+07/23 08:03:04 AM | loss = 0.011757170781493187
+07/23 08:03:04 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13183
+07/23 08:03:08 AM | loss = 0.011904725804924965
+07/23 08:03:08 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13247
+07/23 08:03:13 AM | loss = 0.011569676920771599
+07/23 08:03:13 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13311
+07/23 08:03:17 AM | loss = 0.011846419423818588
+07/23 08:03:17 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13375
+07/23 08:03:21 AM | loss = 0.01169391255825758
+07/23 08:03:21 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13439
+07/23 08:03:25 AM | loss = 0.011411563493311405
+07/23 08:03:25 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13503
+07/23 08:03:29 AM | loss = 0.011634865775704384
+07/23 08:03:29 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13567
+07/23 08:03:33 AM | loss = 0.011911281384527683
+07/23 08:03:33 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13631
+07/23 08:03:39 AM | loss = 0.011568830348551273
+07/23 08:03:39 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13695
+07/23 08:03:43 AM | loss = 0.01190765481442213
+07/23 08:03:43 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13759
+07/23 08:03:49 AM | loss = 0.01158154010772705
+07/23 08:03:49 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13823
+07/23 08:03:56 AM | loss = 0.01200640294700861
+07/23 08:03:56 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13887
+07/23 08:04:02 AM | loss = 0.011608760803937912
+07/23 08:04:02 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 13951
+07/23 08:04:08 AM | loss = 0.011706198565661907
+07/23 08:04:08 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14015
+07/23 08:04:13 AM | loss = 0.011518805287778378
+07/23 08:04:13 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14079
+07/23 08:04:19 AM | loss = 0.011643955484032631
+07/23 08:04:19 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14143
+07/23 08:04:24 AM | loss = 0.011549158953130245
+07/23 08:04:24 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14207
+07/23 08:04:28 AM | loss = 0.011610488407313824
+07/23 08:04:28 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14271
+07/23 08:04:32 AM | loss = 0.011764870956540108
+07/23 08:04:32 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14335
+07/23 08:04:35 AM | loss = 0.011615634895861149
+07/23 08:04:35 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14399
+07/23 08:04:39 AM | loss = 0.011606557294726372
+07/23 08:04:39 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14463
+07/23 08:04:43 AM | loss = 0.011757790111005306
+07/23 08:04:43 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14527
+07/23 08:04:48 AM | loss = 0.011662495322525501
+07/23 08:04:48 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14591
+07/23 08:04:51 AM | loss = 0.011699139140546322
+07/23 08:04:51 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14655
+07/23 08:04:56 AM | loss = 0.011311886832118034
+07/23 08:04:56 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14719
+07/23 08:05:00 AM | loss = 0.011685989797115326
+07/23 08:05:00 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14783
+07/23 08:05:04 AM | loss = 0.011640165001153946
+07/23 08:05:04 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14847
+07/23 08:05:09 AM | loss = 0.011769087985157967
+07/23 08:05:09 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14911
+07/23 08:05:14 AM | loss = 0.011432742699980736
+07/23 08:05:14 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 14975
+07/23 08:05:19 AM | loss = 0.011769810691475868
+07/23 08:05:19 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15039
+07/23 08:05:23 AM | loss = 0.011881569400429726
+07/23 08:05:23 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15103
+07/23 08:05:27 AM | loss = 0.011585604399442673
+07/23 08:05:27 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15167
+07/23 08:05:30 AM | loss = 0.01142712403088808
+07/23 08:05:30 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15231
+07/23 08:05:34 AM | loss = 0.01172387320548296
+07/23 08:05:34 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15295
+07/23 08:05:39 AM | loss = 0.011824371293187141
+07/23 08:05:39 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15359
+07/23 08:05:45 AM | loss = 0.011833645403385162
+07/23 08:05:45 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15423
+07/23 08:05:49 AM | loss = 0.011644093319773674
+07/23 08:05:49 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15487
+07/23 08:05:55 AM | loss = 0.011287395842373371
+07/23 08:05:55 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15551
+07/23 08:06:00 AM | loss = 0.011754653416574001
+07/23 08:06:00 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15615
+07/23 08:06:06 AM | loss = 0.011574774980545044
+07/23 08:06:06 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15679
+07/23 08:06:11 AM | loss = 0.01161429937928915
+07/23 08:06:11 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15743
+07/23 08:06:15 AM | loss = 0.011727113276720047
+07/23 08:06:15 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15807
+07/23 08:06:20 AM | loss = 0.011533480137586594
+07/23 08:06:20 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15871
+07/23 08:06:25 AM | loss = 0.011742501519620419
+07/23 08:06:25 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15935
+07/23 08:06:29 AM | loss = 0.011652650311589241
+07/23 08:06:29 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15999
+07/23 08:06:33 AM | loss = 0.011675581336021423
+07/23 08:06:33 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16063
+07/23 08:06:34 AM | Train: [ 1/50] Step 250/390 Loss 0.012 Prec@(1,5) (1.5%, 6.6%)
+07/23 08:06:37 AM | loss = 0.011593221686780453
+07/23 08:06:37 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16127
+07/23 08:06:41 AM | loss = 0.011724533513188362
+07/23 08:06:41 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16191
+07/23 08:06:45 AM | loss = 0.011447541415691376
+07/23 08:06:45 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16255
+07/23 08:06:50 AM | loss = 0.011766799725592136
+07/23 08:06:50 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16319
+07/23 08:06:54 AM | loss = 0.011785740032792091
+07/23 08:06:54 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16383
+07/23 08:06:58 AM | loss = 0.011466307565569878
+07/23 08:06:58 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16447
+07/23 08:07:02 AM | loss = 0.011692470870912075
+07/23 08:07:02 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16511
+07/23 08:07:06 AM | loss = 0.011448963545262814
+07/23 08:07:06 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16575
+07/23 08:07:09 AM | loss = 0.011757561936974525
+07/23 08:07:09 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16639
+07/23 08:07:13 AM | loss = 0.011464422568678856
+07/23 08:07:13 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16703
+07/23 08:07:18 AM | loss = 0.011696643196046352
+07/23 08:07:18 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16767
+07/23 08:07:22 AM | loss = 0.011644750833511353
+07/23 08:07:22 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16831
+07/23 08:07:26 AM | loss = 0.011707497760653496
+07/23 08:07:26 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16895
+07/23 08:07:30 AM | loss = 0.011507292278110981
+07/23 08:07:30 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 16959
+07/23 08:07:34 AM | loss = 0.01180700771510601
+07/23 08:07:34 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17023
+07/23 08:07:39 AM | loss = 0.011880719102919102
+07/23 08:07:39 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17087
+07/23 08:07:45 AM | loss = 0.011422720737755299
+07/23 08:07:45 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17151
+07/23 08:07:49 AM | loss = 0.011567600071430206
+07/23 08:07:49 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17215
+07/23 08:07:53 AM | loss = 0.011680971831083298
+07/23 08:07:53 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17279
+07/23 08:07:57 AM | loss = 0.011700179427862167
+07/23 08:07:57 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17343
+07/23 08:08:01 AM | loss = 0.01175095234066248
+07/23 08:08:01 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17407
+07/23 08:08:06 AM | loss = 0.011784197762608528
+07/23 08:08:06 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17471
+07/23 08:08:11 AM | loss = 0.011431940831243992
+07/23 08:08:11 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17535
+07/23 08:08:16 AM | loss = 0.011838038451969624
+07/23 08:08:16 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17599
+07/23 08:08:21 AM | loss = 0.011692981235682964
+07/23 08:08:21 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17663
+07/23 08:08:25 AM | loss = 0.011496240273118019
+07/23 08:08:25 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17727
+07/23 08:08:30 AM | loss = 0.011500390246510506
+07/23 08:08:30 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17791
+07/23 08:08:34 AM | loss = 0.011571363545954227
+07/23 08:08:34 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17855
+07/23 08:08:38 AM | loss = 0.011783747933804989
+07/23 08:08:38 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17919
+07/23 08:08:42 AM | loss = 0.011601484380662441
+07/23 08:08:42 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 17983
+07/23 08:08:46 AM | loss = 0.011421880684792995
+07/23 08:08:46 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18047
+07/23 08:08:50 AM | loss = 0.011809632182121277
+07/23 08:08:50 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18111
+07/23 08:08:53 AM | loss = 0.011525942012667656
+07/23 08:08:53 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18175
+07/23 08:08:57 AM | loss = 0.011526213027536869
+07/23 08:08:57 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18239
+07/23 08:09:02 AM | loss = 0.011478651314973831
+07/23 08:09:02 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18303
+07/23 08:09:06 AM | loss = 0.011611212976276875
+07/23 08:09:06 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18367
+07/23 08:09:10 AM | loss = 0.011568093672394753
+07/23 08:09:10 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18431
+07/23 08:09:15 AM | loss = 0.011641032993793488
+07/23 08:09:15 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18495
+07/23 08:09:20 AM | loss = 0.011508571915328503
+07/23 08:09:20 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18559
+07/23 08:09:24 AM | loss = 0.011785442940890789
+07/23 08:09:24 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18623
+07/23 08:09:28 AM | loss = 0.011486891657114029
+07/23 08:09:28 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18687
+07/23 08:09:32 AM | loss = 0.011438917368650436
+07/23 08:09:32 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18751
+07/23 08:09:36 AM | loss = 0.011792996898293495
+07/23 08:09:36 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18815
+07/23 08:09:42 AM | loss = 0.011532170698046684
+07/23 08:09:42 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18879
+07/23 08:09:47 AM | loss = 0.011607755906879902
+07/23 08:09:47 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 18943
+07/23 08:09:51 AM | loss = 0.011676781810820103
+07/23 08:09:51 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19007
+07/23 08:09:55 AM | loss = 0.011746084317564964
+07/23 08:09:55 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19071
+07/23 08:10:00 AM | loss = 0.01159538235515356
+07/23 08:10:00 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19135
+07/23 08:10:04 AM | loss = 0.011626383289694786
+07/23 08:10:04 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19199
+07/23 08:10:09 AM | loss = 0.011822017841041088
+07/23 08:10:09 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19263
+07/23 08:10:09 AM | Train: [ 1/50] Step 300/390 Loss 0.012 Prec@(1,5) (1.7%, 6.9%)
+07/23 08:10:13 AM | loss = 0.011398260481655598
+07/23 08:10:13 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19327
+07/23 08:10:18 AM | loss = 0.011464127339422703
+07/23 08:10:18 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19391
+07/23 08:10:23 AM | loss = 0.011787312105298042
+07/23 08:10:23 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19455
+07/23 08:10:27 AM | loss = 0.011491639539599419
+07/23 08:10:28 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19519
+07/23 08:10:32 AM | loss = 0.011740055866539478
+07/23 08:10:32 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19583
+07/23 08:10:35 AM | loss = 0.011619627475738525
+07/23 08:10:35 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19647
+07/23 08:10:39 AM | loss = 0.011836403049528599
+07/23 08:10:39 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19711
+07/23 08:10:43 AM | loss = 0.0117035498842597
+07/23 08:10:43 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19775
+07/23 08:10:47 AM | loss = 0.01174894254654646
+07/23 08:10:47 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19839
+07/23 08:10:51 AM | loss = 0.011570201255381107
+07/23 08:10:51 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19903
+07/23 08:10:55 AM | loss = 0.011619936674833298
+07/23 08:10:55 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 19967
+07/23 08:11:00 AM | loss = 0.011446558870375156
+07/23 08:11:00 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20031
+07/23 08:11:04 AM | loss = 0.011273958720266819
+07/23 08:11:04 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20095
+07/23 08:11:09 AM | loss = 0.011526627466082573
+07/23 08:11:09 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20159
+07/23 08:11:13 AM | loss = 0.011202405206859112
+07/23 08:11:13 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20223
+07/23 08:11:18 AM | loss = 0.011611654423177242
+07/23 08:11:18 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20287
+07/23 08:11:23 AM | loss = 0.011617288924753666
+07/23 08:11:23 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20351
+07/23 08:11:26 AM | loss = 0.01193555910140276
+07/23 08:11:26 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20415
+07/23 08:11:30 AM | loss = 0.01172848604619503
+07/23 08:11:30 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20479
+07/23 08:11:34 AM | loss = 0.011360247619450092
+07/23 08:11:34 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20543
+07/23 08:11:38 AM | loss = 0.011541461572051048
+07/23 08:11:38 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20607
+07/23 08:11:44 AM | loss = 0.011909758672118187
+07/23 08:11:44 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20671
+07/23 08:11:49 AM | loss = 0.011491223238408566
+07/23 08:11:49 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20735
+07/23 08:11:53 AM | loss = 0.011419977992773056
+07/23 08:11:53 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20799
+07/23 08:11:59 AM | loss = 0.011798596009612083
+07/23 08:11:59 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20863
+07/23 08:12:05 AM | loss = 0.011640004813671112
+07/23 08:12:05 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20927
+07/23 08:12:10 AM | loss = 0.011722895316779613
+07/23 08:12:11 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 20991
+07/23 08:12:16 AM | loss = 0.011681599542498589
+07/23 08:12:16 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21055
+07/23 08:12:22 AM | loss = 0.011615169234573841
+07/23 08:12:22 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21119
+07/23 08:12:26 AM | loss = 0.011726893484592438
+07/23 08:12:26 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21183
+07/23 08:12:31 AM | loss = 0.011506187729537487
+07/23 08:12:31 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21247
+07/23 08:12:35 AM | loss = 0.011599547229707241
+07/23 08:12:35 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21311
+07/23 08:12:39 AM | loss = 0.011481540277600288
+07/23 08:12:39 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21375
+07/23 08:12:43 AM | loss = 0.0114854471758008
+07/23 08:12:43 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21439
+07/23 08:12:47 AM | loss = 0.011582082137465477
+07/23 08:12:47 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21503
+07/23 08:12:51 AM | loss = 0.011496789753437042
+07/23 08:12:51 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21567
+07/23 08:12:55 AM | loss = 0.011514049954712391
+07/23 08:12:55 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21631
+07/23 08:12:59 AM | loss = 0.011539113707840443
+07/23 08:12:59 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21695
+07/23 08:13:04 AM | loss = 0.011516127735376358
+07/23 08:13:04 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21759
+07/23 08:13:08 AM | loss = 0.011485224589705467
+07/23 08:13:08 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21823
+07/23 08:13:13 AM | loss = 0.011579418554902077
+07/23 08:13:13 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21887
+07/23 08:13:17 AM | loss = 0.011585112661123276
+07/23 08:13:17 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 21951
+07/23 08:13:22 AM | loss = 0.011453106999397278
+07/23 08:13:22 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22015
+07/23 08:13:26 AM | loss = 0.011486885137856007
+07/23 08:13:26 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22079
+07/23 08:13:30 AM | loss = 0.011283370666205883
+07/23 08:13:30 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22143
+07/23 08:13:33 AM | loss = 0.011410830542445183
+07/23 08:13:33 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22207
+07/23 08:13:38 AM | loss = 0.01160695031285286
+07/23 08:13:38 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22271
+07/23 08:13:42 AM | loss = 0.011614582501351833
+07/23 08:13:42 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22335
+07/23 08:13:48 AM | loss = 0.011444281786680222
+07/23 08:13:48 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22399
+07/23 08:13:52 AM | loss = 0.011725637130439281
+07/23 08:13:52 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22463
+07/23 08:13:53 AM | Train: [ 1/50] Step 350/390 Loss 0.012 Prec@(1,5) (1.8%, 7.3%)
+07/23 08:13:56 AM | loss = 0.01121591217815876
+07/23 08:13:56 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22527
+07/23 08:14:01 AM | loss = 0.011539439670741558
+07/23 08:14:01 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22591
+07/23 08:14:05 AM | loss = 0.011514472775161266
+07/23 08:14:05 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22655
+07/23 08:14:10 AM | loss = 0.011468183249235153
+07/23 08:14:10 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22719
+07/23 08:14:15 AM | loss = 0.011669875122606754
+07/23 08:14:15 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22783
+07/23 08:14:20 AM | loss = 0.011561988852918148
+07/23 08:14:20 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22847
+07/23 08:14:25 AM | loss = 0.011711569502949715
+07/23 08:14:25 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22911
+07/23 08:14:30 AM | loss = 0.011690456420183182
+07/23 08:14:30 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 22975
+07/23 08:14:35 AM | loss = 0.011311924085021019
+07/23 08:14:35 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23039
+07/23 08:14:39 AM | loss = 0.011490661650896072
+07/23 08:14:39 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23103
+07/23 08:14:43 AM | loss = 0.011523032560944557
+07/23 08:14:43 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23167
+07/23 08:14:47 AM | loss = 0.011660387739539146
+07/23 08:14:47 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23231
+07/23 08:14:52 AM | loss = 0.011571808718144894
+07/23 08:14:52 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23295
+07/23 08:14:55 AM | loss = 0.011497324332594872
+07/23 08:14:55 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23359
+07/23 08:14:59 AM | loss = 0.011577663943171501
+07/23 08:14:59 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23423
+07/23 08:15:03 AM | loss = 0.011640744283795357
+07/23 08:15:03 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23487
+07/23 08:15:07 AM | loss = 0.011290927417576313
+07/23 08:15:07 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23551
+07/23 08:15:12 AM | loss = 0.01143583096563816
+07/23 08:15:12 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23615
+07/23 08:15:16 AM | loss = 0.01154776755720377
+07/23 08:15:16 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23679
+07/23 08:15:20 AM | loss = 0.011767071671783924
+07/23 08:15:20 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23743
+07/23 08:15:24 AM | loss = 0.011363925412297249
+07/23 08:15:24 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23807
+07/23 08:15:28 AM | loss = 0.011462508700788021
+07/23 08:15:28 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23871
+07/23 08:15:33 AM | loss = 0.011385354213416576
+07/23 08:15:33 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23935
+07/23 08:15:37 AM | loss = 0.011471910402178764
+07/23 08:15:37 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 23999
+07/23 08:15:42 AM | loss = 0.011623559519648552
+07/23 08:15:42 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24063
+07/23 08:15:46 AM | loss = 0.011667908169329166
+07/23 08:15:46 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24127
+07/23 08:15:50 AM | loss = 0.011607779189944267
+07/23 08:15:50 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24191
+07/23 08:15:56 AM | loss = 0.011750217527151108
+07/23 08:15:56 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24255
+07/23 08:16:01 AM | loss = 0.011365015991032124
+07/23 08:16:01 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24319
+07/23 08:16:05 AM | loss = 0.011494779027998447
+07/23 08:16:05 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24383
+07/23 08:16:09 AM | loss = 0.011411302722990513
+07/23 08:16:10 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24447
+07/23 08:16:14 AM | loss = 0.011608567088842392
+07/23 08:16:14 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24511
+07/23 08:16:19 AM | loss = 0.011525539681315422
+07/23 08:16:19 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24575
+07/23 08:16:24 AM | loss = 0.011456790380179882
+07/23 08:16:24 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24639
+07/23 08:16:28 AM | loss = 0.011561757884919643
+07/23 08:16:28 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24703
+07/23 08:16:33 AM | loss = 0.011555291712284088
+07/23 08:16:33 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24767
+07/23 08:16:38 AM | loss = 0.011534864082932472
+07/23 08:16:38 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24831
+07/23 08:16:42 AM | loss = 0.011706680990755558
+07/23 08:16:42 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24895
+07/23 08:16:46 AM | loss = 0.011599638499319553
+07/23 08:16:46 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 24959
+07/23 08:16:51 AM | loss = 0.007079470902681351
+07/23 08:16:51 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 15639
+07/23 08:16:52 AM | Train: [ 1/50] Step 390/390 Loss 0.012 Prec@(1,5) (1.9%, 7.6%)
+07/23 08:16:52 AM | Train: [ 1/50] Final Prec@1 1.9280%
+07/23 08:16:52 AM | Valid: [ 1/50] Step 000/390 Loss 4.343 Prec@(1,5) (6.2%, 9.4%)
+07/23 08:17:05 AM | Valid: [ 1/50] Step 050/390 Loss 4.483 Prec@(1,5) (3.3%, 11.4%)
+07/23 08:17:17 AM | Valid: [ 1/50] Step 100/390 Loss 4.490 Prec@(1,5) (2.9%, 10.9%)
+07/23 08:17:29 AM | Valid: [ 1/50] Step 150/390 Loss 4.492 Prec@(1,5) (3.0%, 11.0%)
+07/23 08:17:40 AM | Valid: [ 1/50] Step 200/390 Loss 4.491 Prec@(1,5) (3.0%, 11.1%)
+07/23 08:17:50 AM | Valid: [ 1/50] Step 250/390 Loss 4.495 Prec@(1,5) (2.9%, 10.8%)
+07/23 08:18:03 AM | Valid: [ 1/50] Step 300/390 Loss 4.497 Prec@(1,5) (2.8%, 10.7%)
+07/23 08:18:16 AM | Valid: [ 1/50] Step 350/390 Loss 4.499 Prec@(1,5) (2.8%, 10.6%)
+07/23 08:18:26 AM | Valid: [ 1/50] Step 390/390 Loss 4.499 Prec@(1,5) (2.8%, 10.5%)
+07/23 08:18:26 AM | Valid: [ 1/50] Final Prec@1 2.7600%
+07/23 08:18:26 AM | genotype = Genotype(normal=[[('dil_conv_3x3', 0), ('dil_conv_3x3', 1)], [('sep_conv_3x3', 0), ('sep_conv_3x3', 1)], [('dil_conv_3x3', 1), ('dil_conv_3x3', 0)], [('sep_conv_5x5', 4), ('sep_conv_5x5', 1)]], normal_concat=range(2, 6), reduce=[[('sep_conv_5x5', 0), ('skip_connect', 1)], [('dil_conv_3x3', 1), ('max_pool_3x3', 0)], [('sep_conv_5x5', 0), ('dil_conv_5x5', 2)], [('max_pool_3x3', 0), ('avg_pool_3x3', 2)]], reduce_concat=range(2, 6))
+####### ALPHA #######
+# Alpha - normal
+tensor([[0.1225, 0.1250, 0.1247, 0.1231, 0.1264, 0.1289, 0.1243, 0.1252],
+        [0.1241, 0.1248, 0.1257, 0.1242, 0.1229, 0.1275, 0.1262, 0.1247]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1206, 0.1230, 0.1227, 0.1284, 0.1263, 0.1267, 0.1263, 0.1259],
+        [0.1205, 0.1214, 0.1226, 0.1281, 0.1269, 0.1261, 0.1270, 0.1274],
+        [0.1202, 0.1212, 0.1234, 0.1252, 0.1273, 0.1255, 0.1278, 0.1293]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1233, 0.1226, 0.1232, 0.1233, 0.1241, 0.1288, 0.1269, 0.1278],
+        [0.1224, 0.1214, 0.1216, 0.1249, 0.1259, 0.1297, 0.1281, 0.1260],
+        [0.1216, 0.1207, 0.1228, 0.1278, 0.1252, 0.1257, 0.1262, 0.1301],
+        [0.1215, 0.1205, 0.1209, 0.1259, 0.1281, 0.1289, 0.1284, 0.1259]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1251, 0.1274, 0.1273, 0.1237, 0.1228, 0.1241, 0.1250, 0.1245],
+        [0.1216, 0.1218, 0.1230, 0.1251, 0.1283, 0.1251, 0.1249, 0.1303],
+        [0.1206, 0.1209, 0.1252, 0.1268, 0.1258, 0.1232, 0.1282, 0.1293],
+        [0.1210, 0.1217, 0.1240, 0.1275, 0.1242, 0.1272, 0.1262, 0.1283],
+        [0.1217, 0.1220, 0.1228, 0.1224, 0.1300, 0.1269, 0.1242, 0.1300]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+
+# Alpha - reduce
+tensor([[0.1281, 0.1284, 0.1199, 0.1254, 0.1288, 0.1208, 0.1269, 0.1217],
+        [0.1226, 0.1222, 0.1275, 0.1264, 0.1260, 0.1259, 0.1256, 0.1238]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1295, 0.1292, 0.1225, 0.1202, 0.1249, 0.1230, 0.1261, 0.1247],
+        [0.1190, 0.1191, 0.1288, 0.1281, 0.1260, 0.1296, 0.1209, 0.1285],
+        [0.1226, 0.1217, 0.1232, 0.1243, 0.1259, 0.1284, 0.1279, 0.1259]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1235, 0.1241, 0.1228, 0.1255, 0.1299, 0.1239, 0.1226, 0.1276],
+        [0.1259, 0.1258, 0.1215, 0.1273, 0.1261, 0.1229, 0.1239, 0.1265],
+        [0.1212, 0.1230, 0.1233, 0.1254, 0.1253, 0.1276, 0.1288, 0.1253],
+        [0.1221, 0.1228, 0.1251, 0.1268, 0.1245, 0.1235, 0.1280, 0.1272]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1294, 0.1293, 0.1231, 0.1232, 0.1202, 0.1239, 0.1270, 0.1240],
+        [0.1234, 0.1223, 0.1276, 0.1256, 0.1227, 0.1264, 0.1256, 0.1264],
+        [0.1267, 0.1283, 0.1279, 0.1221, 0.1258, 0.1220, 0.1242, 0.1230],
+        [0.1262, 0.1265, 0.1279, 0.1234, 0.1214, 0.1263, 0.1256, 0.1228],
+        [0.1268, 0.1275, 0.1283, 0.1210, 0.1252, 0.1245, 0.1237, 0.1230]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+#####################
+07/23 08:18:33 AM | loss = 0.011382004246115685
+07/23 08:18:33 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 63
+07/23 08:18:33 AM | Train: [ 2/50] Step 000/390 Loss 0.011 Prec@(1,5) (3.1%, 12.5%)
+07/23 08:18:38 AM | loss = 0.011392772197723389
+07/23 08:18:38 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 127
+07/23 08:18:43 AM | loss = 0.01161881722509861
+07/23 08:18:43 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 191
+07/23 08:18:48 AM | loss = 0.011391843669116497
+07/23 08:18:48 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 255
+07/23 08:18:52 AM | loss = 0.01156639028340578
+07/23 08:18:52 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 319
+07/23 08:18:55 AM | loss = 0.011360147967934608
+07/23 08:18:55 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 383
+07/23 08:18:59 AM | loss = 0.011525752022862434
+07/23 08:18:59 AM | Likelihood = Parameter containing:
+tensor([1., 1., 1.,  ..., 1., 1., 1.], device='cuda:0', requires_grad=True), Likelihood sum=25000.0, dataIndex = 447
+07/23 08:24:58 AM | 
+07/23 08:24:58 AM | Parameters:
+07/23 08:24:58 AM | ALPHA_LR=0.0003
+07/23 08:24:58 AM | ALPHA_WEIGHT_DECAY=0.001
+07/23 08:24:58 AM | BATCH_SIZE=64
+07/23 08:24:58 AM | DATA_PATH=./data/
+07/23 08:24:58 AM | DATASET=cifar100
+07/23 08:24:58 AM | EPOCHS=50
+07/23 08:24:58 AM | GPUS=[0]
+07/23 08:24:58 AM | INIT_CHANNELS=16
+07/23 08:24:58 AM | LAYERS=8
+07/23 08:24:58 AM | NAME=cifar100-ignore-train
+07/23 08:24:58 AM | PATH=searchs/cifar100-ignore-train
+07/23 08:24:58 AM | PLOT_PATH=searchs/cifar100-ignore-train/plots
+07/23 08:24:58 AM | PRINT_FREQ=50
+07/23 08:24:58 AM | SEED=2
+07/23 08:24:58 AM | W_GRAD_CLIP=5.0
+07/23 08:24:58 AM | W_LR=0.025
+07/23 08:24:58 AM | W_LR_MIN=0.001
+07/23 08:24:58 AM | W_MOMENTUM=0.9
+07/23 08:24:58 AM | W_WEIGHT_DECAY=0.0003
+07/23 08:24:58 AM | WORKERS=4
+07/23 08:24:58 AM | 
+07/23 08:24:58 AM | Logger is set - training start
+####### ALPHA #######
+# Alpha - normal
+tensor([[0.1249, 0.1252, 0.1249, 0.1249, 0.1249, 0.1252, 0.1249, 0.1250],
+        [0.1249, 0.1251, 0.1250, 0.1250, 0.1252, 0.1249, 0.1250, 0.1250]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1249, 0.1253, 0.1250, 0.1250, 0.1249, 0.1250, 0.1250, 0.1249],
+        [0.1251, 0.1247, 0.1249, 0.1253, 0.1248, 0.1249, 0.1251, 0.1253],
+        [0.1250, 0.1250, 0.1249, 0.1251, 0.1252, 0.1250, 0.1251, 0.1249]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1249, 0.1250, 0.1250, 0.1250, 0.1251, 0.1249, 0.1251],
+        [0.1250, 0.1249, 0.1251, 0.1249, 0.1249, 0.1253, 0.1252, 0.1248],
+        [0.1250, 0.1250, 0.1251, 0.1248, 0.1251, 0.1250, 0.1251, 0.1250],
+        [0.1250, 0.1251, 0.1250, 0.1251, 0.1251, 0.1251, 0.1249, 0.1248]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1250, 0.1249, 0.1249, 0.1251, 0.1250, 0.1249, 0.1252],
+        [0.1250, 0.1252, 0.1252, 0.1248, 0.1250, 0.1249, 0.1248, 0.1251],
+        [0.1251, 0.1251, 0.1250, 0.1251, 0.1248, 0.1250, 0.1249, 0.1249],
+        [0.1249, 0.1250, 0.1250, 0.1253, 0.1251, 0.1251, 0.1247, 0.1249],
+        [0.1251, 0.1251, 0.1252, 0.1249, 0.1249, 0.1251, 0.1250, 0.1249]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+
+# Alpha - reduce
+tensor([[0.1248, 0.1249, 0.1249, 0.1251, 0.1250, 0.1250, 0.1251, 0.1251],
+        [0.1250, 0.1248, 0.1249, 0.1252, 0.1249, 0.1250, 0.1249, 0.1251]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1251, 0.1249, 0.1252, 0.1249, 0.1250, 0.1250, 0.1249, 0.1250],
+        [0.1250, 0.1249, 0.1250, 0.1251, 0.1251, 0.1249, 0.1250, 0.1251],
+        [0.1250, 0.1250, 0.1250, 0.1249, 0.1250, 0.1250, 0.1250, 0.1252]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1251, 0.1247, 0.1249, 0.1252, 0.1252, 0.1249, 0.1251, 0.1249],
+        [0.1250, 0.1250, 0.1250, 0.1251, 0.1253, 0.1249, 0.1249, 0.1248],
+        [0.1250, 0.1252, 0.1250, 0.1250, 0.1251, 0.1248, 0.1251, 0.1249],
+        [0.1250, 0.1251, 0.1251, 0.1249, 0.1248, 0.1251, 0.1250, 0.1250]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1249, 0.1251, 0.1251, 0.1251, 0.1249, 0.1250, 0.1250],
+        [0.1252, 0.1249, 0.1251, 0.1251, 0.1250, 0.1249, 0.1249, 0.1249],
+        [0.1249, 0.1250, 0.1251, 0.1250, 0.1249, 0.1250, 0.1250, 0.1252],
+        [0.1250, 0.1249, 0.1250, 0.1251, 0.1250, 0.1251, 0.1250, 0.1249],
+        [0.1249, 0.1251, 0.1250, 0.1251, 0.1248, 0.1251, 0.1249, 0.1251]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+#####################
+07/23 08:27:08 AM | 
+07/23 08:27:08 AM | Parameters:
+07/23 08:27:08 AM | ALPHA_LR=0.0003
+07/23 08:27:08 AM | ALPHA_WEIGHT_DECAY=0.001
+07/23 08:27:08 AM | BATCH_SIZE=64
+07/23 08:27:08 AM | DATA_PATH=./data/
+07/23 08:27:08 AM | DATASET=cifar100
+07/23 08:27:08 AM | EPOCHS=50
+07/23 08:27:08 AM | GPUS=[0]
+07/23 08:27:08 AM | INIT_CHANNELS=16
+07/23 08:27:08 AM | LAYERS=8
+07/23 08:27:08 AM | NAME=cifar100-ignore-train
+07/23 08:27:08 AM | PATH=searchs/cifar100-ignore-train
+07/23 08:27:08 AM | PLOT_PATH=searchs/cifar100-ignore-train/plots
+07/23 08:27:08 AM | PRINT_FREQ=50
+07/23 08:27:08 AM | SEED=2
+07/23 08:27:08 AM | W_GRAD_CLIP=5.0
+07/23 08:27:08 AM | W_LR=0.025
+07/23 08:27:08 AM | W_LR_MIN=0.001
+07/23 08:27:08 AM | W_MOMENTUM=0.9
+07/23 08:27:08 AM | W_WEIGHT_DECAY=0.0003
+07/23 08:27:08 AM | WORKERS=4
+07/23 08:27:08 AM | 
+07/23 08:27:08 AM | Logger is set - training start
+####### ALPHA #######
+# Alpha - normal
+tensor([[0.1249, 0.1252, 0.1249, 0.1249, 0.1249, 0.1252, 0.1249, 0.1250],
+        [0.1249, 0.1251, 0.1250, 0.1250, 0.1252, 0.1249, 0.1250, 0.1250]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1249, 0.1253, 0.1250, 0.1250, 0.1249, 0.1250, 0.1250, 0.1249],
+        [0.1251, 0.1247, 0.1249, 0.1253, 0.1248, 0.1249, 0.1251, 0.1253],
+        [0.1250, 0.1250, 0.1249, 0.1251, 0.1252, 0.1250, 0.1251, 0.1249]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1249, 0.1250, 0.1250, 0.1250, 0.1251, 0.1249, 0.1251],
+        [0.1250, 0.1249, 0.1251, 0.1249, 0.1249, 0.1253, 0.1252, 0.1248],
+        [0.1250, 0.1250, 0.1251, 0.1248, 0.1251, 0.1250, 0.1251, 0.1250],
+        [0.1250, 0.1251, 0.1250, 0.1251, 0.1251, 0.1251, 0.1249, 0.1248]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1250, 0.1249, 0.1249, 0.1251, 0.1250, 0.1249, 0.1252],
+        [0.1250, 0.1252, 0.1252, 0.1248, 0.1250, 0.1249, 0.1248, 0.1251],
+        [0.1251, 0.1251, 0.1250, 0.1251, 0.1248, 0.1250, 0.1249, 0.1249],
+        [0.1249, 0.1250, 0.1250, 0.1253, 0.1251, 0.1251, 0.1247, 0.1249],
+        [0.1251, 0.1251, 0.1252, 0.1249, 0.1249, 0.1251, 0.1250, 0.1249]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+
+# Alpha - reduce
+tensor([[0.1248, 0.1249, 0.1249, 0.1251, 0.1250, 0.1250, 0.1251, 0.1251],
+        [0.1250, 0.1248, 0.1249, 0.1252, 0.1249, 0.1250, 0.1249, 0.1251]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1251, 0.1249, 0.1252, 0.1249, 0.1250, 0.1250, 0.1249, 0.1250],
+        [0.1250, 0.1249, 0.1250, 0.1251, 0.1251, 0.1249, 0.1250, 0.1251],
+        [0.1250, 0.1250, 0.1250, 0.1249, 0.1250, 0.1250, 0.1250, 0.1252]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1251, 0.1247, 0.1249, 0.1252, 0.1252, 0.1249, 0.1251, 0.1249],
+        [0.1250, 0.1250, 0.1250, 0.1251, 0.1253, 0.1249, 0.1249, 0.1248],
+        [0.1250, 0.1252, 0.1250, 0.1250, 0.1251, 0.1248, 0.1251, 0.1249],
+        [0.1250, 0.1251, 0.1251, 0.1249, 0.1248, 0.1251, 0.1250, 0.1250]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1249, 0.1251, 0.1251, 0.1251, 0.1249, 0.1250, 0.1250],
+        [0.1252, 0.1249, 0.1251, 0.1251, 0.1250, 0.1249, 0.1249, 0.1249],
+        [0.1249, 0.1250, 0.1251, 0.1250, 0.1249, 0.1250, 0.1250, 0.1252],
+        [0.1250, 0.1249, 0.1250, 0.1251, 0.1250, 0.1251, 0.1250, 0.1249],
+        [0.1249, 0.1251, 0.1250, 0.1251, 0.1248, 0.1251, 0.1249, 0.1251]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+#####################
+07/23 08:32:52 AM | 
+07/23 08:32:52 AM | Parameters:
+07/23 08:32:52 AM | ALPHA_LR=0.0003
+07/23 08:32:52 AM | ALPHA_WEIGHT_DECAY=0.001
+07/23 08:32:52 AM | BATCH_SIZE=64
+07/23 08:32:52 AM | DATA_PATH=./data/
+07/23 08:32:52 AM | DATASET=cifar100
+07/23 08:32:52 AM | EPOCHS=50
+07/23 08:32:52 AM | GPUS=[0]
+07/23 08:32:52 AM | INIT_CHANNELS=16
+07/23 08:32:52 AM | LAYERS=8
+07/23 08:32:52 AM | NAME=cifar100-ignore-train
+07/23 08:32:52 AM | PATH=searchs/cifar100-ignore-train
+07/23 08:32:52 AM | PLOT_PATH=searchs/cifar100-ignore-train/plots
+07/23 08:32:52 AM | PRINT_FREQ=50
+07/23 08:32:52 AM | SEED=2
+07/23 08:32:52 AM | W_GRAD_CLIP=5.0
+07/23 08:32:52 AM | W_LR=0.025
+07/23 08:32:52 AM | W_LR_MIN=0.001
+07/23 08:32:52 AM | W_MOMENTUM=0.9
+07/23 08:32:52 AM | W_WEIGHT_DECAY=0.0003
+07/23 08:32:52 AM | WORKERS=4
+07/23 08:32:52 AM | 
+07/23 08:32:52 AM | Logger is set - training start
+####### ALPHA #######
+# Alpha - normal
+tensor([[0.1249, 0.1252, 0.1249, 0.1249, 0.1249, 0.1252, 0.1249, 0.1250],
+        [0.1249, 0.1251, 0.1250, 0.1250, 0.1252, 0.1249, 0.1250, 0.1250]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1249, 0.1253, 0.1250, 0.1250, 0.1249, 0.1250, 0.1250, 0.1249],
+        [0.1251, 0.1247, 0.1249, 0.1253, 0.1248, 0.1249, 0.1251, 0.1253],
+        [0.1250, 0.1250, 0.1249, 0.1251, 0.1252, 0.1250, 0.1251, 0.1249]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1249, 0.1250, 0.1250, 0.1250, 0.1251, 0.1249, 0.1251],
+        [0.1250, 0.1249, 0.1251, 0.1249, 0.1249, 0.1253, 0.1252, 0.1248],
+        [0.1250, 0.1250, 0.1251, 0.1248, 0.1251, 0.1250, 0.1251, 0.1250],
+        [0.1250, 0.1251, 0.1250, 0.1251, 0.1251, 0.1251, 0.1249, 0.1248]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1250, 0.1249, 0.1249, 0.1251, 0.1250, 0.1249, 0.1252],
+        [0.1250, 0.1252, 0.1252, 0.1248, 0.1250, 0.1249, 0.1248, 0.1251],
+        [0.1251, 0.1251, 0.1250, 0.1251, 0.1248, 0.1250, 0.1249, 0.1249],
+        [0.1249, 0.1250, 0.1250, 0.1253, 0.1251, 0.1251, 0.1247, 0.1249],
+        [0.1251, 0.1251, 0.1252, 0.1249, 0.1249, 0.1251, 0.1250, 0.1249]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+
+# Alpha - reduce
+tensor([[0.1248, 0.1249, 0.1249, 0.1251, 0.1250, 0.1250, 0.1251, 0.1251],
+        [0.1250, 0.1248, 0.1249, 0.1252, 0.1249, 0.1250, 0.1249, 0.1251]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1251, 0.1249, 0.1252, 0.1249, 0.1250, 0.1250, 0.1249, 0.1250],
+        [0.1250, 0.1249, 0.1250, 0.1251, 0.1251, 0.1249, 0.1250, 0.1251],
+        [0.1250, 0.1250, 0.1250, 0.1249, 0.1250, 0.1250, 0.1250, 0.1252]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1251, 0.1247, 0.1249, 0.1252, 0.1252, 0.1249, 0.1251, 0.1249],
+        [0.1250, 0.1250, 0.1250, 0.1251, 0.1253, 0.1249, 0.1249, 0.1248],
+        [0.1250, 0.1252, 0.1250, 0.1250, 0.1251, 0.1248, 0.1251, 0.1249],
+        [0.1250, 0.1251, 0.1251, 0.1249, 0.1248, 0.1251, 0.1250, 0.1250]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1249, 0.1251, 0.1251, 0.1251, 0.1249, 0.1250, 0.1250],
+        [0.1252, 0.1249, 0.1251, 0.1251, 0.1250, 0.1249, 0.1249, 0.1249],
+        [0.1249, 0.1250, 0.1251, 0.1250, 0.1249, 0.1250, 0.1250, 0.1252],
+        [0.1250, 0.1249, 0.1250, 0.1251, 0.1250, 0.1251, 0.1250, 0.1249],
+        [0.1249, 0.1251, 0.1250, 0.1251, 0.1248, 0.1251, 0.1249, 0.1251]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+#####################
+07/23 08:34:23 AM | 
+07/23 08:34:23 AM | Parameters:
+07/23 08:34:23 AM | ALPHA_LR=0.0003
+07/23 08:34:23 AM | ALPHA_WEIGHT_DECAY=0.001
+07/23 08:34:23 AM | BATCH_SIZE=64
+07/23 08:34:23 AM | DATA_PATH=./data/
+07/23 08:34:23 AM | DATASET=cifar100
+07/23 08:34:23 AM | EPOCHS=50
+07/23 08:34:23 AM | GPUS=[0]
+07/23 08:34:23 AM | INIT_CHANNELS=16
+07/23 08:34:23 AM | LAYERS=8
+07/23 08:34:23 AM | NAME=cifar100-ignore-train
+07/23 08:34:23 AM | PATH=searchs/cifar100-ignore-train
+07/23 08:34:23 AM | PLOT_PATH=searchs/cifar100-ignore-train/plots
+07/23 08:34:23 AM | PRINT_FREQ=50
+07/23 08:34:23 AM | SEED=2
+07/23 08:34:23 AM | W_GRAD_CLIP=5.0
+07/23 08:34:23 AM | W_LR=0.025
+07/23 08:34:23 AM | W_LR_MIN=0.001
+07/23 08:34:23 AM | W_MOMENTUM=0.9
+07/23 08:34:23 AM | W_WEIGHT_DECAY=0.0003
+07/23 08:34:23 AM | WORKERS=4
+07/23 08:34:23 AM | 
+07/23 08:34:23 AM | Logger is set - training start
+####### ALPHA #######
+# Alpha - normal
+tensor([[0.1249, 0.1252, 0.1249, 0.1249, 0.1249, 0.1252, 0.1249, 0.1250],
+        [0.1249, 0.1251, 0.1250, 0.1250, 0.1252, 0.1249, 0.1250, 0.1250]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1249, 0.1253, 0.1250, 0.1250, 0.1249, 0.1250, 0.1250, 0.1249],
+        [0.1251, 0.1247, 0.1249, 0.1253, 0.1248, 0.1249, 0.1251, 0.1253],
+        [0.1250, 0.1250, 0.1249, 0.1251, 0.1252, 0.1250, 0.1251, 0.1249]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1249, 0.1250, 0.1250, 0.1250, 0.1251, 0.1249, 0.1251],
+        [0.1250, 0.1249, 0.1251, 0.1249, 0.1249, 0.1253, 0.1252, 0.1248],
+        [0.1250, 0.1250, 0.1251, 0.1248, 0.1251, 0.1250, 0.1251, 0.1250],
+        [0.1250, 0.1251, 0.1250, 0.1251, 0.1251, 0.1251, 0.1249, 0.1248]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1250, 0.1249, 0.1249, 0.1251, 0.1250, 0.1249, 0.1252],
+        [0.1250, 0.1252, 0.1252, 0.1248, 0.1250, 0.1249, 0.1248, 0.1251],
+        [0.1251, 0.1251, 0.1250, 0.1251, 0.1248, 0.1250, 0.1249, 0.1249],
+        [0.1249, 0.1250, 0.1250, 0.1253, 0.1251, 0.1251, 0.1247, 0.1249],
+        [0.1251, 0.1251, 0.1252, 0.1249, 0.1249, 0.1251, 0.1250, 0.1249]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+
+# Alpha - reduce
+tensor([[0.1248, 0.1249, 0.1249, 0.1251, 0.1250, 0.1250, 0.1251, 0.1251],
+        [0.1250, 0.1248, 0.1249, 0.1252, 0.1249, 0.1250, 0.1249, 0.1251]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1251, 0.1249, 0.1252, 0.1249, 0.1250, 0.1250, 0.1249, 0.1250],
+        [0.1250, 0.1249, 0.1250, 0.1251, 0.1251, 0.1249, 0.1250, 0.1251],
+        [0.1250, 0.1250, 0.1250, 0.1249, 0.1250, 0.1250, 0.1250, 0.1252]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1251, 0.1247, 0.1249, 0.1252, 0.1252, 0.1249, 0.1251, 0.1249],
+        [0.1250, 0.1250, 0.1250, 0.1251, 0.1253, 0.1249, 0.1249, 0.1248],
+        [0.1250, 0.1252, 0.1250, 0.1250, 0.1251, 0.1248, 0.1251, 0.1249],
+        [0.1250, 0.1251, 0.1251, 0.1249, 0.1248, 0.1251, 0.1250, 0.1250]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+tensor([[0.1250, 0.1249, 0.1251, 0.1251, 0.1251, 0.1249, 0.1250, 0.1250],
+        [0.1252, 0.1249, 0.1251, 0.1251, 0.1250, 0.1249, 0.1249, 0.1249],
+        [0.1249, 0.1250, 0.1251, 0.1250, 0.1249, 0.1250, 0.1250, 0.1252],
+        [0.1250, 0.1249, 0.1250, 0.1251, 0.1250, 0.1251, 0.1250, 0.1249],
+        [0.1249, 0.1251, 0.1250, 0.1251, 0.1248, 0.1251, 0.1249, 0.1251]],
+       device='cuda:0', grad_fn=<SoftmaxBackward>)
+#####################
