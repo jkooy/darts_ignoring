@@ -20,6 +20,12 @@ Adjust the batch size if out of memory (OOM) occurs. It dependes on your gpu mem
 ```shell
 python search.py --name cifar10 --dataset cifar10
 ```
+```shell
+python search-ignore.py --name cifar100-ignore-train --dataset cifar100
+```
+```shell
+python search-ignore-train.py --name cifar100-ignore-train --dataset cifar100
+```
 
 - Augment
 
