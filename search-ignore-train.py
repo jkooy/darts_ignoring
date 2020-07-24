@@ -44,9 +44,6 @@ def main():
     model = SearchCNNController(input_channels, config.init_channels, n_classes, config.layers,
                                 net_crit, device_ids=config.gpus)
     model = model.to(device)
-
-    #initialize the likehood with equal to each data
-    likelihood = torch.ones(len(train_data) // 2).cuda()
     
     # weights optimizer
     w_optim = torch.optim.SGD(model.weights(), config.w_lr, momentum=config.w_momentum,
@@ -54,16 +51,19 @@ def main():
     # alphas optimizer
     alpha_optim = torch.optim.Adam(model.alphas(), config.alpha_lr, betas=(0.5, 0.999),
                                    weight_decay=config.alpha_weight_decay)
-    # likelihood optimizer
-    Likelihood=torch.nn.Parameter(likelihood,requires_grad=True)
-    Likelihood_optim = torch.optim.Adam({Likelihood}, config.alpha_lr, betas=(0.5, 0.999),
-                                   weight_decay=config.alpha_weight_decay)
     
     # split data to train/validation
     n_train = len(train_data)
     split = n_train // 2
     indices = list(range(n_train))
     train_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[:split])
+        
+    #initialize the likehood with equal to each data
+    likelihood = torch.ones(len(indices[:split])).cuda()
+    # likelihood optimizer
+    Likelihood=torch.nn.Parameter(likelihood,requires_grad=True)
+    Likelihood_optim = torch.optim.Adam({Likelihood}, config.alpha_lr, betas=(0.5, 0.999),
+                                   weight_decay=config.alpha_weight_decay)
     
     # small sample debug 
 #     train_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[:9])
@@ -92,7 +92,7 @@ def main():
         model.print_alphas(logger)
 
         # training
-        train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr, epoch, Likelihood, Likelihood_optim)
+        train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr, epoch, Likelihood, Likelihood_optim, config.batch_size)
 
         # validation
         cur_step = (epoch+1) * len(train_loader)
@@ -123,7 +123,7 @@ def main():
     logger.info("Best Genotype = {}".format(best_genotype))
 
 
-def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr, epoch, Likelihood, Likelihood_optim):
+def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr, epoch, Likelihood, Likelihood_optim, batch_size):
     top1 = utils.AverageMeter()
     top5 = utils.AverageMeter()
     losses = utils.AverageMeter()
@@ -153,12 +153,12 @@ def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr
         # Learning to ignore
         loss = 0
         for d in range(len(trn_y)):
-            dataIndex = d+step*len(trn_y)
+            dataIndex = d + step*batch_size
             loss = loss + Likelihood[dataIndex]*model.criterion(logits[d,:].unsqueeze(dim=0), trn_y[d].unsqueeze(dim=0))
         loss = loss/(Likelihood.sum())
         
         logger.info("loss = {}".format(loss)) 
-        logger.info("Likelihood = {}, Likelihood sum={}, dataIndex = {}, dataIndex = {}".format(Likelihood, Likelihood.sum(), dataIndex, step)) 
+        logger.info("Likelihood = {}, Likelihood sum={}, dataIndex = {}, step = {}".format(Likelihood, Likelihood.sum(), dataIndex, step)) 
         
         
         loss.backward()

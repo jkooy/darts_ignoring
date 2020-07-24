@@ -64,7 +64,7 @@ class Architect():
         # compute gradient
         v_alphas = tuple(self.v_net.alphas())
         v_weights = tuple(self.v_net.weights())
-        v_grads = torch.autograd.grad(loss, v_alphas + v_weights + tuple(Likelihood))
+        v_grads = torch.autograd.grad(loss, v_alphas + v_weights + tuple(Likelihood), allow_unused=True)
         dalpha = v_grads[:len(v_alphas)]
         dw = v_grads[len(v_alphas):(len(v_alphas)+len(v_weights))]
 
@@ -74,7 +74,8 @@ class Architect():
         with torch.no_grad():
             for alpha, da, h in zip(self.net.alphas(), dalpha, hessian):
                 alpha.grad = da - xi*h
-        Likelihood.grad = v_grads[(len(v_alphas)+len(v_weights)):]
+        for likelihood, dl in zip(Likelihood, v_grads[(len(v_alphas)+len(v_weights)):]):
+            likelihood.grad = dl
 
     def compute_hessian(self, dw, trn_X, trn_y):
         """
