@@ -11,6 +11,11 @@ Liu, Hanxiao, Karen Simonyan, and Yiming Yang. "Darts: Differentiable architectu
 - numpy
 - tensorboardX
 
+
+```shell
+python install requirements
+```
+
 ## Run example
 
 Adjust the batch size if out of memory (OOM) occurs. It dependes on your gpu memory size and genotype.
