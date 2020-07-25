@@ -13,7 +13,7 @@ Liu, Hanxiao, Karen Simonyan, and Yiming Yang. "Darts: Differentiable architectu
 
 
 ```shell
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 ## Run example
