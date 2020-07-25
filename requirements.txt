@@ -1,7 +1,6 @@
 certifi==2020.6.20
 cffi==1.14.0
 graphviz==0.14.1
-mkl-service==2.3.0
 numpy @ file:///home/conda/feedstock_root/build_artifacts/numpy_1595522867663/work
 olefile==0.46
 Pillow @ file:///home/conda/feedstock_root/build_artifacts/pillow_1594213010297/work
