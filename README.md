@@ -7,9 +7,14 @@ Liu, Hanxiao, Karen Simonyan, and Yiming Yang. "Darts: Differentiable architectu
 - python 3
 - pytorch >= 0.4.1
 - graphviz
-    - First install using `apt install` and then `pip install`.
+    - First install using `sudo apt install graphviz` and then `pip install graphviz`.
 - numpy
 - tensorboardX
+
+
+```shell
+pip install -r requirements.txt
+```
 
 ## Run example
 
