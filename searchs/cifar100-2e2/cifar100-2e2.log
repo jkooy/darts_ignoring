@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+07/26 07:18:55 AM | 
+07/26 07:18:55 AM | Parameters:
+07/26 07:18:55 AM | ALPHA_LR=0.0003
+07/26 07:18:55 AM | ALPHA_WEIGHT_DECAY=0.001
+07/26 07:18:55 AM | BATCH_SIZE=64
+07/26 07:18:55 AM | DATA_PATH=./data/
+07/26 07:18:55 AM | DATASET=cifar100
+07/26 07:18:55 AM | EPOCHS=50
+07/26 07:18:55 AM | GPUS=[0]
+07/26 07:18:55 AM | INIT_CHANNELS=16
+07/26 07:18:55 AM | LAYERS=8
+07/26 07:18:55 AM | NAME=cifar100-2e2
+07/26 07:18:55 AM | PATH=searchs/cifar100-2e2
+07/26 07:18:55 AM | PLOT_PATH=searchs/cifar100-2e2/plots
+07/26 07:18:55 AM | PRINT_FREQ=50
+07/26 07:18:55 AM | SEED=2
+07/26 07:18:55 AM | W_GRAD_CLIP=5.0
+07/26 07:18:55 AM | W_LR=0.025
+07/26 07:18:55 AM | W_LR_MIN=0.001
+07/26 07:18:55 AM | W_MOMENTUM=0.9
+07/26 07:18:55 AM | W_WEIGHT_DECAY=0.0003
+07/26 07:18:55 AM | WORKERS=4
+07/26 07:18:55 AM | 
+07/26 07:18:55 AM | Logger is set - training start
+=======
 07/25 10:16:45 PM | 
 07/25 10:16:45 PM | Parameters:
 07/25 10:16:45 PM | ALPHA_LR=0.0003
@@ -22,6 +48,7 @@
 07/25 10:16:45 PM | WORKERS=4
 07/25 10:16:45 PM | 
 07/25 10:16:45 PM | Logger is set - training start
+>>>>>>> c01054b557a41af8296d9b6ff7394bb5e3478530
 ####### ALPHA #######
 # Alpha - normal
 tensor([[0.1249, 0.1252, 0.1249, 0.1249, 0.1249, 0.1252, 0.1249, 0.1250],
@@ -63,6 +90,9 @@ tensor([[0.1250, 0.1249, 0.1251, 0.1251, 0.1251, 0.1249, 0.1250, 0.1250],
         [0.1249, 0.1251, 0.1250, 0.1251, 0.1248, 0.1251, 0.1249, 0.1251]],
        device='cuda:0', grad_fn=<SoftmaxBackward>)
 #####################
+<<<<<<< HEAD
+07/26 07:19:11 AM | Train: [ 1/50] Step 000/390 Loss 4.726 Prec@(1,5) (1.6%, 9.4%)
+=======
 07/26 02:08:57 AM | 
 07/26 02:08:57 AM | Parameters:
 07/26 02:08:57 AM | ALPHA_LR=0.0003
@@ -527,6 +557,7 @@ tensor([[0.1250, 0.1249, 0.1251, 0.1251, 0.1251, 0.1249, 0.1250, 0.1250],
 07/26 03:39:56 AM | Train: [ 1/50] Step 050/390 Loss 4.449 Prec@(1,5) (3.8%, 15.4%)
 07/26 03:43:36 AM | Train: [ 1/50] Step 100/390 Loss 4.259 Prec@(1,5) (5.6%, 20.5%)
 07/26 03:47:19 AM | Train: [ 1/50] Step 150/390 Loss 4.169 Prec@(1,5) (6.5%, 23.2%)
+<<<<<<< HEAD
 07/26 03:51:16 AM | Train: [ 1/50] Step 200/390 Loss 4.083 Prec@(1,5) (7.5%, 25.4%)
 07/26 03:55:14 AM | Train: [ 1/50] Step 250/390 Loss 4.010 Prec@(1,5) (8.4%, 27.6%)
 07/26 03:58:51 AM | Train: [ 1/50] Step 300/390 Loss 3.952 Prec@(1,5) (9.1%, 29.4%)
@@ -3584,3 +3615,6 @@ tensor([[0.2788, 0.2768, 0.0682, 0.0786, 0.0717, 0.0810, 0.0828, 0.0620],
 07/27 05:18:16 AM | genotype = Genotype(normal=[[('skip_connect', 0), ('skip_connect', 1)], [('skip_connect', 0), ('sep_conv_3x3', 1)], [('skip_connect', 0), ('sep_conv_3x3', 1)], [('skip_connect', 0), ('sep_conv_3x3', 1)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('avg_pool_3x3', 1)], [('skip_connect', 2), ('max_pool_3x3', 0)], [('skip_connect', 2), ('avg_pool_3x3', 0)], [('skip_connect', 2), ('avg_pool_3x3', 0)]], reduce_concat=range(2, 6))
 07/27 05:18:18 AM | Final best Prec@1 = 60.6920%
 07/27 05:18:18 AM | Best Genotype = Genotype(normal=[[('skip_connect', 0), ('skip_connect', 1)], [('skip_connect', 0), ('sep_conv_3x3', 2)], [('skip_connect', 0), ('sep_conv_3x3', 1)], [('skip_connect', 0), ('sep_conv_3x3', 1)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('skip_connect', 2), ('max_pool_3x3', 0)], [('skip_connect', 2), ('avg_pool_3x3', 0)], [('skip_connect', 2), ('max_pool_3x3', 0)]], reduce_concat=range(2, 6))
+=======
+>>>>>>> c01054b557a41af8296d9b6ff7394bb5e3478530
+>>>>>>> 0fdf91ae84b6510b0ce1dccdb172b33374182fe7

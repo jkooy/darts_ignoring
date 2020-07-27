@@ -28,6 +28,8 @@ python search.py --name cifar10 --dataset cifar10
 ```shell
 python search-ignore.py --name cifar100-ignore-train --dataset cifar100
 ```
+
+On CIFAR-100
 ```shell
 python search-ignore-train.py --name cifar100-ignore-train --dataset cifar100
 ```
@@ -42,6 +44,16 @@ python augment.py --name cifar10 --dataset cifar10 --genotype "Genotype(
     reduce=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('skip_connect', 2)], [('skip_connect', 3), ('max_pool_3x3', 0)], [('skip_connect', 2), ('max_pool_3x3', 0)]],
     reduce_concat=range(2, 6)
 )"
+```
+On CIFAR-100
+```shell
+# genotype from search results
+python augment.py --name cifar100-ignoring --dataset cifar100 --genotype "Genotype(
+   normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], 
+   [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], 
+   normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], 
+   [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)],
+   [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))"
 ```
 
 - with docker
