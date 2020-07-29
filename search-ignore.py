@@ -66,8 +66,6 @@ def main():
     indices = list(range(n_train))
     train_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[:split])
     
-    # small sample debug 
-#     train_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[:9])
     valid_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[split:])
     train_loader = torch.utils.data.DataLoader(train_data,
                                                batch_size=config.batch_size,
@@ -164,6 +162,9 @@ def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr
         for d in range(len(trn_y)):
             dataIndex = d+step*len(trn_y)
             loss = loss + Likelihood[dataIndex]*model.criterion(logits[d,:].unsqueeze(dim=0), trn_y[d].unsqueeze(dim=0))
+        
+        loss = Likelihood[step*len(trn_y), *model.criterion(logits, trn_y, reduction= 'sum')
+        
         loss = loss/(Likelihood.sum())
         '''
         logger.info("loss = {}".format(loss)) 

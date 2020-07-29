@@ -64,9 +64,7 @@ def main():
     Likelihood=torch.nn.Parameter(likelihood,requires_grad=True)
     Likelihood_optim = torch.optim.Adam({Likelihood}, config.alpha_lr, betas=(0.5, 0.999),
                                    weight_decay=config.alpha_weight_decay)
-    
-    # small sample debug 
-#     train_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[:9])
+
     valid_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[split:])
     train_loader = torch.utils.data.DataLoader(train_data,
                                                batch_size=config.batch_size,
@@ -149,16 +147,25 @@ def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr
         logits = model(trn_X)
         
         
+        sloss = model.criterion(logits, trn_y)     
+        logger.info("standard loss = {}".format(sloss)) 
         
         # Learning to ignore
+        
+        '''
         loss = 0
         for d in range(len(trn_y)):
             dataIndex = d + step*batch_size
             loss = loss + Likelihood[dataIndex]*model.criterion(logits[d,:].unsqueeze(dim=0), trn_y[d].unsqueeze(dim=0))
         loss = loss/(Likelihood.sum())
+        '''
+        ignore_crit = nn.CrossEntropyLoss(reduction='none').to(device)
+        dataIndex = len(trn_y)+step*batch_size
+        loss = torch.dot(torch.sigmoid(Likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))
+        loss = loss/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
         
-        logger.info("loss = {}".format(loss)) 
-        logger.info("Likelihood = {}, Likelihood sum={}, dataIndex = {}, step = {}".format(Likelihood, Likelihood.sum(), dataIndex, step)) 
+        logger.info("weighted loss = {}".format(loss)) 
+        logger.info("Likelihood = {}, Likelihood sum={}, dataIndex = {}, step = {}".format(torch.sigmoid(Likelihood), torch.sigmoid(Likelihood).sum(), dataIndex, step)) 
         
         
         loss.backward()
