@@ -137,9 +137,11 @@ def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr
         N = trn_X.size(0)
 
         # phase 2. architect step (alpha)
-        alpha_optim.zero_grad()
-        architect.unrolled_backward(trn_X, trn_y, val_X, val_y, lr, w_optim, Likelihood)
-        alpha_optim.step()
+        alpha_optim.zero_grad()      
+        Likelihood_optim.zero_grad()
+        architect.unrolled_backward(trn_X, trn_y, val_X, val_y, lr, w_optim, model, Likelihood, batch_size, step)
+        alpha_optim.step()      
+        print('likelihood grad:', Likelihood.grad.sum())
         Likelihood_optim.step()
         
         # phase 1. child network step (w)
