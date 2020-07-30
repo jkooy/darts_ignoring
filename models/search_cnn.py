@@ -159,10 +159,11 @@ class SearchCNNController(nn.Module):
                            reduce=gene_reduce, reduce_concat=concat)
 
     def weights(self):
-        return self.net.parameters()
+        return list(self.net.parameters())
+  
 
     def named_weights(self):
-        return self.net.named_parameters()
+        return list(self.net.named_parameters())
 
     def alphas(self):
         for n, p in self._alphas:

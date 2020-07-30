@@ -5,6 +5,7 @@ import utils
 import os
 import torch.nn as nn
 from config import SearchConfig
+from torch.autograd import Variable
 
 config = SearchConfig()
 
@@ -39,19 +40,19 @@ class Architect():
             w_optim: weights optimizer
         """
         # forward & calc loss
-        sloss = self.net.loss(trn_X, trn_y) # L_trn(w)
+        sloss = self.v_net.loss(trn_X, trn_y) # L_trn(w)
         logger.info("unrolled standard loss = {}".format(sloss)) 
         
         
         dataIndex = len(trn_y)+step*batch_size
         ignore_crit = nn.CrossEntropyLoss(reduction='none').cuda()       
         # forward
-        logits = model(trn_X)
+        logits = self.v_net(trn_X)
         loss = torch.dot(torch.sigmoid(Likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
         logger.info("unrolled weighted loss = {}".format(loss)) 
         
         # compute gradient
-        gradients = torch.autograd.grad(loss, self.net.weights(), create_graph=True)
+        gradients = torch.autograd.grad(loss, self.v_net.weights(), create_graph=True)
 
         '''
         # do virtual step (update gradient)
@@ -74,16 +75,25 @@ class Architect():
         for i, (w, vw, g) in enumerate(zip(self.net.weights(), self.v_net.weights(), gradients)):
             m = w_optim.state[w].get('momentum_buffer', 0.) * self.w_momentum
         # in-place operation not used
-#             vw = w - xi * (m + g + self.w_weight_decay*w)    
-            list(self.v_net.weights())[i] = w - xi * (m + g + self.w_weight_decay*w)
+            vw = w - xi * (m + g + self.w_weight_decay*w)    
+            print('vw,', vw)
+            print('vitual weight gradient is:', torch.autograd.grad(torch.sum(vw), Likelihood, retain_graph=True))
+            print('self_weight1,', self.v_net.weights()[i])
+               
+            self.v_net.weights()[i] = w - xi * (m + g + self.w_weight_decay*w)
+#             self.v_net.weights()[i].data = (w - xi * (m + g + self.w_weight_decay*w)).clone()
+#             self.v_net.weights()[i].grad = (w - xi * (m + g + self.w_weight_decay*w)).grad
+
+            print('self_weight2,', self.v_net.weights()[i])
+            print('weight gradient is:', torch.autograd.grad(torch.sum(self.v_net.weights()[i]), Likelihood, retain_graph=True))
         for w, vw, g in zip(self.net.weights(), self.v_net.weights(), gradients):
             print('weight gradient is:', torch.autograd.grad(torch.sum(vw), Likelihood, retain_graph=True))
-        # synchronize alphas
-        for a, va in zip(self.net.alphas(), self.v_net.alphas()):
-#             va.copy_(a)
-
-        # in-place operation not used
-            va = a
+            
+        
+        with torch.no_grad():
+            # synchronize alphas
+            for a, va in zip(self.net.alphas(), self.v_net.alphas()):
+                va.copy_(a)
 
         
     def unrolled_backward(self, trn_X, trn_y, val_X, val_y, xi, w_optim, model, Likelihood, batch_size, step):
