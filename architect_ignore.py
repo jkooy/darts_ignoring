@@ -54,7 +54,7 @@ class Architect():
         # compute gradient
         gradients = torch.autograd.grad(loss, self.v_net.weights(), create_graph=True)
 
-        '''
+
         # do virtual step (update gradient)
         # below operations do not need gradient tracking
         with torch.no_grad():
@@ -67,7 +67,8 @@ class Architect():
             # synchronize alphas
             for a, va in zip(self.net.alphas(), self.v_net.alphas()):
                 va.copy_(a)
-        '''
+                
+        '''       
         # do virtual step (update gradient)
         
         # dict key is not the value, but the pointer. So original network weight have to
@@ -76,8 +77,8 @@ class Architect():
             m = w_optim.state[w].get('momentum_buffer', 0.) * self.w_momentum
         # in-place operation not used
             vw = w - xi * (m + g + self.w_weight_decay*w)    
-            print('vw,', vw)
-            print('vitual weight gradient is:', torch.autograd.grad(torch.sum(vw), Likelihood, retain_graph=True))
+            print('vw,', vw.size)
+            print('vitual weight gradient is:', torch.autograd.grad(vw, Likelihood).size())
             print('self_weight1,', self.v_net.weights()[i])
                
             self.v_net.weights()[i] = w - xi * (m + g + self.w_weight_decay*w)
@@ -94,7 +95,8 @@ class Architect():
             # synchronize alphas
             for a, va in zip(self.net.alphas(), self.v_net.alphas()):
                 va.copy_(a)
-
+        '''
+        
         
     def unrolled_backward(self, trn_X, trn_y, val_X, val_y, xi, w_optim, model, Likelihood, batch_size, step):
         """ Compute unrolled loss and backward its gradients
