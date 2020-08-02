@@ -7,7 +7,7 @@ from tensorboardX import SummaryWriter
 from config import SearchConfig
 import utils
 from models.search_cnn import SearchCNNController
-from architect_ignore import Architect
+from architect_ignore_sigmoid import Architect
 from visualize import plot
 
 
@@ -167,12 +167,12 @@ def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr
         '''
         ignore_crit = nn.CrossEntropyLoss(reduction='none').to(device)
         dataIndex = len(trn_y)+step*batch_size
-#         loss = torch.dot(torch.sigmoid(Likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))
-#         loss = loss/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
+        loss = torch.dot(torch.sigmoid(Likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))
+        loss = loss/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
         
-        
+        '''
         loss = torch.dot(Likelihood[step*batch_size:dataIndex], ignore_crit(logits, trn_y))/(Likelihood[step*batch_size:dataIndex].sum())
-        
+        '''
         
         
         logger.info("weighted loss = {}".format(loss)) 

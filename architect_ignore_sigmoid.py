@@ -46,18 +46,18 @@ class Architect():
         # forward
         logits = self.v_net(trn_X)
         
+        '''
         loss = torch.dot(Likelihood[step*batch_size:dataIndex], ignore_crit(logits, trn_y))
 #         loss = torch.dot(Likelihood[step*batch_size:dataIndex], ignore_crit(logits, trn_y))/(Likelihood[step*batch_size:dataIndex].sum())
         '''
         # sigmoid loss
         loss = torch.dot(torch.sigmoid(Likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
-        '''
+        
         
         # compute gradient
         gradients = torch.autograd.grad(loss, self.v_net.weights(), retain_graph=True)
         dtloss_ll = torch.autograd.grad(loss, Likelihood)
         print('dtloss_ll', sum(dtloss_ll).sum())
-        print('dtloss_ll', dtloss_ll)
         
         
         dtloss_w = []
@@ -98,11 +98,11 @@ class Architect():
         dalpha = v_grads[:len(v_alphas)]
         dw = v_grads[len(v_alphas):]
         
-        dvloss_w = torch.autograd.grad(loss, self.v_net.weights())
+        
         ########## tuple
 
         dvloss_tloss = 0  
-        for dv, dt in zip(dvloss_w, dtloss_w):
+        for dv, dt in zip(dw, dtloss_w):
             grad_valw_d_trainw = torch.div(dv, dt)
             grad_valw_d_trainw[torch.isinf(grad_valw_d_trainw)] = 0
             grad_valw_d_trainw[torch.isnan(grad_valw_d_trainw)] = 0
@@ -122,7 +122,7 @@ class Architect():
 #         for i,likelihood in enumerate(Likelihood):
 #             likelihood.grad = dlikelihood[i]
         likelihood.grad = dlikelihood
-        print(likelihood.grad)
+        print('likelihood gradient is:', likelihood.grad.sum())
         Likelihood_optim.step()
         return likelihood, Likelihood_optim
         
