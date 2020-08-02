@@ -141,7 +141,6 @@ def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr
         trn_X, trn_y = trn_X.to(device, non_blocking=True), trn_y.to(device, non_blocking=True)
         val_X, val_y = val_X.to(device, non_blocking=True), val_y.to(device, non_blocking=True)
         N = trn_X.size(0)
-
         # phase 2. architect step (alpha)
         alpha_optim.zero_grad()      
         Likelihood, Likelihood_optim= architect.unrolled_backward(trn_X, trn_y, val_X, val_y, lr, w_optim, model, Likelihood, Likelihood_optim, batch_size, step)
