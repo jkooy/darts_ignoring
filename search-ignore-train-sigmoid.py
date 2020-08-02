@@ -167,8 +167,8 @@ def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr
         '''
         ignore_crit = nn.CrossEntropyLoss(reduction='none').to(device)
         dataIndex = len(trn_y)+step*batch_size
-        loss = torch.dot(torch.sigmoid(Likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))
-        loss = loss/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
+        loss = torch.dot(torch.sigmoid(likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))
+        loss = loss/(torch.sigmoid(likelihood[step*batch_size:dataIndex]).sum())
         
         '''
         loss = torch.dot(Likelihood[step*batch_size:dataIndex], ignore_crit(logits, trn_y))/(Likelihood[step*batch_size:dataIndex].sum())
@@ -176,7 +176,7 @@ def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr
         
         
         logger.info("weighted loss = {}".format(loss)) 
-        logger.info("Likelihood = {}, Likelihood sum= {}, sigmoid_Likelihood = {}, sigmoid_Likelihood sum={}, dataIndex = {}, step = {}".format(Likelihood, Likelihood.sum(), torch.sigmoid(Likelihood), torch.sigmoid(Likelihood).sum(), dataIndex, step)) 
+        logger.info("Likelihood = {}, Likelihood sum= {}, sigmoid_Likelihood = {}, sigmoid_Likelihood sum={}, dataIndex = {}, step = {}".format(Likelihood, likelihood.sum(), torch.sigmoid(likelihood), torch.sigmoid(likelihood).sum(), dataIndex, step)) 
         
         
         loss.backward()
