@@ -63,10 +63,10 @@ def main():
                                    weight_decay=config.alpha_weight_decay)
     
     # likelihood optimizer
-    Likelihood_optim = torch.optim.Adam({likelihood}, config.alpha_lr, betas=(0.5, 0.999),
-#                                    weight_decay=config.alpha_weight_decay
-                                       )
-    
+#     Likelihood_optim = torch.optim.Adam({likelihood}, config.alpha_lr, betas=(0.5, 0.999),
+# #                                    weight_decay=config.alpha_weight_decay
+#                                        )
+    Likelihood_optim = torch.optim.SGD({likelihood}, config.alpha_lr)
     
     train_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[:split])
         
@@ -167,8 +167,13 @@ def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr
         '''
         ignore_crit = nn.CrossEntropyLoss(reduction='none').to(device)
         dataIndex = len(trn_y)+step*batch_size
-        loss = torch.dot(torch.sigmoid(Likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))
-        loss = loss/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
+#         loss = torch.dot(torch.sigmoid(Likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))
+#         loss = loss/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
+        
+        
+        loss = torch.dot(Likelihood[step*batch_size:dataIndex], ignore_crit(logits, trn_y))/(Likelihood[step*batch_size:dataIndex].sum())
+        
+        
         
         logger.info("weighted loss = {}".format(loss)) 
         logger.info("Likelihood = {}, Likelihood sum= {}, sigmoid_Likelihood = {}, sigmoid_Likelihood sum={}, dataIndex = {}, step = {}".format(Likelihood, Likelihood.sum(), torch.sigmoid(Likelihood), torch.sigmoid(Likelihood).sum(), dataIndex, step)) 
