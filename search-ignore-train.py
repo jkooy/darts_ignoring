@@ -39,10 +39,20 @@ def main():
     # get data with meta info
     input_size, input_channels, n_classes, train_data = utils.get_data(
         config.dataset, config.data_path, cutout_length=0, validation=False)
-
+    
+    # split data to train/validation
+    n_train = len(train_data)
+    split = n_train // 2
+    indices = list(range(n_train))
+    
+    
+    #initialize the likehood with equal weights on each data
+    likelihood=torch.nn.Parameter(torch.ones(len(indices[:split])).cuda(),requires_grad=True)
+        
+        
     net_crit = nn.CrossEntropyLoss().to(device)
     model = SearchCNNController(input_channels, config.init_channels, n_classes, config.layers,
-                                net_crit, device_ids=config.gpus)
+                                net_crit, indices, split, device_ids=config.gpus)
     model = model.to(device)
     
     # weights optimizer
@@ -52,18 +62,14 @@ def main():
     alpha_optim = torch.optim.Adam(model.alphas(), config.alpha_lr, betas=(0.5, 0.999),
                                    weight_decay=config.alpha_weight_decay)
     
-    # split data to train/validation
-    n_train = len(train_data)
-    split = n_train // 2
-    indices = list(range(n_train))
+    # likelihood optimizer
+    Likelihood_optim = torch.optim.Adam({likelihood}, config.alpha_lr, betas=(0.5, 0.999),
+#                                    weight_decay=config.alpha_weight_decay
+                                       )
+    
+    
     train_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[:split])
         
-    #initialize the likehood with equal to each data
-    likelihood = torch.ones(len(indices[:split])).cuda()
-    # likelihood optimizer
-    Likelihood=torch.nn.Parameter(likelihood,requires_grad=True)
-    Likelihood_optim = torch.optim.Adam({Likelihood}, config.alpha_lr, betas=(0.5, 0.999),
-                                   weight_decay=config.alpha_weight_decay)
 
     valid_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[split:])
     train_loader = torch.utils.data.DataLoader(train_data,
@@ -90,7 +96,7 @@ def main():
         model.print_alphas(logger)
 
         # training
-        train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr, epoch, Likelihood, Likelihood_optim, config.batch_size)
+        train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr, epoch, likelihood, Likelihood_optim, config.batch_size)
 
         # validation
         cur_step = (epoch+1) * len(train_loader)
@@ -138,11 +144,9 @@ def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr
 
         # phase 2. architect step (alpha)
         alpha_optim.zero_grad()      
-        Likelihood_optim.zero_grad()
-        architect.unrolled_backward(trn_X, trn_y, val_X, val_y, lr, w_optim, model, Likelihood, batch_size, step)
+        likelihood, Likelihood_optim= architect.unrolled_backward(trn_X, trn_y, val_X, val_y, lr, w_optim, model, Likelihood, Likelihood_optim, batch_size, step)
         alpha_optim.step()      
-        print('likelihood grad:', Likelihood.grad.sum())
-        Likelihood_optim.step()
+        
         
         # phase 1. child network step (w)
         w_optim.zero_grad()
@@ -167,7 +171,7 @@ def train(train_loader, valid_loader, model, architect, w_optim, alpha_optim, lr
         loss = loss/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
         
         logger.info("weighted loss = {}".format(loss)) 
-        logger.info("Likelihood = {}, Likelihood sum={}, dataIndex = {}, step = {}".format(torch.sigmoid(Likelihood), torch.sigmoid(Likelihood).sum(), dataIndex, step)) 
+        logger.info("Likelihood = {}, Likelihood sum= {}, sigmoid_Likelihood = {}, sigmoid_Likelihood sum={}, dataIndex = {}, step = {}".format(Likelihood, Likelihood.sum(), torch.sigmoid(Likelihood), torch.sigmoid(Likelihood).sum(), dataIndex, step)) 
         
         
         loss.backward()
