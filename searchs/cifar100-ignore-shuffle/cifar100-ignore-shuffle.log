@@ -5045,3 +5045,454 @@ tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
 tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
        device='cuda:0', requires_grad=True), Likelihood sum= 723905.25, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
        grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16679.8359375, dataIndex = 6656, step = 415
+08/01 08:48:13 PM | standard loss = 4.138828277587891
+08/01 08:48:13 PM | weighted loss = 4.383248329162598
+08/01 08:48:13 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 716934.0, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16668.13671875, dataIndex = 6672, step = 416
+08/01 08:48:19 PM | standard loss = 4.166030406951904
+08/01 08:48:19 PM | weighted loss = 4.305141448974609
+08/01 08:48:19 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 720151.75, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16672.44140625, dataIndex = 6688, step = 417
+08/01 08:48:25 PM | standard loss = 3.958247423171997
+08/01 08:48:25 PM | weighted loss = 4.183743000030518
+08/01 08:48:25 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 713766.9375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16660.744140625, dataIndex = 6704, step = 418
+08/01 08:48:30 PM | standard loss = 3.9299376010894775
+08/01 08:48:30 PM | weighted loss = 4.11843729019165
+08/01 08:48:30 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 713616.75, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16649.0703125, dataIndex = 6720, step = 419
+08/01 08:48:37 PM | standard loss = 3.8237295150756836
+08/01 08:48:37 PM | weighted loss = 4.004886627197266
+08/01 08:48:37 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 711341.6875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16637.37109375, dataIndex = 6736, step = 420
+08/01 08:48:42 PM | standard loss = 3.9318673610687256
+08/01 08:48:42 PM | weighted loss = 4.104244232177734
+08/01 08:48:42 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 702101.375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16625.67578125, dataIndex = 6752, step = 421
+08/01 08:48:48 PM | standard loss = 3.916454553604126
+08/01 08:48:48 PM | weighted loss = 4.983283042907715
+08/01 08:48:48 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 702073.875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16619.435546875, dataIndex = 6768, step = 422
+08/01 08:48:53 PM | standard loss = 4.146116256713867
+08/01 08:48:53 PM | weighted loss = 4.294152736663818
+08/01 08:48:53 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 704262.875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16623.73828125, dataIndex = 6784, step = 423
+08/01 08:48:59 PM | standard loss = 3.826507329940796
+08/01 08:48:59 PM | weighted loss = 3.9431092739105225
+08/01 08:48:59 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 703455.125, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16612.04296875, dataIndex = 6800, step = 424
+08/01 08:49:04 PM | standard loss = 4.186625003814697
+08/01 08:49:04 PM | weighted loss = 4.356457710266113
+08/01 08:49:05 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 698112.5, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16600.345703125, dataIndex = 6816, step = 425
+08/01 08:49:11 PM | standard loss = 4.106932640075684
+08/01 08:49:11 PM | weighted loss = 4.334055423736572
+08/01 08:49:11 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 691481.1875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16588.6484375, dataIndex = 6832, step = 426
+08/01 08:49:17 PM | standard loss = 3.841717481613159
+08/01 08:49:17 PM | weighted loss = 4.056116580963135
+08/01 08:49:17 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 626926.875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16576.953125, dataIndex = 6848, step = 427
+08/01 08:49:22 PM | standard loss = 3.622870922088623
+08/01 08:49:22 PM | weighted loss = 3.7617716789245605
+08/01 08:49:22 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 628834.625, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16581.25390625, dataIndex = 6864, step = 428
+08/01 08:49:28 PM | standard loss = 4.338028430938721
+08/01 08:49:28 PM | weighted loss = 4.369834899902344
+08/01 08:49:28 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 628842.875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16582.673828125, dataIndex = 6880, step = 429
+08/01 08:49:34 PM | standard loss = 4.074021816253662
+08/01 08:49:34 PM | weighted loss = 4.234066486358643
+08/01 08:49:34 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 631711.5625, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16586.9765625, dataIndex = 6896, step = 430
+08/01 08:49:39 PM | standard loss = 4.2786760330200195
+08/01 08:49:39 PM | weighted loss = 4.5363922119140625
+08/01 08:49:39 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 633154.125, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16591.279296875, dataIndex = 6912, step = 431
+08/01 08:49:45 PM | standard loss = 4.465206623077393
+08/01 08:49:45 PM | weighted loss = 4.6202616691589355
+08/01 08:49:45 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 636019.375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16595.58203125, dataIndex = 6928, step = 432
+08/01 08:49:51 PM | standard loss = 3.599121332168579
+08/01 08:49:51 PM | weighted loss = 3.7593281269073486
+08/01 08:49:51 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 635167.9375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16583.884765625, dataIndex = 6944, step = 433
+08/01 08:49:57 PM | standard loss = 4.20866060256958
+08/01 08:49:57 PM | weighted loss = 4.507155895233154
+08/01 08:49:57 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 630596.375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16572.1875, dataIndex = 6960, step = 434
+08/01 08:50:03 PM | standard loss = 4.183277606964111
+08/01 08:50:03 PM | weighted loss = 4.445803642272949
+08/01 08:50:03 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 631711.875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16576.4921875, dataIndex = 6976, step = 435
+08/01 08:50:09 PM | standard loss = 4.3890204429626465
+08/01 08:50:09 PM | weighted loss = 4.862168312072754
+08/01 08:50:09 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 645145.3125, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16580.796875, dataIndex = 6992, step = 436
+08/01 08:50:15 PM | standard loss = 4.575559616088867
+08/01 08:50:15 PM | weighted loss = 4.772096633911133
+08/01 08:50:15 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 645092.125, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16570.685546875, dataIndex = 7008, step = 437
+08/01 08:50:20 PM | standard loss = 3.834723949432373
+08/01 08:50:20 PM | weighted loss = 4.0681233406066895
+08/01 08:50:20 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 640730.625, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16558.98828125, dataIndex = 7024, step = 438
+08/01 08:50:26 PM | standard loss = 4.406463623046875
+08/01 08:50:26 PM | weighted loss = 4.752971649169922
+08/01 08:50:26 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 641151.125, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16563.291015625, dataIndex = 7040, step = 439
+08/01 08:50:32 PM | standard loss = 3.8691887855529785
+08/01 08:50:32 PM | weighted loss = 3.9434754848480225
+08/01 08:50:32 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 641196.875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16567.22265625, dataIndex = 7056, step = 440
+08/01 08:50:38 PM | standard loss = 4.146365642547607
+08/01 08:50:38 PM | weighted loss = 4.298775672912598
+08/01 08:50:38 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 640242.75, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16555.525390625, dataIndex = 7072, step = 441
+08/01 08:50:44 PM | standard loss = 4.058306694030762
+08/01 08:50:44 PM | weighted loss = 4.225753307342529
+08/01 08:50:44 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 640101.4375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16544.029296875, dataIndex = 7088, step = 442
+08/01 08:50:50 PM | standard loss = 3.893932580947876
+08/01 08:50:50 PM | weighted loss = 4.131515026092529
+08/01 08:50:50 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 642643.0, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16548.33203125, dataIndex = 7104, step = 443
+08/01 08:50:55 PM | standard loss = 4.277190685272217
+08/01 08:50:55 PM | weighted loss = 3.185136318206787
+08/01 08:50:55 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 642629.75, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16545.32421875, dataIndex = 7120, step = 444
+08/01 08:51:01 PM | standard loss = 4.162513732910156
+08/01 08:51:01 PM | weighted loss = 4.271742820739746
+08/01 08:51:01 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 644658.125, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16549.62890625, dataIndex = 7136, step = 445
+08/01 08:51:07 PM | standard loss = 3.6775128841400146
+08/01 08:51:07 PM | weighted loss = 3.8120806217193604
+08/01 08:51:07 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 644225.1875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16537.9296875, dataIndex = 7152, step = 446
+08/01 08:51:13 PM | standard loss = 4.188998699188232
+08/01 08:51:13 PM | weighted loss = 4.484767913818359
+08/01 08:51:13 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 646242.75, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16542.234375, dataIndex = 7168, step = 447
+08/01 08:51:18 PM | standard loss = 3.671142816543579
+08/01 08:51:18 PM | weighted loss = 3.860013961791992
+08/01 08:51:18 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 646437.9375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16546.537109375, dataIndex = 7184, step = 448
+08/01 08:51:24 PM | standard loss = 4.5582194328308105
+08/01 08:51:24 PM | weighted loss = 4.687249660491943
+08/01 08:51:24 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 647160.6875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16550.83984375, dataIndex = 7200, step = 449
+08/01 08:51:30 PM | standard loss = 3.771353244781494
+08/01 08:51:30 PM | weighted loss = 3.863769769668579
+08/01 08:51:30 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 638510.9375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16539.142578125, dataIndex = 7216, step = 450
+08/01 08:51:30 PM | Train: [ 1/50] Step 450/1562 Loss 4.438 Prec@(1,5) (5.0%, 18.7%)
+08/01 08:51:35 PM | standard loss = 3.912611246109009
+08/01 08:51:35 PM | weighted loss = 4.148026943206787
+08/01 08:51:35 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 636844.125, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16527.4453125, dataIndex = 7232, step = 451
+08/01 08:51:41 PM | standard loss = 3.7513206005096436
+08/01 08:51:41 PM | weighted loss = 4.194329261779785
+08/01 08:51:41 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 632826.6875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16515.75, dataIndex = 7248, step = 452
+08/01 08:51:48 PM | standard loss = 3.9455060958862305
+08/01 08:51:48 PM | weighted loss = 4.030330181121826
+08/01 08:51:48 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 632893.875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16519.9453125, dataIndex = 7264, step = 453
+08/01 08:51:53 PM | standard loss = 4.230086803436279
+08/01 08:51:53 PM | weighted loss = 4.384572982788086
+08/01 08:51:53 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 641393.625, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16524.25, dataIndex = 7280, step = 454
+08/01 08:51:59 PM | standard loss = 4.180071830749512
+08/01 08:51:59 PM | weighted loss = 4.322589874267578
+08/01 08:51:59 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 742951.875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16528.552734375, dataIndex = 7296, step = 455
+08/01 08:52:04 PM | standard loss = 4.085056781768799
+08/01 08:52:04 PM | weighted loss = 4.479868412017822
+08/01 08:52:04 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 741675.0625, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16516.85546875, dataIndex = 7312, step = 456
+08/01 08:52:10 PM | standard loss = 4.095090389251709
+08/01 08:52:10 PM | weighted loss = 4.34795618057251
+08/01 08:52:10 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 740279.4375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16505.15625, dataIndex = 7328, step = 457
+08/01 08:52:16 PM | standard loss = 3.839566230773926
+08/01 08:52:16 PM | weighted loss = 3.9345271587371826
+08/01 08:52:16 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 732533.625, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16493.4609375, dataIndex = 7344, step = 458
+08/01 08:52:21 PM | standard loss = 3.650513172149658
+08/01 08:52:21 PM | weighted loss = 3.8345422744750977
+08/01 08:52:21 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 731348.0, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16481.765625, dataIndex = 7360, step = 459
+08/01 08:52:27 PM | standard loss = 4.181973457336426
+08/01 08:52:27 PM | weighted loss = 4.305948734283447
+08/01 08:52:27 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 815128.875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16486.068359375, dataIndex = 7376, step = 460
+08/01 08:52:32 PM | standard loss = 3.9106671810150146
+08/01 08:52:32 PM | weighted loss = 4.211233615875244
+08/01 08:52:32 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 816102.75, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16490.37109375, dataIndex = 7392, step = 461
+08/01 08:52:38 PM | standard loss = 3.6610188484191895
+08/01 08:52:38 PM | weighted loss = 3.8822622299194336
+08/01 08:52:38 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 814375.875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16478.673828125, dataIndex = 7408, step = 462
+08/01 08:52:44 PM | standard loss = 3.890197277069092
+08/01 08:52:44 PM | weighted loss = 4.079479694366455
+08/01 08:52:44 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 817049.625, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16482.9765625, dataIndex = 7424, step = 463
+08/01 08:52:50 PM | standard loss = 4.198098659515381
+08/01 08:52:50 PM | weighted loss = 4.422369003295898
+08/01 08:52:50 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 818359.0, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16487.279296875, dataIndex = 7440, step = 464
+08/01 08:52:56 PM | standard loss = 3.9316890239715576
+08/01 08:52:56 PM | weighted loss = 4.187009811401367
+08/01 08:52:56 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 814311.75, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16475.58203125, dataIndex = 7456, step = 465
+08/01 08:53:02 PM | standard loss = 3.7521913051605225
+08/01 08:53:02 PM | weighted loss = 4.098876476287842
+08/01 08:53:02 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 807426.0, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16463.88671875, dataIndex = 7472, step = 466
+08/01 08:53:08 PM | standard loss = 4.047962665557861
+08/01 08:53:08 PM | weighted loss = 4.250220775604248
+08/01 08:53:08 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 807461.25, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16467.4375, dataIndex = 7488, step = 467
+08/01 08:53:13 PM | standard loss = 3.956252336502075
+08/01 08:53:13 PM | weighted loss = 4.111269474029541
+08/01 08:53:13 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 815918.1875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16471.7421875, dataIndex = 7504, step = 468
+08/01 08:53:19 PM | standard loss = 3.9245991706848145
+08/01 08:53:19 PM | weighted loss = 4.024875640869141
+08/01 08:53:19 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 817636.375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16476.044921875, dataIndex = 7520, step = 469
+08/01 08:53:24 PM | standard loss = 3.7056262493133545
+08/01 08:53:24 PM | weighted loss = 4.029144763946533
+08/01 08:53:24 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 818051.5625, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16480.34765625, dataIndex = 7536, step = 470
+08/01 08:53:30 PM | standard loss = 4.238009452819824
+08/01 08:53:30 PM | weighted loss = 4.498141765594482
+08/01 08:53:30 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 812604.1875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16468.65234375, dataIndex = 7552, step = 471
+08/01 08:53:35 PM | standard loss = 3.644296646118164
+08/01 08:53:35 PM | weighted loss = 4.235691070556641
+08/01 08:53:35 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 812553.625, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16459.21875, dataIndex = 7568, step = 472
+08/01 08:53:41 PM | standard loss = 3.7312114238739014
+08/01 08:53:41 PM | weighted loss = 3.887061357498169
+08/01 08:53:41 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 792170.9375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16447.521484375, dataIndex = 7584, step = 473
+08/01 08:53:46 PM | standard loss = 3.5283570289611816
+08/01 08:53:46 PM | weighted loss = 3.7233188152313232
+08/01 08:53:46 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 792284.875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16451.796875, dataIndex = 7600, step = 474
+08/01 08:53:52 PM | standard loss = 4.635464668273926
+08/01 08:53:52 PM | weighted loss = 5.034482002258301
+08/01 08:53:52 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 791791.375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16440.1015625, dataIndex = 7616, step = 475
+08/01 08:53:58 PM | standard loss = 3.614894151687622
+08/01 08:53:58 PM | weighted loss = 3.7626709938049316
+08/01 08:53:58 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 795748.1875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16444.40625, dataIndex = 7632, step = 476
+08/01 08:54:04 PM | standard loss = 4.269530296325684
+08/01 08:54:04 PM | weighted loss = 4.3912577629089355
+08/01 08:54:04 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 792372.625, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16432.70703125, dataIndex = 7648, step = 477
+08/01 08:54:10 PM | standard loss = 4.391664981842041
+08/01 08:54:10 PM | weighted loss = 4.511826992034912
+08/01 08:54:10 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 790035.6875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16421.01171875, dataIndex = 7664, step = 478
+08/01 08:54:15 PM | standard loss = 3.766566276550293
+08/01 08:54:15 PM | weighted loss = 3.9731316566467285
+08/01 08:54:15 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 784051.6875, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16409.314453125, dataIndex = 7680, step = 479
+08/01 08:54:22 PM | standard loss = 4.009132385253906
+08/01 08:54:22 PM | weighted loss = 4.077689170837402
+08/01 08:54:22 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 754757.0, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16397.6171875, dataIndex = 7696, step = 480
+08/01 08:54:28 PM | standard loss = 4.081303596496582
+08/01 08:54:28 PM | weighted loss = 4.575350761413574
+08/01 08:54:28 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 758747.375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16401.921875, dataIndex = 7712, step = 481
+08/01 08:54:34 PM | standard loss = 3.8318464756011963
+08/01 08:54:34 PM | weighted loss = 4.068460464477539
+08/01 08:54:34 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 764062.5625, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16406.22265625, dataIndex = 7728, step = 482
+08/01 08:54:39 PM | standard loss = 4.083191871643066
+08/01 08:54:39 PM | weighted loss = 4.165985584259033
+08/01 08:54:39 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 744265.25, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16394.52734375, dataIndex = 7744, step = 483
+08/01 08:54:45 PM | standard loss = 3.965245246887207
+08/01 08:54:45 PM | weighted loss = 4.157607078552246
+08/01 08:54:45 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 746702.25, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16398.828125, dataIndex = 7760, step = 484
+08/01 08:54:51 PM | standard loss = 3.855691432952881
+08/01 08:54:51 PM | weighted loss = 3.9867923259735107
+08/01 08:54:51 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 737459.25, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16387.1328125, dataIndex = 7776, step = 485
+08/01 08:54:57 PM | standard loss = 3.962068557739258
+08/01 08:54:57 PM | weighted loss = 4.072233200073242
+08/01 08:54:57 PM | Likelihood = Parameter containing:
+tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
+       device='cuda:0', requires_grad=True), Likelihood sum= 742121.9375, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
+       grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16391.435546875, dataIndex = 7792, step = 486
+08/01 09:12:25 PM | 
+08/01 09:12:25 PM | Parameters:
+08/01 09:12:25 PM | ALPHA_LR=0.0003
+08/01 09:12:25 PM | ALPHA_WEIGHT_DECAY=0.001
+08/01 09:12:25 PM | BATCH_SIZE=16
+08/01 09:12:25 PM | DATA_PATH=./data/
+08/01 09:12:25 PM | DATASET=cifar100
+08/01 09:12:25 PM | EPOCHS=50
+08/01 09:12:25 PM | GPUS=[0]
+08/01 09:12:25 PM | INIT_CHANNELS=16
+08/01 09:12:25 PM | LAYERS=8
+08/01 09:12:25 PM | NAME=cifar100-ignore-shuffle
+08/01 09:12:25 PM | PATH=searchs/cifar100-ignore-shuffle
+08/01 09:12:25 PM | PLOT_PATH=searchs/cifar100-ignore-shuffle/plots
+08/01 09:12:25 PM | PRINT_FREQ=50
+08/01 09:12:25 PM | SEED=2
+08/01 09:12:25 PM | W_GRAD_CLIP=5.0
+08/01 09:12:25 PM | W_LR=0.025
+08/01 09:12:25 PM | W_LR_MIN=0.001
+08/01 09:12:25 PM | W_MOMENTUM=0.9
+08/01 09:12:25 PM | W_WEIGHT_DECAY=0.0003
+08/01 09:12:25 PM | WORKERS=4
+08/01 09:12:25 PM | 
+08/01 09:12:25 PM | Logger is set - training start
