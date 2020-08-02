@@ -4,4 +4,4 @@ cd /xh-volume/darts_ignoring
 apt-get update
 apt install graphviz
 pip install graphviz
-python search.py --name cifar100-no_sigmoid --dataset cifar100
+python search.py --name cifar100-no-sigmoid --dataset cifar100
