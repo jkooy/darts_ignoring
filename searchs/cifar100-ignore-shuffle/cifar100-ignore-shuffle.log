@@ -5045,3 +5045,27 @@ tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
 tensor([95.0214, 97.9750, 97.6695,  ...,  1.0000,  1.0000,  1.0000],
        device='cuda:0', requires_grad=True), Likelihood sum= 723905.25, sigmoid_Likelihood = tensor([1.0000, 1.0000, 1.0000,  ..., 0.7311, 0.7311, 0.7311], device='cuda:0',
        grad_fn=<SigmoidBackward>), sigmoid_Likelihood sum=16679.8359375, dataIndex = 6656, step = 415
+08/02 04:12:38 AM | 
+08/02 04:12:39 AM | Parameters:
+08/02 04:12:39 AM | ALPHA_LR=0.0003
+08/02 04:12:39 AM | ALPHA_WEIGHT_DECAY=0.001
+08/02 04:12:39 AM | BATCH_SIZE=16
+08/02 04:12:39 AM | DATA_PATH=./data/
+08/02 04:12:39 AM | DATASET=cifar100
+08/02 04:12:39 AM | EPOCHS=50
+08/02 04:12:39 AM | GPUS=[0]
+08/02 04:12:39 AM | INIT_CHANNELS=16
+08/02 04:12:39 AM | LAYERS=8
+08/02 04:12:39 AM | NAME=cifar100-ignore-shuffle
+08/02 04:12:39 AM | PATH=searchs/cifar100-ignore-shuffle
+08/02 04:12:39 AM | PLOT_PATH=searchs/cifar100-ignore-shuffle/plots
+08/02 04:12:39 AM | PRINT_FREQ=50
+08/02 04:12:39 AM | SEED=2
+08/02 04:12:39 AM | W_GRAD_CLIP=5.0
+08/02 04:12:39 AM | W_LR=0.025
+08/02 04:12:39 AM | W_LR_MIN=0.001
+08/02 04:12:39 AM | W_MOMENTUM=0.9
+08/02 04:12:39 AM | W_WEIGHT_DECAY=0.0003
+08/02 04:12:39 AM | WORKERS=4
+08/02 04:12:39 AM | 
+08/02 04:12:39 AM | Logger is set - training start
