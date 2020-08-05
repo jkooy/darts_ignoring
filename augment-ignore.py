@@ -21,6 +21,113 @@ logger = utils.get_logger(os.path.join(config.path, "{}.log".format(config.name)
 config.print_params(logger.info)
 
 
+class Architect():
+    """ Compute gradients of alphas """
+    def __init__(self, net, w_momentum, w_weight_decay):
+        """
+        Args:
+            net
+            w_momentum: weights momentum
+        """
+        self.net = net
+        self.v_net = copy.deepcopy(net)
+        self.w_momentum = w_momentum
+        self.w_weight_decay = w_weight_decay
+
+    def virtual_step(self, trn_X, trn_y, xi, w_optim):
+        """
+        Compute unrolled weight w' (virtual step)
+
+        Step process:
+        1) forward
+        2) calc loss
+        3) compute gradient (by backprop)
+        4) update gradient
+
+        Args:
+            xi: learning rate for virtual gradient step (same as weights lr)
+            w_optim: weights optimizer
+        """
+        # forward & calc loss
+        loss = self.net.loss(trn_X, trn_y) # L_trn(w)
+
+        # compute gradient
+        gradients = torch.autograd.grad(loss, self.net.weights())
+
+        # do virtual step (update gradient)
+        # below operations do not need gradient tracking
+        with torch.no_grad():
+            # dict key is not the value, but the pointer. So original network weight have to
+            # be iterated also.
+            for w, vw, g in zip(self.net.weights(), self.v_net.weights(), gradients):
+                m = w_optim.state[w].get('momentum_buffer', 0.) * self.w_momentum
+                vw.copy_(w - xi * (m + g + self.w_weight_decay*w))
+
+            # synchronize alphas
+            for a, va in zip(self.net.alphas(), self.v_net.alphas()):
+                va.copy_(a)
+
+    def unrolled_backward(self, trn_X, trn_y, val_X, val_y, xi, w_optim):
+        """ Compute unrolled loss and backward its gradients
+        Args:
+            xi: learning rate for virtual gradient step (same as net lr)
+            w_optim: weights optimizer - for virtual step
+        """
+        # do virtual step (calc w`)
+        self.virtual_step(trn_X, trn_y, xi, w_optim)
+
+        # calc unrolled loss
+        loss = self.v_net.loss(val_X, val_y) # L_val(w`)
+
+        # compute gradient
+        v_alphas = tuple(self.v_net.alphas())
+        v_weights = tuple(self.v_net.weights())
+        v_grads = torch.autograd.grad(loss, v_alphas + v_weights)
+        dalpha = v_grads[:len(v_alphas)]
+        dw = v_grads[len(v_alphas):]
+
+        hessian = self.compute_hessian(dw, trn_X, trn_y)
+
+        # update final gradient = dalpha - xi*hessian
+        with torch.no_grad():
+            for alpha, da, h in zip(self.net.alphas(), dalpha, hessian):
+                alpha.grad = da - xi*h
+
+    def compute_hessian(self, dw, trn_X, trn_y):
+        """
+        dw = dw` { L_val(w`, alpha) }
+        w+ = w + eps * dw
+        w- = w - eps * dw
+        hessian = (dalpha { L_trn(w+, alpha) } - dalpha { L_trn(w-, alpha) }) / (2*eps)
+        eps = 0.01 / ||dw||
+        """
+        norm = torch.cat([w.view(-1) for w in dw]).norm()
+        eps = 0.01 / norm
+
+        # w+ = w + eps*dw`
+        with torch.no_grad():
+            for p, d in zip(self.net.weights(), dw):
+                p += eps * d
+        loss = self.net.loss(trn_X, trn_y)
+        dalpha_pos = torch.autograd.grad(loss, self.net.alphas()) # dalpha { L_trn(w+) }
+
+        # w- = w - eps*dw`
+        with torch.no_grad():
+            for p, d in zip(self.net.weights(), dw):
+                p -= 2. * eps * d
+        loss = self.net.loss(trn_X, trn_y)
+        dalpha_neg = torch.autograd.grad(loss, self.net.alphas()) # dalpha { L_trn(w-) }
+
+        # recover w
+        with torch.no_grad():
+            for p, d in zip(self.net.weights(), dw):
+                p += eps * d
+
+#         hessian = [(p-n) / 2.*eps for p, n in zip(dalpha_pos, dalpha_neg)]
+        hessian = [(p-n) / (2.*eps) for p, n in zip(dalpha_pos, dalpha_neg)]
+        return hessian
+    
+    
 def main():
     logger.info("Logger is set - training start")
 
@@ -56,21 +163,14 @@ def main():
     n_train = len(train_data)
     split = n_train // 2
     indices = list(range(n_train))
-#     train_sampler = torch.utils.data.sampler.SubsetRandomSampler(indices[:9])
     
-    '''
-    train_loader = torch.utils.data.DataLoader(train_data,
-#                                                batch_size=config.batch_size,
-                                           batch_size=10,
-                                           sampler=train_sampler,
-                                           num_workers=config.workers,
-                                           pin_memory=True)
+    likelihood=torch.nn.Parameter(torch.ones(len(indices[:split])).cuda(),requires_grad=True)
+    Likelihood_optim = torch.optim.SGD({likelihood}, config.alpha_lr)
     
-    '''
     
     train_loader = torch.utils.data.DataLoader(train_data,
                                                batch_size=config.batch_size,
-                                               shuffle=True,
+                                               shuffle=False,
                                                num_workers=config.workers,
                                                pin_memory=True)
     
@@ -89,7 +189,7 @@ def main():
         model.module.drop_path_prob(drop_prob)
 
         # training
-        train(train_loader, model, optimizer, criterion, epoch)
+        train(train_loader, model, optimizer, criterion, epoch, likelihood, Likelihood_optim, config.batch_size)
 
         # validation
         cur_step = (epoch+1) * len(train_loader)
@@ -127,6 +227,7 @@ def train(train_loader, model, optimizer, criterion, epoch):
         optimizer.zero_grad()
         logits, aux_logits = model(X)
         loss = criterion(logits, y)
+           
         if config.aux_weight > 0.:
             loss += config.aux_weight * criterion(aux_logits, y)
         loss.backward()
@@ -154,7 +255,7 @@ def train(train_loader, model, optimizer, criterion, epoch):
     logger.info("Train: [{:3d}/{}] Final Prec@1 {:.4%}".format(epoch+1, config.epochs, top1.avg))
 
 
-def validate(valid_loader, model, criterion, epoch, cur_step):
+def validate(valid_loader, model, criterion, epoch, cur_step, Likelihood, Likelihood_optim, batch_size):
     top1 = utils.AverageMeter()
     top5 = utils.AverageMeter()
     losses = utils.AverageMeter()
@@ -167,8 +268,16 @@ def validate(valid_loader, model, criterion, epoch, cur_step):
             N = X.size(0)
 
             logits, _ = model(X)
-            loss = criterion(logits, y)
-
+#             loss = criterion(logits, y)
+            
+            
+            ignore_crit = nn.CrossEntropyLoss(reduction='none').to(device)
+            dataIndex = len(trn_y)+step*batch_size
+            loss = torch.dot(torch.sigmoid(Likelihood[step*batch_size:dataIndex]), ignore_crit(logits, y))
+            loss = loss/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
+        
+            Likelihood, Likelihood_optim= architect.unrolled_backward(trn_X, trn_y, val_X, val_y, lr, w_optim, model, Likelihood, Likelihood_optim, batch_size, step)
+            
             prec1, prec5 = utils.accuracy(logits, y, topk=(1, 5))
             losses.update(loss.item(), N)
             top1.update(prec1.item(), N)
