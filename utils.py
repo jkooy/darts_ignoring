@@ -39,6 +39,11 @@ def get_data(dataset, data_path, cutout_length, validation):
     ret = [input_size, input_channels, n_classes, trn_data]
     if validation: # append validation data
         ret.append(dset_cls(root=data_path, train=False, download=True, transform=val_transform))
+    
+    '''
+    if test: # append test data
+        ret.append(dset_cls(root=data_path, train=False, download=True, transform=test_transform))
+    '''
 
     return ret
 

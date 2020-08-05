@@ -1,0 +1,426 @@
+08/04 11:33:51 PM | 
+08/04 11:33:51 PM | Parameters:
+08/04 11:33:51 PM | AUX_WEIGHT=0.4
+08/04 11:33:51 PM | BATCH_SIZE=96
+08/04 11:33:51 PM | CUTOUT_LENGTH=16
+08/04 11:33:51 PM | DATA_PATH=./data/
+08/04 11:33:51 PM | DATASET=cifar100
+08/04 11:33:51 PM | DROP_PATH_PROB=0.2
+08/04 11:33:51 PM | EPOCHS=600
+08/04 11:33:51 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/04 11:33:51 PM | GPUS=[0]
+08/04 11:33:51 PM | GRAD_CLIP=5.0
+08/04 11:33:51 PM | INIT_CHANNELS=36
+08/04 11:33:51 PM | LAYERS=20
+08/04 11:33:51 PM | LR=0.025
+08/04 11:33:51 PM | MOMENTUM=0.9
+08/04 11:33:51 PM | NAME=cifar100-ignoring-sigmoid
+08/04 11:33:51 PM | PATH=augments/cifar100-ignoring-sigmoid
+08/04 11:33:51 PM | PRINT_FREQ=200
+08/04 11:33:51 PM | SEED=2
+08/04 11:33:51 PM | WEIGHT_DECAY=0.0003
+08/04 11:33:51 PM | WORKERS=4
+08/04 11:33:51 PM | 
+08/04 11:33:51 PM | Logger is set - training start
+08/04 11:33:56 PM | Model size = 2.014 MB
+08/04 11:33:56 PM | Epoch 0 LR 0.024999828653092835
+08/04 11:33:59 PM | Train: [  1/600] Step 000/520 Loss 7.300 Prec@(1,5) (0.0%, 4.2%)
+08/04 11:35:01 PM | Train: [  1/600] Step 200/520 Loss 6.233 Prec@(1,5) (5.4%, 19.4%)
+08/04 11:35:12 PM | 
+08/04 11:35:12 PM | Parameters:
+08/04 11:35:12 PM | AUX_WEIGHT=0.4
+08/04 11:35:12 PM | BATCH_SIZE=96
+08/04 11:35:12 PM | CUTOUT_LENGTH=16
+08/04 11:35:12 PM | DATA_PATH=./data/
+08/04 11:35:12 PM | DATASET=cifar100
+08/04 11:35:12 PM | DROP_PATH_PROB=0.2
+08/04 11:35:12 PM | EPOCHS=600
+08/04 11:35:12 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/04 11:35:12 PM | GPUS=[0]
+08/04 11:35:12 PM | GRAD_CLIP=5.0
+08/04 11:35:12 PM | INIT_CHANNELS=36
+08/04 11:35:12 PM | LAYERS=20
+08/04 11:35:12 PM | LR=0.025
+08/04 11:35:12 PM | MOMENTUM=0.9
+08/04 11:35:12 PM | NAME=cifar100-ignoring-sigmoid
+08/04 11:35:12 PM | PATH=augments/cifar100-ignoring-sigmoid
+08/04 11:35:12 PM | PRINT_FREQ=200
+08/04 11:35:12 PM | SEED=2
+08/04 11:35:12 PM | WEIGHT_DECAY=0.0003
+08/04 11:35:12 PM | WORKERS=4
+08/04 11:35:12 PM | 
+08/04 11:35:12 PM | Logger is set - training start
+08/04 11:35:17 PM | Model size = 2.014 MB
+08/04 11:35:17 PM | Epoch 0 LR 0.024999828653092835
+08/04 11:35:19 PM | Train: [  1/600] Step 000/520 Loss 7.300 Prec@(1,5) (0.0%, 4.2%)
+08/04 11:36:22 PM | Train: [  1/600] Step 200/520 Loss 6.178 Prec@(1,5) (5.4%, 19.7%)
+08/04 11:37:26 PM | Train: [  1/600] Step 400/520 Loss 5.744 Prec@(1,5) (8.0%, 26.3%)
+08/04 11:38:02 PM | Train: [  1/600] Step 520/520 Loss 5.590 Prec@(1,5) (9.3%, 29.1%)
+08/04 11:38:02 PM | Train: [  1/600] Final Prec@1 9.2660%
+08/04 11:38:03 PM | Valid: [  1/600] Step 000/104 Loss 3.721 Prec@(1,5) (14.6%, 36.5%)
+08/04 11:38:28 PM | Valid: [  1/600] Step 104/104 Loss 3.610 Prec@(1,5) (14.0%, 39.3%)
+08/04 11:38:28 PM | Valid: [  1/600] Final Prec@1 13.9600%
+08/04 11:38:28 PM | Epoch 1 LR 0.024999314617068905
+08/04 11:38:31 PM | Train: [  2/600] Step 000/520 Loss 5.133 Prec@(1,5) (16.7%, 37.5%)
+08/04 11:40:13 PM | 
+08/04 11:40:13 PM | Parameters:
+08/04 11:40:13 PM | AUX_WEIGHT=0.4
+08/04 11:40:13 PM | BATCH_SIZE=96
+08/04 11:40:13 PM | CUTOUT_LENGTH=16
+08/04 11:40:13 PM | DATA_PATH=./data/
+08/04 11:40:13 PM | DATASET=cifar100
+08/04 11:40:13 PM | DROP_PATH_PROB=0.2
+08/04 11:40:13 PM | EPOCHS=600
+08/04 11:40:13 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/04 11:40:13 PM | GPUS=[0]
+08/04 11:40:13 PM | GRAD_CLIP=5.0
+08/04 11:40:13 PM | INIT_CHANNELS=36
+08/04 11:40:13 PM | LAYERS=20
+08/04 11:40:13 PM | LR=0.025
+08/04 11:40:13 PM | MOMENTUM=0.9
+08/04 11:40:13 PM | NAME=cifar100-ignoring-sigmoid
+08/04 11:40:13 PM | PATH=augments/cifar100-ignoring-sigmoid
+08/04 11:40:13 PM | PRINT_FREQ=200
+08/04 11:40:13 PM | SEED=2
+08/04 11:40:13 PM | WEIGHT_DECAY=0.0003
+08/04 11:40:13 PM | WORKERS=4
+08/04 11:40:13 PM | 
+08/04 11:40:13 PM | Logger is set - training start
+08/04 11:40:18 PM | Model size = 2.014 MB
+08/04 11:40:58 PM | 
+08/04 11:40:58 PM | Parameters:
+08/04 11:40:58 PM | AUX_WEIGHT=0.4
+08/04 11:40:58 PM | BATCH_SIZE=96
+08/04 11:40:58 PM | CUTOUT_LENGTH=16
+08/04 11:40:58 PM | DATA_PATH=./data/
+08/04 11:40:58 PM | DATASET=cifar100
+08/04 11:40:58 PM | DROP_PATH_PROB=0.2
+08/04 11:40:58 PM | EPOCHS=600
+08/04 11:40:58 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/04 11:40:58 PM | GPUS=[0]
+08/04 11:40:58 PM | GRAD_CLIP=5.0
+08/04 11:40:58 PM | INIT_CHANNELS=36
+08/04 11:40:58 PM | LAYERS=20
+08/04 11:40:58 PM | LR=0.025
+08/04 11:40:58 PM | MOMENTUM=0.9
+08/04 11:40:58 PM | NAME=cifar100-ignoring-sigmoid
+08/04 11:40:58 PM | PATH=augments/cifar100-ignoring-sigmoid
+08/04 11:40:58 PM | PRINT_FREQ=200
+08/04 11:40:58 PM | SEED=2
+08/04 11:40:58 PM | WEIGHT_DECAY=0.0003
+08/04 11:40:58 PM | WORKERS=4
+08/04 11:40:58 PM | 
+08/04 11:40:58 PM | Logger is set - training start
+08/04 11:41:02 PM | Model size = 2.014 MB
+08/04 11:42:49 PM | 
+08/04 11:42:49 PM | Parameters:
+08/04 11:42:49 PM | AUX_WEIGHT=0.4
+08/04 11:42:49 PM | BATCH_SIZE=96
+08/04 11:42:49 PM | CUTOUT_LENGTH=16
+08/04 11:42:49 PM | DATA_PATH=./data/
+08/04 11:42:49 PM | DATASET=cifar100
+08/04 11:42:49 PM | DROP_PATH_PROB=0.2
+08/04 11:42:49 PM | EPOCHS=600
+08/04 11:42:49 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/04 11:42:49 PM | GPUS=[0]
+08/04 11:42:49 PM | GRAD_CLIP=5.0
+08/04 11:42:49 PM | INIT_CHANNELS=36
+08/04 11:42:49 PM | LAYERS=20
+08/04 11:42:49 PM | LR=0.025
+08/04 11:42:49 PM | MOMENTUM=0.9
+08/04 11:42:49 PM | NAME=cifar100-ignoring-sigmoid
+08/04 11:42:49 PM | PATH=augments/cifar100-ignoring-sigmoid
+08/04 11:42:49 PM | PRINT_FREQ=200
+08/04 11:42:49 PM | SEED=2
+08/04 11:42:49 PM | WEIGHT_DECAY=0.0003
+08/04 11:42:49 PM | WORKERS=4
+08/04 11:42:49 PM | 
+08/04 11:42:49 PM | Logger is set - training start
+08/04 11:42:53 PM | Model size = 2.014 MB
+08/04 11:43:16 PM | 
+08/04 11:43:16 PM | Parameters:
+08/04 11:43:16 PM | AUX_WEIGHT=0.4
+08/04 11:43:16 PM | BATCH_SIZE=96
+08/04 11:43:16 PM | CUTOUT_LENGTH=16
+08/04 11:43:16 PM | DATA_PATH=./data/
+08/04 11:43:16 PM | DATASET=cifar100
+08/04 11:43:16 PM | DROP_PATH_PROB=0.2
+08/04 11:43:16 PM | EPOCHS=600
+08/04 11:43:16 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/04 11:43:16 PM | GPUS=[0]
+08/04 11:43:16 PM | GRAD_CLIP=5.0
+08/04 11:43:16 PM | INIT_CHANNELS=36
+08/04 11:43:16 PM | LAYERS=20
+08/04 11:43:16 PM | LR=0.025
+08/04 11:43:16 PM | MOMENTUM=0.9
+08/04 11:43:16 PM | NAME=cifar100-ignoring-sigmoid
+08/04 11:43:16 PM | PATH=augments/cifar100-ignoring-sigmoid
+08/04 11:43:16 PM | PRINT_FREQ=200
+08/04 11:43:16 PM | SEED=2
+08/04 11:43:16 PM | WEIGHT_DECAY=0.0003
+08/04 11:43:16 PM | WORKERS=4
+08/04 11:43:16 PM | 
+08/04 11:43:16 PM | Logger is set - training start
+08/04 11:43:21 PM | Model size = 2.014 MB
+08/04 11:45:55 PM | 
+08/04 11:45:55 PM | Parameters:
+08/04 11:45:55 PM | AUX_WEIGHT=0.4
+08/04 11:45:55 PM | BATCH_SIZE=96
+08/04 11:45:55 PM | CUTOUT_LENGTH=16
+08/04 11:45:55 PM | DATA_PATH=./data/
+08/04 11:45:55 PM | DATASET=cifar100
+08/04 11:45:55 PM | DROP_PATH_PROB=0.2
+08/04 11:45:55 PM | EPOCHS=600
+08/04 11:45:55 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/04 11:45:55 PM | GPUS=[0]
+08/04 11:45:55 PM | GRAD_CLIP=5.0
+08/04 11:45:55 PM | INIT_CHANNELS=36
+08/04 11:45:55 PM | LAYERS=20
+08/04 11:45:55 PM | LR=0.025
+08/04 11:45:55 PM | MOMENTUM=0.9
+08/04 11:45:55 PM | NAME=cifar100-ignoring-sigmoid
+08/04 11:45:55 PM | PATH=augments/cifar100-ignoring-sigmoid
+08/04 11:45:55 PM | PRINT_FREQ=200
+08/04 11:45:55 PM | SEED=2
+08/04 11:45:55 PM | WEIGHT_DECAY=0.0003
+08/04 11:45:55 PM | WORKERS=4
+08/04 11:45:55 PM | 
+08/04 11:45:55 PM | Logger is set - training start
+08/04 11:46:00 PM | Model size = 2.014 MB
+08/04 11:46:00 PM | Epoch 0 LR 0.024999828653092835
+08/04 11:46:03 PM | Train: [  1/600] Step 000/520 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
+08/04 11:47:06 PM | Train: [  1/600] Step 200/520 Loss 6.512 Prec@(1,5) (4.2%, 17.0%)
+08/04 11:48:07 PM | Train: [  1/600] Step 400/520 Loss 5.985 Prec@(1,5) (6.6%, 23.7%)
+08/04 11:48:44 PM | Train: [  1/600] Step 520/520 Loss 5.808 Prec@(1,5) (7.8%, 26.4%)
+08/04 11:48:44 PM | Train: [  1/600] Final Prec@1 7.7940%
+08/05 12:01:06 AM | 
+08/05 12:01:06 AM | Parameters:
+08/05 12:01:06 AM | AUX_WEIGHT=0.4
+08/05 12:01:06 AM | BATCH_SIZE=96
+08/05 12:01:06 AM | CUTOUT_LENGTH=16
+08/05 12:01:06 AM | DATA_PATH=./data/
+08/05 12:01:06 AM | DATASET=cifar100
+08/05 12:01:06 AM | DROP_PATH_PROB=0.2
+08/05 12:01:06 AM | EPOCHS=600
+08/05 12:01:06 AM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/05 12:01:06 AM | GPUS=[0]
+08/05 12:01:06 AM | GRAD_CLIP=5.0
+08/05 12:01:06 AM | INIT_CHANNELS=36
+08/05 12:01:06 AM | LAYERS=20
+08/05 12:01:06 AM | LR=0.025
+08/05 12:01:06 AM | MOMENTUM=0.9
+08/05 12:01:06 AM | NAME=cifar100-ignoring-sigmoid
+08/05 12:01:06 AM | PATH=augments/cifar100-ignoring-sigmoid
+08/05 12:01:06 AM | PRINT_FREQ=200
+08/05 12:01:06 AM | SEED=2
+08/05 12:01:06 AM | WEIGHT_DECAY=0.0003
+08/05 12:01:06 AM | WORKERS=4
+08/05 12:01:06 AM | 
+08/05 12:01:06 AM | Logger is set - training start
+08/05 12:01:10 AM | Model size = 2.014 MB
+08/05 12:01:11 AM | Epoch 0 LR 0.024999828653092835
+08/05 12:01:13 AM | Train: [  1/600] Step 000/520 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
+08/05 12:02:15 AM | Train: [  1/600] Step 200/520 Loss 6.165 Prec@(1,5) (5.4%, 20.4%)
+08/05 12:03:17 AM | Train: [  1/600] Step 400/520 Loss 5.741 Prec@(1,5) (8.1%, 26.9%)
+08/05 12:03:54 AM | Train: [  1/600] Step 520/520 Loss 5.592 Prec@(1,5) (9.2%, 29.5%)
+08/05 12:03:54 AM | Train: [  1/600] Final Prec@1 9.1580%
+08/05 12:04:52 AM | 
+08/05 12:04:52 AM | Parameters:
+08/05 12:04:52 AM | AUX_WEIGHT=0.4
+08/05 12:04:52 AM | BATCH_SIZE=96
+08/05 12:04:52 AM | CUTOUT_LENGTH=16
+08/05 12:04:52 AM | DATA_PATH=./data/
+08/05 12:04:52 AM | DATASET=cifar100
+08/05 12:04:52 AM | DROP_PATH_PROB=0.2
+08/05 12:04:52 AM | EPOCHS=600
+08/05 12:04:52 AM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/05 12:04:52 AM | GPUS=[0]
+08/05 12:04:52 AM | GRAD_CLIP=5.0
+08/05 12:04:52 AM | INIT_CHANNELS=36
+08/05 12:04:52 AM | LAYERS=20
+08/05 12:04:52 AM | LR=0.025
+08/05 12:04:52 AM | MOMENTUM=0.9
+08/05 12:04:52 AM | NAME=cifar100-ignoring-sigmoid
+08/05 12:04:52 AM | PATH=augments/cifar100-ignoring-sigmoid
+08/05 12:04:52 AM | PRINT_FREQ=200
+08/05 12:04:52 AM | SEED=2
+08/05 12:04:52 AM | WEIGHT_DECAY=0.0003
+08/05 12:04:52 AM | WORKERS=4
+08/05 12:04:52 AM | 
+08/05 12:04:52 AM | Logger is set - training start
+08/05 12:04:57 AM | Model size = 2.014 MB
+08/05 12:05:39 AM | 
+08/05 12:05:39 AM | Parameters:
+08/05 12:05:39 AM | AUX_WEIGHT=0.4
+08/05 12:05:39 AM | BATCH_SIZE=96
+08/05 12:05:39 AM | CUTOUT_LENGTH=16
+08/05 12:05:39 AM | DATA_PATH=./data/
+08/05 12:05:39 AM | DATASET=cifar100
+08/05 12:05:39 AM | DROP_PATH_PROB=0.2
+08/05 12:05:39 AM | EPOCHS=600
+08/05 12:05:39 AM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/05 12:05:39 AM | GPUS=[0]
+08/05 12:05:39 AM | GRAD_CLIP=5.0
+08/05 12:05:39 AM | INIT_CHANNELS=36
+08/05 12:05:39 AM | LAYERS=20
+08/05 12:05:39 AM | LR=0.025
+08/05 12:05:39 AM | MOMENTUM=0.9
+08/05 12:05:39 AM | NAME=cifar100-ignoring-sigmoid
+08/05 12:05:39 AM | PATH=augments/cifar100-ignoring-sigmoid
+08/05 12:05:39 AM | PRINT_FREQ=200
+08/05 12:05:39 AM | SEED=2
+08/05 12:05:39 AM | WEIGHT_DECAY=0.0003
+08/05 12:05:39 AM | WORKERS=4
+08/05 12:05:39 AM | 
+08/05 12:05:39 AM | Logger is set - training start
+08/05 12:05:44 AM | Model size = 2.014 MB
+08/05 12:05:44 AM | Epoch 0 LR 0.024999828653092835
+08/05 12:05:46 AM | Train: [  1/600] Step 000/520 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
+08/05 12:06:50 AM | Train: [  1/600] Step 200/520 Loss 6.122 Prec@(1,5) (5.5%, 20.6%)
+08/05 12:07:53 AM | Train: [  1/600] Step 400/520 Loss 5.707 Prec@(1,5) (8.0%, 27.0%)
+08/05 12:08:30 AM | Train: [  1/600] Step 520/520 Loss 5.557 Prec@(1,5) (9.1%, 29.6%)
+08/05 12:08:30 AM | Train: [  1/600] Final Prec@1 9.1260%
+08/05 12:09:52 AM | 
+08/05 12:09:52 AM | Parameters:
+08/05 12:09:52 AM | AUX_WEIGHT=0.4
+08/05 12:09:52 AM | BATCH_SIZE=96
+08/05 12:09:52 AM | CUTOUT_LENGTH=16
+08/05 12:09:52 AM | DATA_PATH=./data/
+08/05 12:09:52 AM | DATASET=cifar100
+08/05 12:09:52 AM | DROP_PATH_PROB=0.2
+08/05 12:09:52 AM | EPOCHS=600
+08/05 12:09:52 AM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/05 12:09:52 AM | GPUS=[0]
+08/05 12:09:52 AM | GRAD_CLIP=5.0
+08/05 12:09:52 AM | INIT_CHANNELS=36
+08/05 12:09:52 AM | LAYERS=20
+08/05 12:09:52 AM | LR=0.025
+08/05 12:09:52 AM | MOMENTUM=0.9
+08/05 12:09:52 AM | NAME=cifar100-ignoring-sigmoid
+08/05 12:09:52 AM | PATH=augments/cifar100-ignoring-sigmoid
+08/05 12:09:52 AM | PRINT_FREQ=200
+08/05 12:09:52 AM | SEED=2
+08/05 12:09:52 AM | WEIGHT_DECAY=0.0003
+08/05 12:09:52 AM | WORKERS=4
+08/05 12:09:52 AM | 
+08/05 12:09:52 AM | Logger is set - training start
+08/05 12:09:56 AM | Model size = 2.014 MB
+08/05 12:09:56 AM | Epoch 0 LR 0.024999828653092835
+08/05 12:09:59 AM | Train: [  1/600] Step 000/520 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
+08/05 12:11:03 AM | Train: [  1/600] Step 200/520 Loss 6.208 Prec@(1,5) (5.4%, 20.1%)
+08/05 12:12:05 AM | Train: [  1/600] Step 400/520 Loss 5.762 Prec@(1,5) (7.9%, 26.4%)
+08/05 12:12:41 AM | Train: [  1/600] Step 520/520 Loss 5.609 Prec@(1,5) (9.0%, 28.9%)
+08/05 12:12:41 AM | Train: [  1/600] Final Prec@1 8.9600%
+08/05 10:35:51 AM | 
+08/05 10:35:51 AM | Parameters:
+08/05 10:35:51 AM | AUX_WEIGHT=0.4
+08/05 10:35:51 AM | BATCH_SIZE=96
+08/05 10:35:51 AM | CUTOUT_LENGTH=16
+08/05 10:35:51 AM | DATA_PATH=./data/
+08/05 10:35:51 AM | DATASET=cifar100
+08/05 10:35:51 AM | DROP_PATH_PROB=0.2
+08/05 10:35:51 AM | EPOCHS=600
+08/05 10:35:51 AM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/05 10:35:51 AM | GPUS=[0]
+08/05 10:35:51 AM | GRAD_CLIP=5.0
+08/05 10:35:51 AM | INIT_CHANNELS=36
+08/05 10:35:51 AM | LAYERS=20
+08/05 10:35:51 AM | LR=0.025
+08/05 10:35:51 AM | MOMENTUM=0.9
+08/05 10:35:51 AM | NAME=cifar100-ignoring-sigmoid
+08/05 10:35:51 AM | PATH=augments/cifar100-ignoring-sigmoid
+08/05 10:35:51 AM | PRINT_FREQ=200
+08/05 10:35:51 AM | SEED=2
+08/05 10:35:51 AM | WEIGHT_DECAY=0.0003
+08/05 10:35:51 AM | WORKERS=4
+08/05 10:35:51 AM | 
+08/05 10:35:51 AM | Logger is set - training start
+08/05 10:35:56 AM | Model size = 2.014 MB
+08/05 10:35:56 AM | Epoch 0 LR 0.024999828653092835
+08/05 10:35:58 AM | Train: [  1/600] Step 000/520 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
+08/05 10:37:00 AM | Train: [  1/600] Step 200/520 Loss 6.207 Prec@(1,5) (5.0%, 19.5%)
+08/05 10:38:01 AM | Train: [  1/600] Step 400/520 Loss 5.783 Prec@(1,5) (7.6%, 26.0%)
+08/05 10:38:38 AM | Train: [  1/600] Step 520/520 Loss 5.633 Prec@(1,5) (8.7%, 28.5%)
+08/05 10:38:38 AM | Train: [  1/600] Final Prec@1 8.7480%
+08/05 03:07:34 PM | 
+08/05 03:07:34 PM | Parameters:
+08/05 03:07:34 PM | AUX_WEIGHT=0.4
+08/05 03:07:34 PM | BATCH_SIZE=96
+08/05 03:07:34 PM | CUTOUT_LENGTH=16
+08/05 03:07:34 PM | DATA_PATH=./data/
+08/05 03:07:34 PM | DATASET=cifar100
+08/05 03:07:34 PM | DROP_PATH_PROB=0.2
+08/05 03:07:34 PM | EPOCHS=600
+08/05 03:07:34 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/05 03:07:34 PM | GPUS=[0]
+08/05 03:07:34 PM | GRAD_CLIP=5.0
+08/05 03:07:34 PM | INIT_CHANNELS=36
+08/05 03:07:34 PM | LAYERS=20
+08/05 03:07:34 PM | LR=0.025
+08/05 03:07:34 PM | MOMENTUM=0.9
+08/05 03:07:34 PM | NAME=cifar100-ignoring-sigmoid
+08/05 03:07:34 PM | PATH=augments/cifar100-ignoring-sigmoid
+08/05 03:07:34 PM | PRINT_FREQ=200
+08/05 03:07:34 PM | SEED=2
+08/05 03:07:34 PM | WEIGHT_DECAY=0.0003
+08/05 03:07:34 PM | WORKERS=4
+08/05 03:07:34 PM | 
+08/05 03:07:34 PM | Logger is set - training start
+08/05 03:07:39 PM | Model size = 2.014 MB
+08/05 03:07:39 PM | Epoch 0 LR 0.024999828653092835
+08/05 03:07:41 PM | Train: [  1/600] Step 000/260 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
+08/05 03:08:13 PM | Train: [  1/600] Step 200/260 Loss 6.171 Prec@(1,5) (5.4%, 20.0%)
+08/05 03:08:23 PM | Train: [  1/600] Step 260/260 Loss 6.015 Prec@(1,5) (6.0%, 22.1%)
+08/05 03:08:23 PM | Train: [  1/600] Final Prec@1 6.0480%
+08/05 03:48:18 PM | 
+08/05 03:48:18 PM | Parameters:
+08/05 03:48:18 PM | AUX_WEIGHT=0.4
+08/05 03:48:18 PM | BATCH_SIZE=96
+08/05 03:48:18 PM | CUTOUT_LENGTH=16
+08/05 03:48:18 PM | DATA_PATH=./data/
+08/05 03:48:18 PM | DATASET=cifar100
+08/05 03:48:18 PM | DROP_PATH_PROB=0.2
+08/05 03:48:18 PM | EPOCHS=600
+08/05 03:48:18 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/05 03:48:18 PM | GPUS=[0]
+08/05 03:48:18 PM | GRAD_CLIP=5.0
+08/05 03:48:18 PM | INIT_CHANNELS=36
+08/05 03:48:18 PM | LAYERS=20
+08/05 03:48:18 PM | LR=0.025
+08/05 03:48:18 PM | MOMENTUM=0.9
+08/05 03:48:18 PM | NAME=cifar100-ignoring-sigmoid
+08/05 03:48:18 PM | PATH=augments/cifar100-ignoring-sigmoid
+08/05 03:48:18 PM | PRINT_FREQ=200
+08/05 03:48:18 PM | SEED=2
+08/05 03:48:18 PM | WEIGHT_DECAY=0.0003
+08/05 03:48:18 PM | WORKERS=4
+08/05 03:48:18 PM | 
+08/05 03:48:18 PM | Logger is set - training start
+08/05 03:48:23 PM | Model size = 2.014 MB
+08/05 03:48:23 PM | Epoch 0 LR 0.024999828653092835
+08/05 03:48:24 PM | Train: [  1/600] Step 000/260 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
+08/05 03:49:04 PM | 
+08/05 03:49:04 PM | Parameters:
+08/05 03:49:04 PM | AUX_WEIGHT=0.4
+08/05 03:49:04 PM | BATCH_SIZE=96
+08/05 03:49:04 PM | CUTOUT_LENGTH=16
+08/05 03:49:04 PM | DATA_PATH=./data/
+08/05 03:49:04 PM | DATASET=cifar100
+08/05 03:49:04 PM | DROP_PATH_PROB=0.2
+08/05 03:49:04 PM | EPOCHS=600
+08/05 03:49:04 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/05 03:49:04 PM | GPUS=[0]
+08/05 03:49:04 PM | GRAD_CLIP=5.0
+08/05 03:49:04 PM | INIT_CHANNELS=36
+08/05 03:49:04 PM | LAYERS=20
+08/05 03:49:04 PM | LR=0.025
+08/05 03:49:04 PM | MOMENTUM=0.9
+08/05 03:49:04 PM | NAME=cifar100-ignoring-sigmoid
+08/05 03:49:04 PM | PATH=augments/cifar100-ignoring-sigmoid
+08/05 03:49:04 PM | PRINT_FREQ=200
+08/05 03:49:04 PM | SEED=2
+08/05 03:49:04 PM | WEIGHT_DECAY=0.0003
+08/05 03:49:04 PM | WORKERS=4
+08/05 03:49:04 PM | 
+08/05 03:49:04 PM | Logger is set - training start
+08/05 03:49:09 PM | Model size = 2.014 MB

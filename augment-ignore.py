@@ -7,6 +7,7 @@ from tensorboardX import SummaryWriter
 from config import AugmentConfig
 import utils
 from models.augment_cnn import AugmentCNN
+import copy
 
 
 config = AugmentConfig()
@@ -142,7 +143,7 @@ def main():
     torch.backends.cudnn.benchmark = True
 
     # get data with meta info
-    input_size, input_channels, n_classes, train_data, valid_data = utils.get_data(
+    input_size, input_channels, n_classes, train_data, test_data = utils.get_data(
         config.dataset, config.data_path, config.cutout_length, validation=True)
 
     criterion = nn.CrossEntropyLoss().to(device)
@@ -164,23 +165,26 @@ def main():
     split = n_train // 2
     indices = list(range(n_train))
     
-    likelihood=torch.nn.Parameter(torch.ones(len(indices[:split])).cuda(),requires_grad=True)
-    Likelihood_optim = torch.optim.SGD({likelihood}, config.alpha_lr)
-    
-    
+    Likelihood = torch.nn.Parameter(torch.ones(len(indices[:split])).cuda(),requires_grad=True)
+    Likelihood_optim = torch.optim.SGD({Likelihood}, config.lr)
+   
+    train_data = torch.utils.data.Subset(train_data, indices[:split])
+    valid_data = torch.utils.data.Subset(train_data, indices[split:])
+
     train_loader = torch.utils.data.DataLoader(train_data,
                                                batch_size=config.batch_size,
                                                shuffle=False,
                                                num_workers=config.workers,
-                                               pin_memory=True)
-    
+                                               pin_memory=False)
     valid_loader = torch.utils.data.DataLoader(valid_data,
                                                batch_size=config.batch_size,
                                                shuffle=False,
                                                num_workers=config.workers,
-                                               pin_memory=True)
+                                               pin_memory=False)
+    
     lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, config.epochs)
-
+    architect = Architect(model, 0.9, 3e-4)
+    
     best_top1 = 0.
     # training loop
     for epoch in range(config.epochs):
@@ -189,11 +193,11 @@ def main():
         model.module.drop_path_prob(drop_prob)
 
         # training
-        train(train_loader, model, optimizer, criterion, epoch, likelihood, Likelihood_optim, config.batch_size)
+        train(train_loader, model, optimizer, criterion, epoch)
 
         # validation
         cur_step = (epoch+1) * len(train_loader)
-        top1 = validate(valid_loader, model, criterion, epoch, cur_step)
+        top1 = validate(valid_loader, model, architect, criterion, epoch, cur_step, Likelihood, Likelihood_optim, config.batch_size)
 
         # save
         if best_top1 < top1:
@@ -255,7 +259,7 @@ def train(train_loader, model, optimizer, criterion, epoch):
     logger.info("Train: [{:3d}/{}] Final Prec@1 {:.4%}".format(epoch+1, config.epochs, top1.avg))
 
 
-def validate(valid_loader, model, criterion, epoch, cur_step, Likelihood, Likelihood_optim, batch_size):
+def validate(valid_loader, model, architect, criterion, epoch, cur_step, Likelihood, Likelihood_optim, batch_size):
     top1 = utils.AverageMeter()
     top5 = utils.AverageMeter()
     losses = utils.AverageMeter()
@@ -265,7 +269,7 @@ def validate(valid_loader, model, criterion, epoch, cur_step, Likelihood, Likeli
     with torch.no_grad():
         for step, (X, y) in enumerate(valid_loader):
             X, y = X.to(device, non_blocking=True), y.to(device, non_blocking=True)
-            N = X.size(0)
+            N = X.size(0) 
 
             logits, _ = model(X)
 #             loss = criterion(logits, y)
