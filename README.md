@@ -56,6 +56,16 @@ python augment.py --name cifar100-ignoring --dataset cifar100 --genotype "Genoty
    [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))"
 ```
 
+```shell
+# genotype from search results
+python augment-ignore.py --name cifar100-ignoring-sigmoid --dataset cifar100 --genotype "Genotype(
+   normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], 
+   [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], 
+   normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], 
+   [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)],
+   [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))"
+```
+
 - with docker
 
 ```shell
