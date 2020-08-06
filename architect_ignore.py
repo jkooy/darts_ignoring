@@ -76,6 +76,7 @@ class Architect():
                 alpha.grad = da - xi*h
         for likelihood, dl in zip(Likelihood, v_grads[(len(v_alphas)+len(v_weights)):]):
             likelihood.grad = dl
+            
 
     def compute_hessian(self, dw, trn_X, trn_y):
         """
