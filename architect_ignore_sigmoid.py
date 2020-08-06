@@ -119,8 +119,6 @@ class Architect():
             for alpha, da, h in zip(self.net.alphas(), dalpha, hessian):
                 alpha.grad = da - xi*h
         Likelihood_optim.zero_grad()
-#         for i,likelihood in enumerate(Likelihood):
-#             likelihood.grad = dlikelihood[i]
         likelihood.grad = dlikelihood
         print('likelihood gradient is:', likelihood.grad.sum())
         Likelihood_optim.step()

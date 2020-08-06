@@ -99,3 +99,6 @@ class AugmentCNN(nn.Module):
         for module in self.modules():
             if isinstance(module, ops.DropPath_):
                 module.p = p
+
+    def weights(self):
+        return self.parameters()

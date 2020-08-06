@@ -1,426 +1,186 @@
-08/04 11:33:51 PM | 
-08/04 11:33:51 PM | Parameters:
-08/04 11:33:51 PM | AUX_WEIGHT=0.4
-08/04 11:33:51 PM | BATCH_SIZE=96
-08/04 11:33:51 PM | CUTOUT_LENGTH=16
-08/04 11:33:51 PM | DATA_PATH=./data/
-08/04 11:33:51 PM | DATASET=cifar100
-08/04 11:33:51 PM | DROP_PATH_PROB=0.2
-08/04 11:33:51 PM | EPOCHS=600
-08/04 11:33:51 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/04 11:33:51 PM | GPUS=[0]
-08/04 11:33:51 PM | GRAD_CLIP=5.0
-08/04 11:33:51 PM | INIT_CHANNELS=36
-08/04 11:33:51 PM | LAYERS=20
-08/04 11:33:51 PM | LR=0.025
-08/04 11:33:51 PM | MOMENTUM=0.9
-08/04 11:33:51 PM | NAME=cifar100-ignoring-sigmoid
-08/04 11:33:51 PM | PATH=augments/cifar100-ignoring-sigmoid
-08/04 11:33:51 PM | PRINT_FREQ=200
-08/04 11:33:51 PM | SEED=2
-08/04 11:33:51 PM | WEIGHT_DECAY=0.0003
-08/04 11:33:51 PM | WORKERS=4
-08/04 11:33:51 PM | 
-08/04 11:33:51 PM | Logger is set - training start
-08/04 11:33:56 PM | Model size = 2.014 MB
-08/04 11:33:56 PM | Epoch 0 LR 0.024999828653092835
-08/04 11:33:59 PM | Train: [  1/600] Step 000/520 Loss 7.300 Prec@(1,5) (0.0%, 4.2%)
-08/04 11:35:01 PM | Train: [  1/600] Step 200/520 Loss 6.233 Prec@(1,5) (5.4%, 19.4%)
-08/04 11:35:12 PM | 
-08/04 11:35:12 PM | Parameters:
-08/04 11:35:12 PM | AUX_WEIGHT=0.4
-08/04 11:35:12 PM | BATCH_SIZE=96
-08/04 11:35:12 PM | CUTOUT_LENGTH=16
-08/04 11:35:12 PM | DATA_PATH=./data/
-08/04 11:35:12 PM | DATASET=cifar100
-08/04 11:35:12 PM | DROP_PATH_PROB=0.2
-08/04 11:35:12 PM | EPOCHS=600
-08/04 11:35:12 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/04 11:35:12 PM | GPUS=[0]
-08/04 11:35:12 PM | GRAD_CLIP=5.0
-08/04 11:35:12 PM | INIT_CHANNELS=36
-08/04 11:35:12 PM | LAYERS=20
-08/04 11:35:12 PM | LR=0.025
-08/04 11:35:12 PM | MOMENTUM=0.9
-08/04 11:35:12 PM | NAME=cifar100-ignoring-sigmoid
-08/04 11:35:12 PM | PATH=augments/cifar100-ignoring-sigmoid
-08/04 11:35:12 PM | PRINT_FREQ=200
-08/04 11:35:12 PM | SEED=2
-08/04 11:35:12 PM | WEIGHT_DECAY=0.0003
-08/04 11:35:12 PM | WORKERS=4
-08/04 11:35:12 PM | 
-08/04 11:35:12 PM | Logger is set - training start
-08/04 11:35:17 PM | Model size = 2.014 MB
-08/04 11:35:17 PM | Epoch 0 LR 0.024999828653092835
-08/04 11:35:19 PM | Train: [  1/600] Step 000/520 Loss 7.300 Prec@(1,5) (0.0%, 4.2%)
-08/04 11:36:22 PM | Train: [  1/600] Step 200/520 Loss 6.178 Prec@(1,5) (5.4%, 19.7%)
-08/04 11:37:26 PM | Train: [  1/600] Step 400/520 Loss 5.744 Prec@(1,5) (8.0%, 26.3%)
-08/04 11:38:02 PM | Train: [  1/600] Step 520/520 Loss 5.590 Prec@(1,5) (9.3%, 29.1%)
-08/04 11:38:02 PM | Train: [  1/600] Final Prec@1 9.2660%
-08/04 11:38:03 PM | Valid: [  1/600] Step 000/104 Loss 3.721 Prec@(1,5) (14.6%, 36.5%)
-08/04 11:38:28 PM | Valid: [  1/600] Step 104/104 Loss 3.610 Prec@(1,5) (14.0%, 39.3%)
-08/04 11:38:28 PM | Valid: [  1/600] Final Prec@1 13.9600%
-08/04 11:38:28 PM | Epoch 1 LR 0.024999314617068905
-08/04 11:38:31 PM | Train: [  2/600] Step 000/520 Loss 5.133 Prec@(1,5) (16.7%, 37.5%)
-08/04 11:40:13 PM | 
-08/04 11:40:13 PM | Parameters:
-08/04 11:40:13 PM | AUX_WEIGHT=0.4
-08/04 11:40:13 PM | BATCH_SIZE=96
-08/04 11:40:13 PM | CUTOUT_LENGTH=16
-08/04 11:40:13 PM | DATA_PATH=./data/
-08/04 11:40:13 PM | DATASET=cifar100
-08/04 11:40:13 PM | DROP_PATH_PROB=0.2
-08/04 11:40:13 PM | EPOCHS=600
-08/04 11:40:13 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/04 11:40:13 PM | GPUS=[0]
-08/04 11:40:13 PM | GRAD_CLIP=5.0
-08/04 11:40:13 PM | INIT_CHANNELS=36
-08/04 11:40:13 PM | LAYERS=20
-08/04 11:40:13 PM | LR=0.025
-08/04 11:40:13 PM | MOMENTUM=0.9
-08/04 11:40:13 PM | NAME=cifar100-ignoring-sigmoid
-08/04 11:40:13 PM | PATH=augments/cifar100-ignoring-sigmoid
-08/04 11:40:13 PM | PRINT_FREQ=200
-08/04 11:40:13 PM | SEED=2
-08/04 11:40:13 PM | WEIGHT_DECAY=0.0003
-08/04 11:40:13 PM | WORKERS=4
-08/04 11:40:13 PM | 
-08/04 11:40:13 PM | Logger is set - training start
-08/04 11:40:18 PM | Model size = 2.014 MB
-08/04 11:40:58 PM | 
-08/04 11:40:58 PM | Parameters:
-08/04 11:40:58 PM | AUX_WEIGHT=0.4
-08/04 11:40:58 PM | BATCH_SIZE=96
-08/04 11:40:58 PM | CUTOUT_LENGTH=16
-08/04 11:40:58 PM | DATA_PATH=./data/
-08/04 11:40:58 PM | DATASET=cifar100
-08/04 11:40:58 PM | DROP_PATH_PROB=0.2
-08/04 11:40:58 PM | EPOCHS=600
-08/04 11:40:58 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/04 11:40:58 PM | GPUS=[0]
-08/04 11:40:58 PM | GRAD_CLIP=5.0
-08/04 11:40:58 PM | INIT_CHANNELS=36
-08/04 11:40:58 PM | LAYERS=20
-08/04 11:40:58 PM | LR=0.025
-08/04 11:40:58 PM | MOMENTUM=0.9
-08/04 11:40:58 PM | NAME=cifar100-ignoring-sigmoid
-08/04 11:40:58 PM | PATH=augments/cifar100-ignoring-sigmoid
-08/04 11:40:58 PM | PRINT_FREQ=200
-08/04 11:40:58 PM | SEED=2
-08/04 11:40:58 PM | WEIGHT_DECAY=0.0003
-08/04 11:40:58 PM | WORKERS=4
-08/04 11:40:58 PM | 
-08/04 11:40:58 PM | Logger is set - training start
-08/04 11:41:02 PM | Model size = 2.014 MB
-08/04 11:42:49 PM | 
-08/04 11:42:49 PM | Parameters:
-08/04 11:42:49 PM | AUX_WEIGHT=0.4
-08/04 11:42:49 PM | BATCH_SIZE=96
-08/04 11:42:49 PM | CUTOUT_LENGTH=16
-08/04 11:42:49 PM | DATA_PATH=./data/
-08/04 11:42:49 PM | DATASET=cifar100
-08/04 11:42:49 PM | DROP_PATH_PROB=0.2
-08/04 11:42:49 PM | EPOCHS=600
-08/04 11:42:49 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/04 11:42:49 PM | GPUS=[0]
-08/04 11:42:49 PM | GRAD_CLIP=5.0
-08/04 11:42:49 PM | INIT_CHANNELS=36
-08/04 11:42:49 PM | LAYERS=20
-08/04 11:42:49 PM | LR=0.025
-08/04 11:42:49 PM | MOMENTUM=0.9
-08/04 11:42:49 PM | NAME=cifar100-ignoring-sigmoid
-08/04 11:42:49 PM | PATH=augments/cifar100-ignoring-sigmoid
-08/04 11:42:49 PM | PRINT_FREQ=200
-08/04 11:42:49 PM | SEED=2
-08/04 11:42:49 PM | WEIGHT_DECAY=0.0003
-08/04 11:42:49 PM | WORKERS=4
-08/04 11:42:49 PM | 
-08/04 11:42:49 PM | Logger is set - training start
-08/04 11:42:53 PM | Model size = 2.014 MB
-08/04 11:43:16 PM | 
-08/04 11:43:16 PM | Parameters:
-08/04 11:43:16 PM | AUX_WEIGHT=0.4
-08/04 11:43:16 PM | BATCH_SIZE=96
-08/04 11:43:16 PM | CUTOUT_LENGTH=16
-08/04 11:43:16 PM | DATA_PATH=./data/
-08/04 11:43:16 PM | DATASET=cifar100
-08/04 11:43:16 PM | DROP_PATH_PROB=0.2
-08/04 11:43:16 PM | EPOCHS=600
-08/04 11:43:16 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/04 11:43:16 PM | GPUS=[0]
-08/04 11:43:16 PM | GRAD_CLIP=5.0
-08/04 11:43:16 PM | INIT_CHANNELS=36
-08/04 11:43:16 PM | LAYERS=20
-08/04 11:43:16 PM | LR=0.025
-08/04 11:43:16 PM | MOMENTUM=0.9
-08/04 11:43:16 PM | NAME=cifar100-ignoring-sigmoid
-08/04 11:43:16 PM | PATH=augments/cifar100-ignoring-sigmoid
-08/04 11:43:16 PM | PRINT_FREQ=200
-08/04 11:43:16 PM | SEED=2
-08/04 11:43:16 PM | WEIGHT_DECAY=0.0003
-08/04 11:43:16 PM | WORKERS=4
-08/04 11:43:16 PM | 
-08/04 11:43:16 PM | Logger is set - training start
-08/04 11:43:21 PM | Model size = 2.014 MB
-08/04 11:45:55 PM | 
-08/04 11:45:55 PM | Parameters:
-08/04 11:45:55 PM | AUX_WEIGHT=0.4
-08/04 11:45:55 PM | BATCH_SIZE=96
-08/04 11:45:55 PM | CUTOUT_LENGTH=16
-08/04 11:45:55 PM | DATA_PATH=./data/
-08/04 11:45:55 PM | DATASET=cifar100
-08/04 11:45:55 PM | DROP_PATH_PROB=0.2
-08/04 11:45:55 PM | EPOCHS=600
-08/04 11:45:55 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/04 11:45:55 PM | GPUS=[0]
-08/04 11:45:55 PM | GRAD_CLIP=5.0
-08/04 11:45:55 PM | INIT_CHANNELS=36
-08/04 11:45:55 PM | LAYERS=20
-08/04 11:45:55 PM | LR=0.025
-08/04 11:45:55 PM | MOMENTUM=0.9
-08/04 11:45:55 PM | NAME=cifar100-ignoring-sigmoid
-08/04 11:45:55 PM | PATH=augments/cifar100-ignoring-sigmoid
-08/04 11:45:55 PM | PRINT_FREQ=200
-08/04 11:45:55 PM | SEED=2
-08/04 11:45:55 PM | WEIGHT_DECAY=0.0003
-08/04 11:45:55 PM | WORKERS=4
-08/04 11:45:55 PM | 
-08/04 11:45:55 PM | Logger is set - training start
-08/04 11:46:00 PM | Model size = 2.014 MB
-08/04 11:46:00 PM | Epoch 0 LR 0.024999828653092835
-08/04 11:46:03 PM | Train: [  1/600] Step 000/520 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
-08/04 11:47:06 PM | Train: [  1/600] Step 200/520 Loss 6.512 Prec@(1,5) (4.2%, 17.0%)
-08/04 11:48:07 PM | Train: [  1/600] Step 400/520 Loss 5.985 Prec@(1,5) (6.6%, 23.7%)
-08/04 11:48:44 PM | Train: [  1/600] Step 520/520 Loss 5.808 Prec@(1,5) (7.8%, 26.4%)
-08/04 11:48:44 PM | Train: [  1/600] Final Prec@1 7.7940%
-08/05 12:01:06 AM | 
-08/05 12:01:06 AM | Parameters:
-08/05 12:01:06 AM | AUX_WEIGHT=0.4
-08/05 12:01:06 AM | BATCH_SIZE=96
-08/05 12:01:06 AM | CUTOUT_LENGTH=16
-08/05 12:01:06 AM | DATA_PATH=./data/
-08/05 12:01:06 AM | DATASET=cifar100
-08/05 12:01:06 AM | DROP_PATH_PROB=0.2
-08/05 12:01:06 AM | EPOCHS=600
-08/05 12:01:06 AM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/05 12:01:06 AM | GPUS=[0]
-08/05 12:01:06 AM | GRAD_CLIP=5.0
-08/05 12:01:06 AM | INIT_CHANNELS=36
-08/05 12:01:06 AM | LAYERS=20
-08/05 12:01:06 AM | LR=0.025
-08/05 12:01:06 AM | MOMENTUM=0.9
-08/05 12:01:06 AM | NAME=cifar100-ignoring-sigmoid
-08/05 12:01:06 AM | PATH=augments/cifar100-ignoring-sigmoid
-08/05 12:01:06 AM | PRINT_FREQ=200
-08/05 12:01:06 AM | SEED=2
-08/05 12:01:06 AM | WEIGHT_DECAY=0.0003
-08/05 12:01:06 AM | WORKERS=4
-08/05 12:01:06 AM | 
-08/05 12:01:06 AM | Logger is set - training start
-08/05 12:01:10 AM | Model size = 2.014 MB
-08/05 12:01:11 AM | Epoch 0 LR 0.024999828653092835
-08/05 12:01:13 AM | Train: [  1/600] Step 000/520 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
-08/05 12:02:15 AM | Train: [  1/600] Step 200/520 Loss 6.165 Prec@(1,5) (5.4%, 20.4%)
-08/05 12:03:17 AM | Train: [  1/600] Step 400/520 Loss 5.741 Prec@(1,5) (8.1%, 26.9%)
-08/05 12:03:54 AM | Train: [  1/600] Step 520/520 Loss 5.592 Prec@(1,5) (9.2%, 29.5%)
-08/05 12:03:54 AM | Train: [  1/600] Final Prec@1 9.1580%
-08/05 12:04:52 AM | 
-08/05 12:04:52 AM | Parameters:
-08/05 12:04:52 AM | AUX_WEIGHT=0.4
-08/05 12:04:52 AM | BATCH_SIZE=96
-08/05 12:04:52 AM | CUTOUT_LENGTH=16
-08/05 12:04:52 AM | DATA_PATH=./data/
-08/05 12:04:52 AM | DATASET=cifar100
-08/05 12:04:52 AM | DROP_PATH_PROB=0.2
-08/05 12:04:52 AM | EPOCHS=600
-08/05 12:04:52 AM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/05 12:04:52 AM | GPUS=[0]
-08/05 12:04:52 AM | GRAD_CLIP=5.0
-08/05 12:04:52 AM | INIT_CHANNELS=36
-08/05 12:04:52 AM | LAYERS=20
-08/05 12:04:52 AM | LR=0.025
-08/05 12:04:52 AM | MOMENTUM=0.9
-08/05 12:04:52 AM | NAME=cifar100-ignoring-sigmoid
-08/05 12:04:52 AM | PATH=augments/cifar100-ignoring-sigmoid
-08/05 12:04:52 AM | PRINT_FREQ=200
-08/05 12:04:52 AM | SEED=2
-08/05 12:04:52 AM | WEIGHT_DECAY=0.0003
-08/05 12:04:52 AM | WORKERS=4
-08/05 12:04:52 AM | 
-08/05 12:04:52 AM | Logger is set - training start
-08/05 12:04:57 AM | Model size = 2.014 MB
-08/05 12:05:39 AM | 
-08/05 12:05:39 AM | Parameters:
-08/05 12:05:39 AM | AUX_WEIGHT=0.4
-08/05 12:05:39 AM | BATCH_SIZE=96
-08/05 12:05:39 AM | CUTOUT_LENGTH=16
-08/05 12:05:39 AM | DATA_PATH=./data/
-08/05 12:05:39 AM | DATASET=cifar100
-08/05 12:05:39 AM | DROP_PATH_PROB=0.2
-08/05 12:05:39 AM | EPOCHS=600
-08/05 12:05:39 AM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/05 12:05:39 AM | GPUS=[0]
-08/05 12:05:39 AM | GRAD_CLIP=5.0
-08/05 12:05:39 AM | INIT_CHANNELS=36
-08/05 12:05:39 AM | LAYERS=20
-08/05 12:05:39 AM | LR=0.025
-08/05 12:05:39 AM | MOMENTUM=0.9
-08/05 12:05:39 AM | NAME=cifar100-ignoring-sigmoid
-08/05 12:05:39 AM | PATH=augments/cifar100-ignoring-sigmoid
-08/05 12:05:39 AM | PRINT_FREQ=200
-08/05 12:05:39 AM | SEED=2
-08/05 12:05:39 AM | WEIGHT_DECAY=0.0003
-08/05 12:05:39 AM | WORKERS=4
-08/05 12:05:39 AM | 
-08/05 12:05:39 AM | Logger is set - training start
-08/05 12:05:44 AM | Model size = 2.014 MB
-08/05 12:05:44 AM | Epoch 0 LR 0.024999828653092835
-08/05 12:05:46 AM | Train: [  1/600] Step 000/520 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
-08/05 12:06:50 AM | Train: [  1/600] Step 200/520 Loss 6.122 Prec@(1,5) (5.5%, 20.6%)
-08/05 12:07:53 AM | Train: [  1/600] Step 400/520 Loss 5.707 Prec@(1,5) (8.0%, 27.0%)
-08/05 12:08:30 AM | Train: [  1/600] Step 520/520 Loss 5.557 Prec@(1,5) (9.1%, 29.6%)
-08/05 12:08:30 AM | Train: [  1/600] Final Prec@1 9.1260%
-08/05 12:09:52 AM | 
-08/05 12:09:52 AM | Parameters:
-08/05 12:09:52 AM | AUX_WEIGHT=0.4
-08/05 12:09:52 AM | BATCH_SIZE=96
-08/05 12:09:52 AM | CUTOUT_LENGTH=16
-08/05 12:09:52 AM | DATA_PATH=./data/
-08/05 12:09:52 AM | DATASET=cifar100
-08/05 12:09:52 AM | DROP_PATH_PROB=0.2
-08/05 12:09:52 AM | EPOCHS=600
-08/05 12:09:52 AM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/05 12:09:52 AM | GPUS=[0]
-08/05 12:09:52 AM | GRAD_CLIP=5.0
-08/05 12:09:52 AM | INIT_CHANNELS=36
-08/05 12:09:52 AM | LAYERS=20
-08/05 12:09:52 AM | LR=0.025
-08/05 12:09:52 AM | MOMENTUM=0.9
-08/05 12:09:52 AM | NAME=cifar100-ignoring-sigmoid
-08/05 12:09:52 AM | PATH=augments/cifar100-ignoring-sigmoid
-08/05 12:09:52 AM | PRINT_FREQ=200
-08/05 12:09:52 AM | SEED=2
-08/05 12:09:52 AM | WEIGHT_DECAY=0.0003
-08/05 12:09:52 AM | WORKERS=4
-08/05 12:09:52 AM | 
-08/05 12:09:52 AM | Logger is set - training start
-08/05 12:09:56 AM | Model size = 2.014 MB
-08/05 12:09:56 AM | Epoch 0 LR 0.024999828653092835
-08/05 12:09:59 AM | Train: [  1/600] Step 000/520 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
-08/05 12:11:03 AM | Train: [  1/600] Step 200/520 Loss 6.208 Prec@(1,5) (5.4%, 20.1%)
-08/05 12:12:05 AM | Train: [  1/600] Step 400/520 Loss 5.762 Prec@(1,5) (7.9%, 26.4%)
-08/05 12:12:41 AM | Train: [  1/600] Step 520/520 Loss 5.609 Prec@(1,5) (9.0%, 28.9%)
-08/05 12:12:41 AM | Train: [  1/600] Final Prec@1 8.9600%
-08/05 10:35:51 AM | 
-08/05 10:35:51 AM | Parameters:
-08/05 10:35:51 AM | AUX_WEIGHT=0.4
-08/05 10:35:51 AM | BATCH_SIZE=96
-08/05 10:35:51 AM | CUTOUT_LENGTH=16
-08/05 10:35:51 AM | DATA_PATH=./data/
-08/05 10:35:51 AM | DATASET=cifar100
-08/05 10:35:51 AM | DROP_PATH_PROB=0.2
-08/05 10:35:51 AM | EPOCHS=600
-08/05 10:35:51 AM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/05 10:35:51 AM | GPUS=[0]
-08/05 10:35:51 AM | GRAD_CLIP=5.0
-08/05 10:35:51 AM | INIT_CHANNELS=36
-08/05 10:35:51 AM | LAYERS=20
-08/05 10:35:51 AM | LR=0.025
-08/05 10:35:51 AM | MOMENTUM=0.9
-08/05 10:35:51 AM | NAME=cifar100-ignoring-sigmoid
-08/05 10:35:51 AM | PATH=augments/cifar100-ignoring-sigmoid
-08/05 10:35:51 AM | PRINT_FREQ=200
-08/05 10:35:51 AM | SEED=2
-08/05 10:35:51 AM | WEIGHT_DECAY=0.0003
-08/05 10:35:51 AM | WORKERS=4
-08/05 10:35:51 AM | 
-08/05 10:35:51 AM | Logger is set - training start
-08/05 10:35:56 AM | Model size = 2.014 MB
-08/05 10:35:56 AM | Epoch 0 LR 0.024999828653092835
-08/05 10:35:58 AM | Train: [  1/600] Step 000/520 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
-08/05 10:37:00 AM | Train: [  1/600] Step 200/520 Loss 6.207 Prec@(1,5) (5.0%, 19.5%)
-08/05 10:38:01 AM | Train: [  1/600] Step 400/520 Loss 5.783 Prec@(1,5) (7.6%, 26.0%)
-08/05 10:38:38 AM | Train: [  1/600] Step 520/520 Loss 5.633 Prec@(1,5) (8.7%, 28.5%)
-08/05 10:38:38 AM | Train: [  1/600] Final Prec@1 8.7480%
-08/05 03:07:34 PM | 
-08/05 03:07:34 PM | Parameters:
-08/05 03:07:34 PM | AUX_WEIGHT=0.4
-08/05 03:07:34 PM | BATCH_SIZE=96
-08/05 03:07:34 PM | CUTOUT_LENGTH=16
-08/05 03:07:34 PM | DATA_PATH=./data/
-08/05 03:07:34 PM | DATASET=cifar100
-08/05 03:07:34 PM | DROP_PATH_PROB=0.2
-08/05 03:07:34 PM | EPOCHS=600
-08/05 03:07:34 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/05 03:07:34 PM | GPUS=[0]
-08/05 03:07:34 PM | GRAD_CLIP=5.0
-08/05 03:07:34 PM | INIT_CHANNELS=36
-08/05 03:07:34 PM | LAYERS=20
-08/05 03:07:34 PM | LR=0.025
-08/05 03:07:34 PM | MOMENTUM=0.9
-08/05 03:07:34 PM | NAME=cifar100-ignoring-sigmoid
-08/05 03:07:34 PM | PATH=augments/cifar100-ignoring-sigmoid
-08/05 03:07:34 PM | PRINT_FREQ=200
-08/05 03:07:34 PM | SEED=2
-08/05 03:07:34 PM | WEIGHT_DECAY=0.0003
-08/05 03:07:34 PM | WORKERS=4
-08/05 03:07:34 PM | 
-08/05 03:07:34 PM | Logger is set - training start
-08/05 03:07:39 PM | Model size = 2.014 MB
-08/05 03:07:39 PM | Epoch 0 LR 0.024999828653092835
-08/05 03:07:41 PM | Train: [  1/600] Step 000/260 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
-08/05 03:08:13 PM | Train: [  1/600] Step 200/260 Loss 6.171 Prec@(1,5) (5.4%, 20.0%)
-08/05 03:08:23 PM | Train: [  1/600] Step 260/260 Loss 6.015 Prec@(1,5) (6.0%, 22.1%)
-08/05 03:08:23 PM | Train: [  1/600] Final Prec@1 6.0480%
-08/05 03:48:18 PM | 
-08/05 03:48:18 PM | Parameters:
-08/05 03:48:18 PM | AUX_WEIGHT=0.4
-08/05 03:48:18 PM | BATCH_SIZE=96
-08/05 03:48:18 PM | CUTOUT_LENGTH=16
-08/05 03:48:18 PM | DATA_PATH=./data/
-08/05 03:48:18 PM | DATASET=cifar100
-08/05 03:48:18 PM | DROP_PATH_PROB=0.2
-08/05 03:48:18 PM | EPOCHS=600
-08/05 03:48:18 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/05 03:48:18 PM | GPUS=[0]
-08/05 03:48:18 PM | GRAD_CLIP=5.0
-08/05 03:48:18 PM | INIT_CHANNELS=36
-08/05 03:48:18 PM | LAYERS=20
-08/05 03:48:18 PM | LR=0.025
-08/05 03:48:18 PM | MOMENTUM=0.9
-08/05 03:48:18 PM | NAME=cifar100-ignoring-sigmoid
-08/05 03:48:18 PM | PATH=augments/cifar100-ignoring-sigmoid
-08/05 03:48:18 PM | PRINT_FREQ=200
-08/05 03:48:18 PM | SEED=2
-08/05 03:48:18 PM | WEIGHT_DECAY=0.0003
-08/05 03:48:18 PM | WORKERS=4
-08/05 03:48:18 PM | 
-08/05 03:48:18 PM | Logger is set - training start
-08/05 03:48:23 PM | Model size = 2.014 MB
-08/05 03:48:23 PM | Epoch 0 LR 0.024999828653092835
-08/05 03:48:24 PM | Train: [  1/600] Step 000/260 Loss 7.183 Prec@(1,5) (0.0%, 5.2%)
-08/05 03:49:04 PM | 
-08/05 03:49:04 PM | Parameters:
-08/05 03:49:04 PM | AUX_WEIGHT=0.4
-08/05 03:49:04 PM | BATCH_SIZE=96
-08/05 03:49:04 PM | CUTOUT_LENGTH=16
-08/05 03:49:04 PM | DATA_PATH=./data/
-08/05 03:49:04 PM | DATASET=cifar100
-08/05 03:49:04 PM | DROP_PATH_PROB=0.2
-08/05 03:49:04 PM | EPOCHS=600
-08/05 03:49:04 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
-08/05 03:49:04 PM | GPUS=[0]
-08/05 03:49:04 PM | GRAD_CLIP=5.0
-08/05 03:49:04 PM | INIT_CHANNELS=36
-08/05 03:49:04 PM | LAYERS=20
-08/05 03:49:04 PM | LR=0.025
-08/05 03:49:04 PM | MOMENTUM=0.9
-08/05 03:49:04 PM | NAME=cifar100-ignoring-sigmoid
-08/05 03:49:04 PM | PATH=augments/cifar100-ignoring-sigmoid
-08/05 03:49:04 PM | PRINT_FREQ=200
-08/05 03:49:04 PM | SEED=2
-08/05 03:49:04 PM | WEIGHT_DECAY=0.0003
-08/05 03:49:04 PM | WORKERS=4
-08/05 03:49:04 PM | 
-08/05 03:49:04 PM | Logger is set - training start
-08/05 03:49:09 PM | Model size = 2.014 MB
+08/06 12:18:09 AM | 
+08/06 12:18:09 AM | Parameters:
+08/06 12:18:09 AM | AUX_WEIGHT=0.4
+08/06 12:18:09 AM | BATCH_SIZE=32
+08/06 12:18:09 AM | CUTOUT_LENGTH=16
+08/06 12:18:09 AM | DATA_PATH=./data/
+08/06 12:18:09 AM | DATASET=cifar100
+08/06 12:18:09 AM | DROP_PATH_PROB=0.2
+08/06 12:18:09 AM | EPOCHS=600
+08/06 12:18:09 AM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/06 12:18:09 AM | GPUS=[0]
+08/06 12:18:09 AM | GRAD_CLIP=5.0
+08/06 12:18:09 AM | INIT_CHANNELS=36
+08/06 12:18:09 AM | LAYERS=20
+08/06 12:18:09 AM | LR=0.025
+08/06 12:18:09 AM | MOMENTUM=0.9
+08/06 12:18:09 AM | NAME=cifar100-ignoring-sigmoid
+08/06 12:18:09 AM | PATH=augments/cifar100-ignoring-sigmoid
+08/06 12:18:09 AM | PRINT_FREQ=200
+08/06 12:18:09 AM | SEED=2
+08/06 12:18:09 AM | WEIGHT_DECAY=0.0003
+08/06 12:18:09 AM | WORKERS=4
+08/06 12:18:09 AM | 
+08/06 12:18:09 AM | Logger is set - training start
+08/06 12:18:14 AM | Model size = 1.493 MB
+08/06 12:18:14 AM | Epoch 0 LR 0.024999828653092835
+08/06 12:19:33 AM | 
+08/06 12:19:33 AM | Parameters:
+08/06 12:19:33 AM | AUX_WEIGHT=0.4
+08/06 12:19:33 AM | BATCH_SIZE=32
+08/06 12:19:33 AM | CUTOUT_LENGTH=16
+08/06 12:19:33 AM | DATA_PATH=./data/
+08/06 12:19:33 AM | DATASET=cifar100
+08/06 12:19:33 AM | DROP_PATH_PROB=0.2
+08/06 12:19:33 AM | EPOCHS=600
+08/06 12:19:33 AM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/06 12:19:33 AM | GPUS=[0]
+08/06 12:19:33 AM | GRAD_CLIP=5.0
+08/06 12:19:33 AM | INIT_CHANNELS=36
+08/06 12:19:33 AM | LAYERS=20
+08/06 12:19:33 AM | LR=0.025
+08/06 12:19:33 AM | MOMENTUM=0.9
+08/06 12:19:33 AM | NAME=cifar100-ignoring-sigmoid
+08/06 12:19:33 AM | PATH=augments/cifar100-ignoring-sigmoid
+08/06 12:19:33 AM | PRINT_FREQ=200
+08/06 12:19:33 AM | SEED=2
+08/06 12:19:33 AM | WEIGHT_DECAY=0.0003
+08/06 12:19:33 AM | WORKERS=4
+08/06 12:19:33 AM | 
+08/06 12:19:33 AM | Logger is set - training start
+08/06 12:19:38 AM | Model size = 1.493 MB
+08/06 12:19:38 AM | Epoch 0 LR 0.024999828653092835
+08/06 12:19:39 AM | Train: [  1/600] Step 000/781 Loss 4.491 standard Loss 5.332Prec@(1,5) (0.0%, 6.2%)
+08/06 12:20:43 AM | Train: [  1/600] Step 200/781 Loss 6.462 standard Loss 5.707Prec@(1,5) (2.2%, 8.7%)
+08/06 12:21:43 AM | Train: [  1/600] Step 400/781 Loss 5.720 standard Loss 5.263Prec@(1,5) (2.3%, 10.3%)
+08/06 12:22:43 AM | Train: [  1/600] Step 600/781 Loss 5.310 standard Loss 5.007Prec@(1,5) (2.5%, 11.6%)
+08/06 12:23:39 AM | Train: [  1/600] Step 781/781 Loss 5.086 standard Loss 4.855Prec@(1,5) (2.9%, 12.8%)
+08/06 12:23:39 AM | Train: [  1/600] Final Prec@1 2.8720%
+08/06 12:23:39 AM | Valid: [  1/600] Step 000/781 Loss 5.102 Prec@(1,5) (3.1%, 12.5%)
+08/06 12:23:42 AM | Valid: [  1/600] Step 200/781 Loss 4.549 Prec@(1,5) (4.4%, 16.8%)
+08/06 12:23:45 AM | Valid: [  1/600] Step 400/781 Loss 4.572 Prec@(1,5) (4.1%, 16.4%)
+08/06 12:23:49 AM | Valid: [  1/600] Step 600/781 Loss 4.577 Prec@(1,5) (4.0%, 16.3%)
+08/06 12:23:51 AM | Valid: [  1/600] Step 781/781 Loss 4.582 Prec@(1,5) (4.0%, 16.0%)
+08/06 12:23:51 AM | Valid: [  1/600] Final Prec@1 4.0280%
+08/06 12:23:52 AM | Epoch 1 LR 0.024999314617068905
+08/06 12:23:52 AM | Train: [  2/600] Step 000/781 Loss 4.782 standard Loss 4.631Prec@(1,5) (3.1%, 6.2%)
+08/06 12:24:58 AM | Train: [  2/600] Step 200/781 Loss 4.336 standard Loss 4.315Prec@(1,5) (4.4%, 17.1%)
+08/06 12:26:04 AM | Train: [  2/600] Step 400/781 Loss 4.285 standard Loss 4.259Prec@(1,5) (4.5%, 18.4%)
+08/06 12:27:04 AM | Train: [  2/600] Step 600/781 Loss 4.226 standard Loss 4.219Prec@(1,5) (4.8%, 19.9%)
+08/06 12:27:59 AM | Train: [  2/600] Step 781/781 Loss 4.190 standard Loss 4.189Prec@(1,5) (5.0%, 20.6%)
+08/06 12:28:00 AM | Train: [  2/600] Final Prec@1 4.9800%
+08/06 12:28:00 AM | Valid: [  2/600] Step 000/781 Loss 3.951 Prec@(1,5) (3.1%, 25.0%)
+08/06 12:28:03 AM | Valid: [  2/600] Step 200/781 Loss 4.014 Prec@(1,5) (7.3%, 26.5%)
+08/06 12:28:06 AM | Valid: [  2/600] Step 400/781 Loss 4.018 Prec@(1,5) (7.3%, 26.4%)
+08/06 12:28:10 AM | Valid: [  2/600] Step 600/781 Loss 4.035 Prec@(1,5) (6.9%, 26.2%)
+08/06 12:28:13 AM | Valid: [  2/600] Step 781/781 Loss 4.040 Prec@(1,5) (6.9%, 26.0%)
+08/06 12:28:13 AM | Valid: [  2/600] Final Prec@1 6.8840%
+08/06 12:28:13 AM | Epoch 2 LR 0.02499845790602076
+08/06 12:28:14 AM | Train: [  3/600] Step 000/781 Loss 4.098 standard Loss 4.040Prec@(1,5) (6.2%, 21.9%)
+08/06 12:29:17 AM | Train: [  3/600] Step 200/781 Loss 4.078 standard Loss 4.083Prec@(1,5) (6.2%, 23.7%)
+08/06 12:30:22 AM | Train: [  3/600] Step 400/781 Loss 4.052 standard Loss 4.047Prec@(1,5) (6.4%, 24.8%)
+08/06 12:31:25 AM | Train: [  3/600] Step 600/781 Loss 4.017 standard Loss 4.031Prec@(1,5) (6.9%, 25.6%)
+08/06 12:32:21 AM | Train: [  3/600] Step 781/781 Loss 3.995 standard Loss 4.012Prec@(1,5) (7.0%, 26.1%)
+08/06 12:32:21 AM | Train: [  3/600] Final Prec@1 7.0360%
+08/06 12:32:22 AM | Valid: [  3/600] Step 000/781 Loss 3.960 Prec@(1,5) (12.5%, 28.1%)
+08/06 12:32:25 AM | Valid: [  3/600] Step 200/781 Loss 3.861 Prec@(1,5) (9.4%, 30.4%)
+08/06 12:32:28 AM | Valid: [  3/600] Step 400/781 Loss 3.880 Prec@(1,5) (9.1%, 30.3%)
+08/06 12:32:31 AM | Valid: [  3/600] Step 600/781 Loss 3.889 Prec@(1,5) (8.9%, 30.3%)
+08/06 12:32:33 AM | Valid: [  3/600] Step 781/781 Loss 3.891 Prec@(1,5) (8.9%, 30.0%)
+08/06 12:32:33 AM | Valid: [  3/600] Final Prec@1 8.8920%
+08/06 12:32:34 AM | Epoch 3 LR 0.02499725854343557
+08/06 12:32:34 AM | Train: [  4/600] Step 000/781 Loss 4.360 standard Loss 4.161Prec@(1,5) (9.4%, 28.1%)
+08/06 12:33:38 AM | Train: [  4/600] Step 200/781 Loss 3.932 standard Loss 3.969Prec@(1,5) (7.5%, 27.1%)
+08/06 12:34:43 AM | Train: [  4/600] Step 400/781 Loss 3.923 standard Loss 3.937Prec@(1,5) (7.9%, 28.0%)
+08/06 12:35:47 AM | Train: [  4/600] Step 600/781 Loss 3.900 standard Loss 3.928Prec@(1,5) (8.1%, 28.7%)
+08/06 12:36:43 AM | Train: [  4/600] Step 781/781 Loss 3.890 standard Loss 3.920Prec@(1,5) (8.3%, 29.0%)
+08/06 12:36:43 AM | Train: [  4/600] Final Prec@1 8.2600%
+08/06 12:36:44 AM | Valid: [  4/600] Step 000/781 Loss 3.880 Prec@(1,5) (12.5%, 28.1%)
+08/06 12:36:47 AM | Valid: [  4/600] Step 200/781 Loss 3.832 Prec@(1,5) (9.7%, 32.2%)
+08/06 12:36:50 AM | Valid: [  4/600] Step 400/781 Loss 3.840 Prec@(1,5) (9.6%, 32.3%)
+08/06 12:36:53 AM | Valid: [  4/600] Step 600/781 Loss 3.853 Prec@(1,5) (9.3%, 32.0%)
+08/06 12:36:55 AM | Valid: [  4/600] Step 781/781 Loss 3.859 Prec@(1,5) (9.1%, 31.6%)
+08/06 12:36:55 AM | Valid: [  4/600] Final Prec@1 9.1120%
+08/06 12:36:56 AM | Epoch 4 LR 0.024995716562194466
+08/06 12:36:56 AM | Train: [  5/600] Step 000/781 Loss 4.246 standard Loss 4.107Prec@(1,5) (12.5%, 28.1%)
+08/06 12:38:02 AM | Train: [  5/600] Step 200/781 Loss 3.859 standard Loss 3.906Prec@(1,5) (8.7%, 29.6%)
+08/06 12:39:09 AM | Train: [  5/600] Step 400/781 Loss 3.850 standard Loss 3.868Prec@(1,5) (9.1%, 30.7%)
+08/06 12:40:15 AM | Train: [  5/600] Step 600/781 Loss 3.821 standard Loss 3.850Prec@(1,5) (9.4%, 31.5%)
+08/06 12:41:14 AM | Train: [  5/600] Step 781/781 Loss 3.814 standard Loss 3.845Prec@(1,5) (9.4%, 31.6%)
+08/06 12:41:14 AM | Train: [  5/600] Final Prec@1 9.3720%
+08/06 12:41:14 AM | Valid: [  5/600] Step 000/781 Loss 3.598 Prec@(1,5) (18.8%, 37.5%)
+08/06 12:41:18 AM | Valid: [  5/600] Step 200/781 Loss 3.715 Prec@(1,5) (11.5%, 34.5%)
+08/06 12:41:21 AM | Valid: [  5/600] Step 400/781 Loss 3.731 Prec@(1,5) (11.3%, 34.7%)
+08/06 12:41:23 AM | Valid: [  5/600] Step 600/781 Loss 3.737 Prec@(1,5) (11.1%, 34.6%)
+08/06 12:41:26 AM | Valid: [  5/600] Step 781/781 Loss 3.740 Prec@(1,5) (11.0%, 34.4%)
+08/06 12:41:26 AM | Valid: [  5/600] Final Prec@1 11.0480%
+08/06 12:41:26 AM | Epoch 5 LR 0.024993832004571646
+08/06 12:41:27 AM | Train: [  6/600] Step 000/781 Loss 4.140 standard Loss 4.019Prec@(1,5) (9.4%, 34.4%)
+08/06 12:42:32 AM | Train: [  6/600] Step 200/781 Loss 3.783 standard Loss 3.833Prec@(1,5) (9.5%, 32.4%)
+08/06 12:43:31 AM | Train: [  6/600] Step 400/781 Loss 3.763 standard Loss 3.796Prec@(1,5) (10.3%, 33.1%)
+08/06 12:44:33 AM | Train: [  6/600] Step 600/781 Loss 3.749 standard Loss 3.788Prec@(1,5) (10.4%, 33.6%)
+08/06 12:45:30 AM | Train: [  6/600] Step 781/781 Loss 3.742 standard Loss 3.779Prec@(1,5) (10.3%, 33.7%)
+08/06 12:45:31 AM | Train: [  6/600] Final Prec@1 10.3120%
+08/06 12:45:31 AM | Valid: [  6/600] Step 000/781 Loss 3.387 Prec@(1,5) (9.4%, 46.9%)
+08/06 12:45:34 AM | Valid: [  6/600] Step 200/781 Loss 3.628 Prec@(1,5) (12.0%, 37.0%)
+08/06 12:45:37 AM | Valid: [  6/600] Step 400/781 Loss 3.645 Prec@(1,5) (12.0%, 36.8%)
+08/06 12:45:40 AM | Valid: [  6/600] Step 600/781 Loss 3.659 Prec@(1,5) (11.7%, 36.6%)
+08/06 12:45:43 AM | Valid: [  6/600] Step 781/781 Loss 3.661 Prec@(1,5) (11.7%, 36.7%)
+08/06 12:45:43 AM | Valid: [  6/600] Final Prec@1 11.7160%
+08/06 12:45:43 AM | Epoch 6 LR 0.024991604922233204
+08/06 12:45:44 AM | Train: [  7/600] Step 000/781 Loss 4.141 standard Loss 3.932Prec@(1,5) (12.5%, 31.2%)
+08/06 12:46:48 AM | Train: [  7/600] Step 200/781 Loss 3.747 standard Loss 3.801Prec@(1,5) (10.2%, 32.9%)
+08/06 12:47:51 AM | Train: [  7/600] Step 400/781 Loss 3.717 standard Loss 3.747Prec@(1,5) (10.9%, 34.1%)
+08/06 12:48:52 AM | Train: [  7/600] Step 600/781 Loss 3.685 standard Loss 3.730Prec@(1,5) (11.3%, 35.0%)
+08/06 12:49:48 AM | Train: [  7/600] Step 781/781 Loss 3.678 standard Loss 3.722Prec@(1,5) (11.5%, 35.2%)
+08/06 12:49:48 AM | Train: [  7/600] Final Prec@1 11.4720%
+08/06 12:49:48 AM | Valid: [  7/600] Step 000/781 Loss 3.247 Prec@(1,5) (15.6%, 53.1%)
+08/06 12:49:51 AM | Valid: [  7/600] Step 200/781 Loss 3.552 Prec@(1,5) (13.4%, 39.6%)
+08/06 12:49:54 AM | Valid: [  7/600] Step 400/781 Loss 3.573 Prec@(1,5) (13.3%, 39.4%)
+08/06 12:49:57 AM | Valid: [  7/600] Step 600/781 Loss 3.585 Prec@(1,5) (13.3%, 39.0%)
+08/06 12:50:00 AM | Valid: [  7/600] Step 781/781 Loss 3.592 Prec@(1,5) (13.2%, 38.9%)
+08/06 12:50:00 AM | Valid: [  7/600] Final Prec@1 13.2040%
+08/06 12:50:00 AM | Epoch 7 LR 0.02498903537623573
+08/06 12:50:01 AM | Train: [  8/600] Step 000/781 Loss 3.996 standard Loss 3.919Prec@(1,5) (12.5%, 34.4%)
+08/06 12:51:02 AM | Train: [  8/600] Step 200/781 Loss 3.665 standard Loss 3.734Prec@(1,5) (11.2%, 36.0%)
+08/06 12:52:04 AM | Train: [  8/600] Step 400/781 Loss 3.634 standard Loss 3.680Prec@(1,5) (12.1%, 37.2%)
+08/06 12:53:03 AM | Train: [  8/600] Step 600/781 Loss 3.615 standard Loss 3.670Prec@(1,5) (12.3%, 37.6%)
+08/06 12:54:00 AM | Train: [  8/600] Step 781/781 Loss 3.607 standard Loss 3.663Prec@(1,5) (12.4%, 37.7%)
+08/06 12:54:00 AM | Train: [  8/600] Final Prec@1 12.4120%
+08/06 12:54:01 AM | Valid: [  8/600] Step 000/781 Loss 3.106 Prec@(1,5) (18.8%, 46.9%)
+08/06 12:54:04 AM | Valid: [  8/600] Step 200/781 Loss 3.502 Prec@(1,5) (14.9%, 41.6%)
+08/06 12:54:07 AM | Valid: [  8/600] Step 400/781 Loss 3.519 Prec@(1,5) (14.9%, 41.3%)
+08/06 12:54:10 AM | Valid: [  8/600] Step 600/781 Loss 3.530 Prec@(1,5) (14.6%, 41.2%)
+08/06 12:54:12 AM | Valid: [  8/600] Step 781/781 Loss 3.534 Prec@(1,5) (14.7%, 41.0%)
+08/06 12:54:12 AM | Valid: [  8/600] Final Prec@1 14.6600%
+08/06 12:54:13 AM | Epoch 8 LR 0.024986123437024627
+08/06 12:54:13 AM | Train: [  9/600] Step 000/781 Loss 3.925 standard Loss 3.945Prec@(1,5) (18.8%, 37.5%)
+08/06 12:55:16 AM | Train: [  9/600] Step 200/781 Loss 3.591 standard Loss 3.668Prec@(1,5) (12.2%, 37.0%)
+08/06 12:56:20 AM | Train: [  9/600] Step 400/781 Loss 3.565 standard Loss 3.621Prec@(1,5) (13.1%, 38.7%)
+08/06 12:57:23 AM | Train: [  9/600] Step 600/781 Loss 3.543 standard Loss 3.606Prec@(1,5) (13.4%, 39.5%)
+08/06 12:58:20 AM | Train: [  9/600] Step 781/781 Loss 3.539 standard Loss 3.602Prec@(1,5) (13.5%, 39.6%)
+08/06 12:58:20 AM | Train: [  9/600] Final Prec@1 13.4600%
+08/06 12:58:20 AM | Valid: [  9/600] Step 000/781 Loss 3.483 Prec@(1,5) (18.8%, 50.0%)
+08/06 12:58:23 AM | Valid: [  9/600] Step 200/781 Loss 3.461 Prec@(1,5) (15.2%, 43.3%)
+08/06 12:58:26 AM | Valid: [  9/600] Step 400/781 Loss 3.477 Prec@(1,5) (15.4%, 42.5%)
+08/06 12:58:29 AM | Valid: [  9/600] Step 600/781 Loss 3.490 Prec@(1,5) (15.1%, 42.4%)
+08/06 12:58:32 AM | Valid: [  9/600] Step 781/781 Loss 3.493 Prec@(1,5) (15.2%, 42.3%)
+08/06 12:58:32 AM | Valid: [  9/600] Final Prec@1 15.2320%
+08/06 12:58:32 AM | Epoch 9 LR 0.024982869184432172
+08/06 12:58:33 AM | Train: [ 10/600] Step 000/781 Loss 3.799 standard Loss 3.711Prec@(1,5) (18.8%, 40.6%)
+08/06 12:59:35 AM | Train: [ 10/600] Step 200/781 Loss 3.522 standard Loss 3.634Prec@(1,5) (12.6%, 38.8%)
+08/06 01:00:40 AM | Train: [ 10/600] Step 400/781 Loss 3.501 standard Loss 3.581Prec@(1,5) (13.8%, 40.2%)
+08/06 01:01:41 AM | Train: [ 10/600] Step 600/781 Loss 3.477 standard Loss 3.559Prec@(1,5) (14.3%, 40.9%)
+08/06 01:02:37 AM | Train: [ 10/600] Step 781/781 Loss 3.474 standard Loss 3.555Prec@(1,5) (14.3%, 40.9%)
+08/06 01:02:37 AM | Train: [ 10/600] Final Prec@1 14.2680%
+08/06 01:02:37 AM | Valid: [ 10/600] Step 000/781 Loss 3.360 Prec@(1,5) (15.6%, 43.8%)
+08/06 01:02:40 AM | Valid: [ 10/600] Step 200/781 Loss 3.378 Prec@(1,5) (17.0%, 45.6%)
+08/06 01:02:43 AM | Valid: [ 10/600] Step 400/781 Loss 3.391 Prec@(1,5) (17.2%, 45.4%)
+08/06 01:02:46 AM | Valid: [ 10/600] Step 600/781 Loss 3.408 Prec@(1,5) (17.0%, 45.1%)
+08/06 01:02:49 AM | Valid: [ 10/600] Step 781/781 Loss 3.417 Prec@(1,5) (16.8%, 44.6%)
+08/06 01:02:49 AM | Valid: [ 10/600] Final Prec@1 16.7760%
+08/06 01:02:49 AM | Epoch 10 LR 0.024979272707675356
+08/06 01:02:50 AM | Train: [ 11/600] Step 000/781 Loss 3.673 standard Loss 3.664Prec@(1,5) (21.9%, 46.9%)
+08/06 01:03:51 AM | Train: [ 11/600] Step 200/781 Loss 3.483 standard Loss 3.573Prec@(1,5) (13.9%, 39.9%)
+08/06 01:04:51 AM | Train: [ 11/600] Step 400/781 Loss 3.440 standard Loss 3.514Prec@(1,5) (14.8%, 41.9%)
+08/06 01:05:52 AM | Train: [ 11/600] Step 600/781 Loss 3.423 standard Loss 3.502Prec@(1,5) (15.1%, 42.5%)
