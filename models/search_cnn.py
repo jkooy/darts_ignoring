@@ -18,7 +18,7 @@ def broadcast_list(l, device_ids):
 
 class SearchCNN(nn.Module):
     """ Search CNN model """
-    def __init__(self, C_in, C, n_classes, n_layers, n_nodes=4, stem_multiplier=3):
+    def __init__(self, C_in, C, n_classes, n_layers, indices, split, n_nodes=4, stem_multiplier=3):
         """
         Args:
             C_in: # of input channels
@@ -33,7 +33,8 @@ class SearchCNN(nn.Module):
         self.C = C
         self.n_classes = n_classes
         self.n_layers = n_layers
-
+    
+    
         C_cur = stem_multiplier * C
         self.stem = nn.Sequential(
             nn.Conv2d(C_in, C_cur, 3, 1, 1, bias=False),
@@ -78,7 +79,7 @@ class SearchCNN(nn.Module):
 
 class SearchCNNController(nn.Module):
     """ SearchCNN controller supporting multi-gpu """
-    def __init__(self, C_in, C, n_classes, n_layers, criterion, n_nodes=4, stem_multiplier=3,
+    def __init__(self, C_in, C, n_classes, n_layers, criterion, indices, split, n_nodes=4, stem_multiplier=3,
                  device_ids=None):
         super().__init__()
         self.n_nodes = n_nodes
@@ -103,7 +104,7 @@ class SearchCNNController(nn.Module):
             if 'alpha' in n:
                 self._alphas.append((n, p))
 
-        self.net = SearchCNN(C_in, C, n_classes, n_layers, n_nodes, stem_multiplier)
+        self.net = SearchCNN(C_in, C, n_classes, n_layers, indices, split, n_nodes, stem_multiplier)
 
     def forward(self, x):
         weights_normal = [F.softmax(alpha, dim=-1) for alpha in self.alpha_normal]
@@ -160,7 +161,7 @@ class SearchCNNController(nn.Module):
 
     def weights(self):
         return self.net.parameters()
-
+  
     def named_weights(self):
         return self.net.named_parameters()
 
