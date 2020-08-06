@@ -115,14 +115,16 @@ class Architect():
             
             
         dlikelihood = dvloss_tloss* dtloss_ll
-
+        
+        vprec1, vprec5 = utils.accuracy(logits, val_y, topk=(1, 5))
+        
         Likelihood_optim.zero_grad()
         likelihood.grad = dlikelihood
         print(dvloss_tloss)
         print(dtloss_ll)
         print('likelihood gradient is:', likelihood.grad)
         Likelihood_optim.step()
-        return likelihood, Likelihood_optim
+        return likelihood, Likelihood_optim, loss, vprec1, vprec5
         
     
 def main():
@@ -217,6 +219,7 @@ def train(train_loader, valid_loader, model, architect, optimizer, criterion, lr
     top5 = utils.AverageMeter()
     losses = utils.AverageMeter()
     standard_losses = utils.AverageMeter()
+    valid_losses = utils.AverageMeter()
 
     cur_step = epoch*len(train_loader)
     cur_lr = optimizer.param_groups[0]['lr']
@@ -229,10 +232,11 @@ def train(train_loader, valid_loader, model, architect, optimizer, criterion, lr
         trn_X, trn_y = trn_X.to(device, non_blocking=True), trn_y.to(device, non_blocking=True)
         val_X, val_y = val_X.to(device, non_blocking=True), val_y.to(device, non_blocking=True)
         N = trn_X.size(0)
+        M = val_X.size(0)
 
         # phase 2. Likelihood step (Likelihood)
         Likelihood_optim.zero_grad()
-        Likelihood, Likelihood_optim= architect.unrolled_backward(trn_X, trn_y, val_X, val_y, lr, optimizer, model, Likelihood, Likelihood_optim, batch_size, step)
+        Likelihood, Likelihood_optim, valid_loss, vprec1, vprec5= architect.unrolled_backward(trn_X, trn_y, val_X, val_y, lr, optimizer, model, Likelihood, Likelihood_optim, batch_size, step)
             
             
         # phase 1. network weight step (w)    
@@ -259,19 +263,24 @@ def train(train_loader, valid_loader, model, architect, optimizer, criterion, lr
         prec1, prec5 = utils.accuracy(logits, trn_y, topk=(1, 5))
         losses.update(loss.item(), N)
         standard_losses.update(standard_loss.item(), N)
+        valid_losses.update(valid_loss.item(), M)
         top1.update(prec1.item(), N)
         top5.update(prec5.item(), N)
     
         if step % config.print_freq == 0 or step == len(train_loader)-1:
             logger.info(
-                "Train: [{:3d}/{}] Step {:03d}/{:03d} Loss {losses.avg:.3f} standard Loss {slosses.avg:.3f}"
+                "Train: [{:3d}/{}] Step {:03d}/{:03d} Loss {losses.avg:.3f} standard Loss {slosses.avg:.3f} Valid Loss {vlosses.avg:.3f}"
                 " Prec@(1,5) ({top1.avg:.1%}, {top5.avg:.1%})".format(
-                    epoch+1, config.epochs, step, len(train_loader)-1, losses=losses, slosses=standard_losses,
+                    epoch+1, config.epochs, step, len(train_loader)-1, losses=losses, slosses=standard_losses, vlosses=valid_losses,
                     top1=top1, top5=top5))
+        
 
         writer.add_scalar('train/loss', loss.item(), cur_step)
         writer.add_scalar('train/top1', prec1.item(), cur_step)
         writer.add_scalar('train/top5', prec5.item(), cur_step)
+        writer.add_scalar('val/loss', valid_loss.item(), cur_step)
+        writer.add_scalar('train/top1', vprec1.item(), cur_step)
+        writer.add_scalar('train/top5', vprec5.item(), cur_step)
         cur_step += 1
 
     logger.info("Train: [{:3d}/{}] Final Prec@1 {:.4%}".format(epoch+1, config.epochs, top1.avg))
@@ -299,16 +308,16 @@ def validate(valid_loader, model, criterion, epoch, cur_step):
 
             if step % config.print_freq == 0 or step == len(valid_loader)-1:
                 logger.info(
-                    "Valid: [{:3d}/{}] Step {:03d}/{:03d} Loss {losses.avg:.3f} "
+                    "Test: [{:3d}/{}] Step {:03d}/{:03d} Loss {losses.avg:.3f} "
                     "Prec@(1,5) ({top1.avg:.1%}, {top5.avg:.1%})".format(
                         epoch+1, config.epochs, step, len(valid_loader)-1, losses=losses,
                         top1=top1, top5=top5))
 
-    writer.add_scalar('val/loss', losses.avg, cur_step)
-    writer.add_scalar('val/top1', top1.avg, cur_step)
-    writer.add_scalar('val/top5', top5.avg, cur_step)
+    writer.add_scalar('test/loss', losses.avg, cur_step)
+    writer.add_scalar('test/top1', top1.avg, cur_step)
+    writer.add_scalar('test/top5', top5.avg, cur_step)
 
-    logger.info("Valid: [{:3d}/{}] Final Prec@1 {:.4%}".format(epoch+1, config.epochs, top1.avg))
+    logger.info("Test: [{:3d}/{}] Final Prec@1 {:.4%}".format(epoch+1, config.epochs, top1.avg))
 
     return top1.avg
 
