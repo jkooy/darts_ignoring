@@ -95,10 +95,9 @@ class Architect():
         
         logits, aux_logits = self.v_net(val_X)
         # calc unrolled loss
-        ignore_crit = nn.CrossEntropyLoss(reduction='none').to(device)
+        crit = nn.CrossEntropyLoss().to(device)
         dataIndex = len(trn_y)+step*batch_size
-        loss = torch.dot(torch.sigmoid(likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))
-        loss = loss/(torch.sigmoid(likelihood[step*batch_size:dataIndex]).sum()) # L_val(w`)
+        loss = crit(logits, val_y) # L_val(w`) # L_val(w`)
                
         # compute gradient
         loss.backward()
