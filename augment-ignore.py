@@ -278,8 +278,8 @@ def train(train_loader, valid_loader, model, architect, optimizer, criterion, lr
         writer.add_scalar('train/top1', prec1.item(), cur_step)
         writer.add_scalar('train/top5', prec5.item(), cur_step)
         writer.add_scalar('val/loss', valid_loss.item(), cur_step)
-        writer.add_scalar('train/top1', vprec1.item(), cur_step)
-        writer.add_scalar('train/top5', vprec5.item(), cur_step)
+        writer.add_scalar('val/top1', vprec1.item(), cur_step)
+        writer.add_scalar('val/top5', vprec5.item(), cur_step)
         cur_step += 1
 
     logger.info("Train: [{:3d}/{}] Final Prec@1 {:.4%}".format(epoch+1, config.epochs, top1.avg))
