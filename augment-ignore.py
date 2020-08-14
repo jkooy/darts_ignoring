@@ -60,6 +60,7 @@ class Architect():
         # sigmoid loss
         loss = torch.dot(torch.sigmoid(Likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
         
+        # gradient of train loss towards likelihhod
         loss.backward()
         dtloss_ll = Likelihood.grad
         
@@ -72,8 +73,10 @@ class Architect():
             # be iterated also.
             for w, vw in zip(self.net.weights(), self.v_net.weights()):
                 m = w_optim.state[w].get('momentum_buffer', 0.) * self.w_momentum  
+                # gradient of train loss towards current weights
                 if w.grad is not None:
                     vw.copy_(w - xi * (m + w.grad )) 
+                    # update virtual weight
                     dtloss_w.append(m + w.grad )
                 elif w.grad is None:
                     dtloss_w.append(w.grad )
@@ -119,9 +122,6 @@ class Architect():
         
         Likelihood_optim.zero_grad()
         likelihood.grad = dlikelihood
-        print(dvloss_tloss)
-        print(dtloss_ll)
-        print('likelihood gradient is:', likelihood.grad)
         Likelihood_optim.step()
         return likelihood, Likelihood_optim, loss, vprec1, vprec5
         
