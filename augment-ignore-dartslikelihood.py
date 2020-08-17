@@ -122,7 +122,6 @@ class Architect():
         norm = torch.cat([w.view(-1) for w in dw if w != None]).norm()
         
         eps = 0.01 / norm
-        print('weights norm', norm)
         
         # w+ = w + eps*dw`
         with torch.no_grad():
@@ -274,10 +273,7 @@ def train(train_loader, valid_loader, model, architect, optimizer, criterion, lr
         # phase 2. Likelihood step (Likelihood)
         Likelihood_optim.zero_grad()
         Likelihood, Likelihood_optim, valid_loss, vprec1, vprec5= architect.unrolled_backward(trn_X, trn_y, val_X, val_y, lr, optimizer, Likelihood, Likelihood_optim, batch_size, step)
-            
-        print(Likelihood)
-        print(Likelihood.sum())
-            
+                        
         # phase 1. network weight step (w)    
         optimizer.zero_grad()
         logits, aux_logits = model(trn_X)      

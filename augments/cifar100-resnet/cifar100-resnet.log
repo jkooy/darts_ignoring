@@ -1,0 +1,103 @@
+08/14 03:25:05 PM | 
+08/14 03:25:05 PM | Parameters:
+08/14 03:25:05 PM | AUX_WEIGHT=0.4
+08/14 03:25:05 PM | BATCH_SIZE=96
+08/14 03:25:05 PM | CUTOUT_LENGTH=16
+08/14 03:25:05 PM | DATA_PATH=./data/
+08/14 03:25:05 PM | DATASET=cifar100
+08/14 03:25:05 PM | DROP_PATH_PROB=0.2
+08/14 03:25:05 PM | EPOCHS=600
+08/14 03:25:05 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/14 03:25:05 PM | GPUS=[0]
+08/14 03:25:05 PM | GRAD_CLIP=5.0
+08/14 03:25:05 PM | INIT_CHANNELS=36
+08/14 03:25:05 PM | LAYERS=20
+08/14 03:25:05 PM | LR=0.025
+08/14 03:25:05 PM | MOMENTUM=0.9
+08/14 03:25:05 PM | NAME=cifar100-resnet
+08/14 03:25:05 PM | PATH=augments/cifar100-resnet
+08/14 03:25:05 PM | PRINT_FREQ=200
+08/14 03:25:05 PM | SEED=2
+08/14 03:25:05 PM | WEIGHT_DECAY=0.0003
+08/14 03:25:05 PM | WORKERS=4
+08/14 03:25:05 PM | 
+08/14 03:25:05 PM | Logger is set - training start
+08/14 03:25:13 PM | Model size = 10.656 MB
+08/14 03:25:50 PM | 
+08/14 03:25:50 PM | Parameters:
+08/14 03:25:50 PM | AUX_WEIGHT=0.4
+08/14 03:25:50 PM | BATCH_SIZE=96
+08/14 03:25:50 PM | CUTOUT_LENGTH=16
+08/14 03:25:50 PM | DATA_PATH=./data/
+08/14 03:25:50 PM | DATASET=cifar100
+08/14 03:25:50 PM | DROP_PATH_PROB=0.2
+08/14 03:25:50 PM | EPOCHS=600
+08/14 03:25:50 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/14 03:25:50 PM | GPUS=[0]
+08/14 03:25:50 PM | GRAD_CLIP=5.0
+08/14 03:25:50 PM | INIT_CHANNELS=36
+08/14 03:25:50 PM | LAYERS=20
+08/14 03:25:50 PM | LR=0.025
+08/14 03:25:50 PM | MOMENTUM=0.9
+08/14 03:25:50 PM | NAME=cifar100-resnet
+08/14 03:25:50 PM | PATH=augments/cifar100-resnet
+08/14 03:25:50 PM | PRINT_FREQ=200
+08/14 03:25:50 PM | SEED=2
+08/14 03:25:50 PM | WEIGHT_DECAY=0.0003
+08/14 03:25:50 PM | WORKERS=4
+08/14 03:25:50 PM | 
+08/14 03:25:50 PM | Logger is set - training start
+08/14 03:25:57 PM | Model size = 10.656 MB
+08/14 03:25:57 PM | Epoch 0 LR 0.024999828653092835
+08/14 03:27:05 PM | 
+08/14 03:27:05 PM | Parameters:
+08/14 03:27:05 PM | AUX_WEIGHT=0.4
+08/14 03:27:05 PM | BATCH_SIZE=96
+08/14 03:27:05 PM | CUTOUT_LENGTH=16
+08/14 03:27:05 PM | DATA_PATH=./data/
+08/14 03:27:05 PM | DATASET=cifar100
+08/14 03:27:05 PM | DROP_PATH_PROB=0.2
+08/14 03:27:05 PM | EPOCHS=600
+08/14 03:27:05 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/14 03:27:05 PM | GPUS=[0]
+08/14 03:27:05 PM | GRAD_CLIP=5.0
+08/14 03:27:05 PM | INIT_CHANNELS=36
+08/14 03:27:05 PM | LAYERS=20
+08/14 03:27:05 PM | LR=0.025
+08/14 03:27:05 PM | MOMENTUM=0.9
+08/14 03:27:05 PM | NAME=cifar100-resnet
+08/14 03:27:05 PM | PATH=augments/cifar100-resnet
+08/14 03:27:05 PM | PRINT_FREQ=200
+08/14 03:27:05 PM | SEED=2
+08/14 03:27:05 PM | WEIGHT_DECAY=0.0003
+08/14 03:27:05 PM | WORKERS=4
+08/14 03:27:05 PM | 
+08/14 03:27:05 PM | Logger is set - training start
+08/14 03:27:12 PM | Model size = 10.656 MB
+08/14 03:27:12 PM | Epoch 0 LR 0.024999828653092835
+08/14 03:30:55 PM | 
+08/14 03:30:55 PM | Parameters:
+08/14 03:30:55 PM | AUX_WEIGHT=0.4
+08/14 03:30:55 PM | BATCH_SIZE=96
+08/14 03:30:55 PM | CUTOUT_LENGTH=16
+08/14 03:30:55 PM | DATA_PATH=./data/
+08/14 03:30:55 PM | DATASET=cifar100
+08/14 03:30:55 PM | DROP_PATH_PROB=0.2
+08/14 03:30:55 PM | EPOCHS=600
+08/14 03:30:55 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/14 03:30:55 PM | GPUS=[0]
+08/14 03:30:55 PM | GRAD_CLIP=5.0
+08/14 03:30:55 PM | INIT_CHANNELS=36
+08/14 03:30:55 PM | LAYERS=20
+08/14 03:30:55 PM | LR=0.025
+08/14 03:30:55 PM | MOMENTUM=0.9
+08/14 03:30:55 PM | NAME=cifar100-resnet
+08/14 03:30:55 PM | PATH=augments/cifar100-resnet
+08/14 03:30:55 PM | PRINT_FREQ=200
+08/14 03:30:55 PM | SEED=2
+08/14 03:30:55 PM | WEIGHT_DECAY=0.0003
+08/14 03:30:55 PM | WORKERS=4
+08/14 03:30:55 PM | 
+08/14 03:30:55 PM | Logger is set - training start
+08/14 03:31:02 PM | Model size = 10.656 MB
+08/14 03:31:02 PM | Epoch 0 LR 0.024999828653092835

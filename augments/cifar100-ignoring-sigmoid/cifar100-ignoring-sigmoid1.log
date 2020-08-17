@@ -1,0 +1,449 @@
+08/14 02:22:58 PM | 
+08/14 02:22:58 PM | Parameters:
+08/14 02:22:58 PM | AUX_WEIGHT=0.4
+08/14 02:22:58 PM | BATCH_SIZE=64
+08/14 02:22:58 PM | CUTOUT_LENGTH=16
+08/14 02:22:58 PM | DATA_PATH=./data/
+08/14 02:22:58 PM | DATASET=cifar100
+08/14 02:22:58 PM | DROP_PATH_PROB=0.2
+08/14 02:22:58 PM | EPOCHS=600
+08/14 02:22:58 PM | GENOTYPE=Genotype(normal=[[('max_pool_3x3', 0), ('max_pool_3x3', 1)], [('max_pool_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)], [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))
+08/14 02:22:58 PM | GPUS=[0]
+08/14 02:22:58 PM | GRAD_CLIP=5.0
+08/14 02:22:58 PM | INIT_CHANNELS=36
+08/14 02:22:58 PM | LAYERS=20
+08/14 02:22:58 PM | LR=0.025
+08/14 02:22:58 PM | MOMENTUM=0.9
+08/14 02:22:58 PM | NAME=cifar100-ignoring-sigmoid
+08/14 02:22:58 PM | PATH=augments/cifar100-ignoring-sigmoid
+08/14 02:22:58 PM | PRINT_FREQ=200
+08/14 02:22:58 PM | SEED=2
+08/14 02:22:58 PM | WEIGHT_DECAY=0.0003
+08/14 02:22:58 PM | WORKERS=4
+08/14 02:22:58 PM | 
+08/14 02:22:58 PM | Logger is set - training start
+08/14 02:23:05 PM | Model size = 1.493 MB
+08/14 02:23:05 PM | Epoch 0 LR 0.024999828653092835
+08/14 02:23:06 PM | Train: [  1/600] Step 000/390 Loss 5.382 standard Loss 5.382 Valid Loss 5.215 Prec@(1,5) (0.0%, 6.2%)
+08/14 02:25:10 PM | Train: [  1/600] Step 200/390 Loss 4.621 standard Loss 4.621 Valid Loss 4.687 Prec@(1,5) (4.3%, 17.0%)
+08/14 02:26:59 PM | Train: [  1/600] Step 390/390 Loss 4.314 standard Loss 4.314 Valid Loss 4.339 Prec@(1,5) (6.1%, 22.1%)
+08/14 02:26:59 PM | Train: [  1/600] Final Prec@1 6.1400%
+08/14 02:26:59 PM | Test: [  1/600] Step 000/390 Loss 3.733 Prec@(1,5) (10.9%, 32.8%)
+08/14 02:27:06 PM | Test: [  1/600] Step 200/390 Loss 3.802 Prec@(1,5) (10.2%, 32.5%)
+08/14 02:27:11 PM | Test: [  1/600] Step 390/390 Loss 3.815 Prec@(1,5) (9.9%, 32.4%)
+08/14 02:27:11 PM | Test: [  1/600] Final Prec@1 9.9360%
+08/14 02:27:12 PM | Epoch 1 LR 0.024999314617068905
+08/14 02:27:13 PM | Train: [  2/600] Step 000/390 Loss 3.982 standard Loss 3.982 Valid Loss 3.822 Prec@(1,5) (12.5%, 29.7%)
+08/14 02:29:19 PM | Train: [  2/600] Step 200/390 Loss 3.777 standard Loss 3.777 Valid Loss 3.774 Prec@(1,5) (10.1%, 34.0%)
+08/14 02:31:20 PM | Train: [  2/600] Step 390/390 Loss 3.726 standard Loss 3.726 Valid Loss 3.712 Prec@(1,5) (11.1%, 35.3%)
+08/14 02:31:20 PM | Train: [  2/600] Final Prec@1 11.0560%
+08/14 02:31:20 PM | Test: [  2/600] Step 000/390 Loss 3.741 Prec@(1,5) (12.5%, 37.5%)
+08/14 02:31:26 PM | Test: [  2/600] Step 200/390 Loss 3.553 Prec@(1,5) (14.5%, 39.8%)
+08/14 02:31:32 PM | Test: [  2/600] Step 390/390 Loss 3.575 Prec@(1,5) (13.8%, 39.5%)
+08/14 02:31:32 PM | Test: [  2/600] Final Prec@1 13.8400%
+08/14 02:31:32 PM | Epoch 2 LR 0.02499845790602076
+08/14 02:31:33 PM | Train: [  3/600] Step 000/390 Loss 3.770 standard Loss 3.770 Valid Loss 3.517 Prec@(1,5) (10.9%, 34.4%)
+08/14 02:33:41 PM | Train: [  3/600] Step 200/390 Loss 3.531 standard Loss 3.531 Valid Loss 3.535 Prec@(1,5) (14.2%, 41.4%)
+08/14 02:35:38 PM | Train: [  3/600] Step 390/390 Loss 3.485 standard Loss 3.485 Valid Loss 3.489 Prec@(1,5) (15.2%, 42.7%)
+08/14 02:35:38 PM | Train: [  3/600] Final Prec@1 15.1680%
+08/14 02:35:38 PM | Test: [  3/600] Step 000/390 Loss 3.600 Prec@(1,5) (15.6%, 34.4%)
+08/14 02:35:44 PM | Test: [  3/600] Step 200/390 Loss 3.319 Prec@(1,5) (18.3%, 46.4%)
+08/14 02:35:50 PM | Test: [  3/600] Step 390/390 Loss 3.334 Prec@(1,5) (17.9%, 46.1%)
+08/14 02:35:51 PM | Test: [  3/600] Final Prec@1 17.8520%
+08/14 02:35:51 PM | Epoch 3 LR 0.024997258543435572
+08/14 02:35:52 PM | Train: [  4/600] Step 000/390 Loss 3.540 standard Loss 3.540 Valid Loss 3.560 Prec@(1,5) (14.1%, 42.2%)
+08/14 02:38:03 PM | Train: [  4/600] Step 200/390 Loss 3.316 standard Loss 3.316 Valid Loss 3.335 Prec@(1,5) (17.6%, 47.6%)
+08/14 02:40:11 PM | Train: [  4/600] Step 390/390 Loss 3.278 standard Loss 3.278 Valid Loss 3.303 Prec@(1,5) (18.5%, 48.4%)
+08/14 02:40:11 PM | Train: [  4/600] Final Prec@1 18.5320%
+08/14 02:40:11 PM | Test: [  4/600] Step 000/390 Loss 3.289 Prec@(1,5) (15.6%, 45.3%)
+08/14 02:40:19 PM | Test: [  4/600] Step 200/390 Loss 3.195 Prec@(1,5) (19.9%, 50.5%)
+08/14 02:40:25 PM | Test: [  4/600] Step 390/390 Loss 3.218 Prec@(1,5) (19.6%, 50.0%)
+08/14 02:40:25 PM | Test: [  4/600] Final Prec@1 19.5800%
+08/14 02:40:25 PM | Epoch 4 LR 0.024995716562194466
+08/14 02:40:26 PM | Train: [  5/600] Step 000/390 Loss 3.267 standard Loss 3.267 Valid Loss 3.241 Prec@(1,5) (25.0%, 45.3%)
+08/14 02:42:36 PM | Train: [  5/600] Step 200/390 Loss 3.133 standard Loss 3.133 Valid Loss 3.190 Prec@(1,5) (21.0%, 52.3%)
+08/14 02:44:41 PM | Train: [  5/600] Step 390/390 Loss 3.105 standard Loss 3.105 Valid Loss 3.153 Prec@(1,5) (21.8%, 53.2%)
+08/14 02:44:41 PM | Train: [  5/600] Final Prec@1 21.8120%
+08/14 02:44:42 PM | Test: [  5/600] Step 000/390 Loss 3.130 Prec@(1,5) (18.8%, 53.1%)
+08/14 02:44:47 PM | Test: [  5/600] Step 200/390 Loss 3.006 Prec@(1,5) (23.7%, 55.1%)
+08/14 02:44:52 PM | Test: [  5/600] Step 390/390 Loss 3.032 Prec@(1,5) (23.1%, 54.9%)
+08/14 02:44:52 PM | Test: [  5/600] Final Prec@1 23.0640%
+08/14 02:44:53 PM | Epoch 5 LR 0.024993832004571646
+08/14 02:44:54 PM | Train: [  6/600] Step 000/390 Loss 3.113 standard Loss 3.113 Valid Loss 3.175 Prec@(1,5) (23.4%, 54.7%)
+08/14 02:47:06 PM | Train: [  6/600] Step 200/390 Loss 2.975 standard Loss 2.975 Valid Loss 3.038 Prec@(1,5) (23.8%, 55.7%)
+08/14 02:49:05 PM | Train: [  6/600] Step 390/390 Loss 2.948 standard Loss 2.948 Valid Loss 3.022 Prec@(1,5) (24.6%, 56.6%)
+08/14 02:49:05 PM | Train: [  6/600] Final Prec@1 24.5760%
+08/14 02:49:05 PM | Test: [  6/600] Step 000/390 Loss 3.343 Prec@(1,5) (12.5%, 46.9%)
+08/14 02:49:11 PM | Test: [  6/600] Step 200/390 Loss 2.974 Prec@(1,5) (25.2%, 56.2%)
+08/14 02:49:16 PM | Test: [  6/600] Step 390/390 Loss 3.004 Prec@(1,5) (24.5%, 55.6%)
+08/14 02:49:16 PM | Test: [  6/600] Final Prec@1 24.5280%
+08/14 02:49:16 PM | Epoch 6 LR 0.0249916049222332
+08/14 02:49:17 PM | Train: [  7/600] Step 000/390 Loss 2.958 standard Loss 2.958 Valid Loss 2.958 Prec@(1,5) (26.6%, 53.1%)
+08/14 02:51:26 PM | Train: [  7/600] Step 200/390 Loss 2.850 standard Loss 2.850 Valid Loss 2.927 Prec@(1,5) (27.0%, 59.1%)
+08/14 02:53:26 PM | Train: [  7/600] Step 390/390 Loss 2.819 standard Loss 2.819 Valid Loss 2.907 Prec@(1,5) (27.5%, 60.2%)
+08/14 02:53:26 PM | Train: [  7/600] Final Prec@1 27.5320%
+08/14 02:53:26 PM | Test: [  7/600] Step 000/390 Loss 3.002 Prec@(1,5) (20.3%, 48.4%)
+08/14 02:53:32 PM | Test: [  7/600] Step 200/390 Loss 2.803 Prec@(1,5) (27.7%, 60.4%)
+08/14 02:53:37 PM | Test: [  7/600] Step 390/390 Loss 2.830 Prec@(1,5) (27.3%, 59.9%)
+08/14 02:53:37 PM | Test: [  7/600] Final Prec@1 27.3000%
+08/14 02:53:38 PM | Epoch 7 LR 0.024989035376235726
+08/14 02:53:39 PM | Train: [  8/600] Step 000/390 Loss 2.847 standard Loss 2.847 Valid Loss 2.973 Prec@(1,5) (31.2%, 54.7%)
+08/14 02:55:52 PM | Train: [  8/600] Step 200/390 Loss 2.713 standard Loss 2.713 Valid Loss 2.803 Prec@(1,5) (29.3%, 62.6%)
+08/14 02:57:56 PM | Train: [  8/600] Step 390/390 Loss 2.692 standard Loss 2.692 Valid Loss 2.803 Prec@(1,5) (30.0%, 63.1%)
+08/14 02:57:56 PM | Train: [  8/600] Final Prec@1 29.9600%
+08/14 02:57:56 PM | Test: [  8/600] Step 000/390 Loss 2.816 Prec@(1,5) (21.9%, 62.5%)
+08/14 02:58:03 PM | Test: [  8/600] Step 200/390 Loss 2.724 Prec@(1,5) (30.1%, 62.9%)
+08/14 02:58:09 PM | Test: [  8/600] Step 390/390 Loss 2.752 Prec@(1,5) (29.8%, 62.2%)
+08/14 02:58:09 PM | Test: [  8/600] Final Prec@1 29.7600%
+08/14 02:58:09 PM | Epoch 8 LR 0.02498612343702462
+08/14 02:58:10 PM | Train: [  9/600] Step 000/390 Loss 2.796 standard Loss 2.796 Valid Loss 2.833 Prec@(1,5) (26.6%, 62.5%)
+08/14 03:00:21 PM | Train: [  9/600] Step 200/390 Loss 2.604 standard Loss 2.604 Valid Loss 2.736 Prec@(1,5) (31.9%, 64.8%)
+08/14 03:02:28 PM | Train: [  9/600] Step 390/390 Loss 2.586 standard Loss 2.586 Valid Loss 2.729 Prec@(1,5) (32.4%, 65.3%)
+08/14 03:02:28 PM | Train: [  9/600] Final Prec@1 32.4040%
+08/14 03:02:28 PM | Test: [  9/600] Step 000/390 Loss 2.904 Prec@(1,5) (21.9%, 59.4%)
+08/14 03:02:35 PM | Test: [  9/600] Step 200/390 Loss 2.668 Prec@(1,5) (31.5%, 63.6%)
+08/14 03:02:41 PM | Test: [  9/600] Step 390/390 Loss 2.700 Prec@(1,5) (30.8%, 62.9%)
+08/14 03:02:41 PM | Test: [  9/600] Final Prec@1 30.8360%
+08/14 03:02:41 PM | Epoch 9 LR 0.024982869184432165
+08/14 03:02:42 PM | Train: [ 10/600] Step 000/390 Loss 2.649 standard Loss 2.649 Valid Loss 2.830 Prec@(1,5) (35.9%, 59.4%)
+08/14 03:04:57 PM | Train: [ 10/600] Step 200/390 Loss 2.493 standard Loss 2.493 Valid Loss 2.677 Prec@(1,5) (33.7%, 67.5%)
+08/14 03:07:01 PM | Train: [ 10/600] Step 390/390 Loss 2.484 standard Loss 2.484 Valid Loss 2.672 Prec@(1,5) (34.2%, 67.8%)
+08/14 03:07:01 PM | Train: [ 10/600] Final Prec@1 34.1520%
+08/14 03:07:01 PM | Test: [ 10/600] Step 000/390 Loss 2.740 Prec@(1,5) (25.0%, 59.4%)
+08/14 03:07:07 PM | Test: [ 10/600] Step 200/390 Loss 2.558 Prec@(1,5) (33.9%, 66.3%)
+08/14 03:07:13 PM | Test: [ 10/600] Step 390/390 Loss 2.576 Prec@(1,5) (33.3%, 66.1%)
+08/14 03:07:13 PM | Test: [ 10/600] Final Prec@1 33.3480%
+08/14 03:07:13 PM | Epoch 10 LR 0.02497927270767535
+08/14 03:07:14 PM | Train: [ 11/600] Step 000/390 Loss 2.563 standard Loss 2.563 Valid Loss 2.507 Prec@(1,5) (35.9%, 59.4%)
+08/14 03:09:26 PM | Train: [ 11/600] Step 200/390 Loss 2.412 standard Loss 2.412 Valid Loss 2.601 Prec@(1,5) (35.8%, 69.6%)
+08/14 03:11:29 PM | Train: [ 11/600] Step 390/390 Loss 2.403 standard Loss 2.403 Valid Loss 2.612 Prec@(1,5) (36.0%, 69.8%)
+08/14 03:11:29 PM | Train: [ 11/600] Final Prec@1 36.0040%
+08/14 03:11:29 PM | Test: [ 11/600] Step 000/390 Loss 2.759 Prec@(1,5) (28.1%, 53.1%)
+08/14 03:11:35 PM | Test: [ 11/600] Step 200/390 Loss 2.556 Prec@(1,5) (33.6%, 66.5%)
+08/14 03:11:40 PM | Test: [ 11/600] Step 390/390 Loss 2.570 Prec@(1,5) (33.3%, 66.1%)
+08/14 03:11:40 PM | Test: [ 11/600] Final Prec@1 33.2720%
+08/14 03:11:40 PM | Epoch 11 LR 0.02497533410535339
+08/14 03:11:41 PM | Train: [ 12/600] Step 000/390 Loss 2.597 standard Loss 2.597 Valid Loss 2.752 Prec@(1,5) (32.8%, 62.5%)
+08/14 03:13:46 PM | Train: [ 12/600] Step 200/390 Loss 2.325 standard Loss 2.325 Valid Loss 2.555 Prec@(1,5) (37.7%, 71.1%)
+08/14 03:15:44 PM | Train: [ 12/600] Step 390/390 Loss 2.319 standard Loss 2.319 Valid Loss 2.563 Prec@(1,5) (38.0%, 71.3%)
+08/14 03:15:44 PM | Train: [ 12/600] Final Prec@1 37.9520%
+08/14 03:15:44 PM | Test: [ 12/600] Step 000/390 Loss 2.617 Prec@(1,5) (26.6%, 67.2%)
+08/14 03:15:50 PM | Test: [ 12/600] Step 200/390 Loss 2.508 Prec@(1,5) (35.5%, 67.9%)
+08/14 03:15:55 PM | Test: [ 12/600] Step 390/390 Loss 2.526 Prec@(1,5) (35.2%, 67.7%)
+08/14 03:15:55 PM | Test: [ 12/600] Final Prec@1 35.1880%
+08/14 03:15:56 PM | Epoch 12 LR 0.024971053485445063
+08/14 03:15:57 PM | Train: [ 13/600] Step 000/390 Loss 2.427 standard Loss 2.427 Valid Loss 2.607 Prec@(1,5) (35.9%, 64.1%)
+08/14 03:18:03 PM | Train: [ 13/600] Step 200/390 Loss 2.250 standard Loss 2.250 Valid Loss 2.512 Prec@(1,5) (39.4%, 72.8%)
+08/14 03:20:01 PM | Train: [ 13/600] Step 390/390 Loss 2.243 standard Loss 2.243 Valid Loss 2.522 Prec@(1,5) (39.6%, 73.0%)
+08/14 03:20:01 PM | Train: [ 13/600] Final Prec@1 39.6280%
+08/14 03:20:01 PM | Test: [ 13/600] Step 000/390 Loss 2.636 Prec@(1,5) (28.1%, 67.2%)
+08/14 03:20:08 PM | Test: [ 13/600] Step 200/390 Loss 2.451 Prec@(1,5) (36.3%, 69.3%)
+08/14 03:20:13 PM | Test: [ 13/600] Step 390/390 Loss 2.472 Prec@(1,5) (35.7%, 68.9%)
+08/14 03:20:13 PM | Test: [ 13/600] Final Prec@1 35.7280%
+08/14 03:20:13 PM | Epoch 13 LR 0.024966430965305722
+08/14 03:20:14 PM | Train: [ 14/600] Step 000/390 Loss 2.246 standard Loss 2.246 Valid Loss 2.626 Prec@(1,5) (34.4%, 76.6%)
+08/14 03:22:26 PM | Train: [ 14/600] Step 200/390 Loss 2.186 standard Loss 2.186 Valid Loss 2.477 Prec@(1,5) (40.9%, 73.9%)
+08/14 03:24:25 PM | Train: [ 14/600] Step 390/390 Loss 2.182 standard Loss 2.182 Valid Loss 2.488 Prec@(1,5) (40.9%, 74.0%)
+08/14 03:24:25 PM | Train: [ 14/600] Final Prec@1 40.8960%
+08/14 03:24:25 PM | Test: [ 14/600] Step 000/390 Loss 2.744 Prec@(1,5) (32.8%, 56.2%)
+08/14 03:24:31 PM | Test: [ 14/600] Step 200/390 Loss 2.442 Prec@(1,5) (37.1%, 70.0%)
+08/14 03:24:38 PM | Test: [ 14/600] Step 390/390 Loss 2.457 Prec@(1,5) (36.6%, 69.5%)
+08/14 03:24:38 PM | Test: [ 14/600] Final Prec@1 36.5680%
+08/14 03:24:38 PM | Epoch 14 LR 0.024961466671664097
+08/14 03:24:39 PM | Train: [ 15/600] Step 000/390 Loss 2.147 standard Loss 2.147 Valid Loss 2.402 Prec@(1,5) (45.3%, 67.2%)
+08/14 03:26:48 PM | Train: [ 15/600] Step 200/390 Loss 2.101 standard Loss 2.101 Valid Loss 2.446 Prec@(1,5) (42.7%, 75.9%)
+08/14 03:28:52 PM | Train: [ 15/600] Step 390/390 Loss 2.102 standard Loss 2.102 Valid Loss 2.465 Prec@(1,5) (42.4%, 75.8%)
+08/14 03:28:52 PM | Train: [ 15/600] Final Prec@1 42.3560%
+08/14 03:28:53 PM | Test: [ 15/600] Step 000/390 Loss 2.595 Prec@(1,5) (26.6%, 65.6%)
+08/14 03:28:59 PM | Test: [ 15/600] Step 200/390 Loss 2.423 Prec@(1,5) (37.6%, 70.3%)
+08/14 03:29:05 PM | Test: [ 15/600] Step 390/390 Loss 2.443 Prec@(1,5) (36.9%, 70.0%)
+08/14 03:29:05 PM | Test: [ 15/600] Final Prec@1 36.8640%
+08/14 03:29:05 PM | Epoch 15 LR 0.024956160740618804
+08/14 03:29:06 PM | Train: [ 16/600] Step 000/390 Loss 1.980 standard Loss 1.980 Valid Loss 2.386 Prec@(1,5) (42.2%, 76.6%)
+08/14 03:31:18 PM | Train: [ 16/600] Step 200/390 Loss 2.071 standard Loss 2.071 Valid Loss 2.443 Prec@(1,5) (43.2%, 76.6%)
+08/14 03:33:17 PM | Train: [ 16/600] Step 390/390 Loss 2.065 standard Loss 2.065 Valid Loss 2.449 Prec@(1,5) (43.8%, 76.7%)
+08/14 03:33:18 PM | Train: [ 16/600] Final Prec@1 43.7600%
+08/14 03:33:18 PM | Test: [ 16/600] Step 000/390 Loss 2.532 Prec@(1,5) (26.6%, 62.5%)
+08/14 03:33:24 PM | Test: [ 16/600] Step 200/390 Loss 2.383 Prec@(1,5) (38.3%, 70.7%)
+08/14 03:33:29 PM | Test: [ 16/600] Step 390/390 Loss 2.387 Prec@(1,5) (37.8%, 70.8%)
+08/14 03:33:29 PM | Test: [ 16/600] Final Prec@1 37.7960%
+08/14 03:33:30 PM | Epoch 16 LR 0.02495051331763462
+08/14 03:33:31 PM | Train: [ 17/600] Step 000/390 Loss 2.122 standard Loss 2.122 Valid Loss 2.572 Prec@(1,5) (40.6%, 70.3%)
+08/14 03:35:40 PM | Train: [ 17/600] Step 200/390 Loss 1.993 standard Loss 1.993 Valid Loss 2.423 Prec@(1,5) (45.0%, 77.9%)
+08/14 03:37:38 PM | Train: [ 17/600] Step 390/390 Loss 1.997 standard Loss 1.997 Valid Loss 2.428 Prec@(1,5) (45.3%, 77.8%)
+08/14 03:37:38 PM | Train: [ 17/600] Final Prec@1 45.2600%
+08/14 03:37:38 PM | Test: [ 17/600] Step 000/390 Loss 2.658 Prec@(1,5) (26.6%, 67.2%)
+08/14 03:37:45 PM | Test: [ 17/600] Step 200/390 Loss 2.356 Prec@(1,5) (39.6%, 71.9%)
+08/14 03:37:50 PM | Test: [ 17/600] Step 390/390 Loss 2.380 Prec@(1,5) (39.0%, 71.3%)
+08/14 03:37:50 PM | Test: [ 17/600] Final Prec@1 38.9520%
+08/14 03:37:50 PM | Epoch 17 LR 0.0249445245575385
+08/14 03:37:51 PM | Train: [ 18/600] Step 000/390 Loss 1.897 standard Loss 1.897 Valid Loss 2.553 Prec@(1,5) (42.2%, 76.6%)
+08/14 03:39:56 PM | Train: [ 18/600] Step 200/390 Loss 1.965 standard Loss 1.965 Valid Loss 2.384 Prec@(1,5) (46.2%, 78.5%)
+08/14 03:41:53 PM | Train: [ 18/600] Step 390/390 Loss 1.954 standard Loss 1.954 Valid Loss 2.408 Prec@(1,5) (46.0%, 78.8%)
+08/14 03:41:53 PM | Train: [ 18/600] Final Prec@1 46.0000%
+08/14 03:41:53 PM | Test: [ 18/600] Step 000/390 Loss 2.644 Prec@(1,5) (32.8%, 60.9%)
+08/14 03:42:00 PM | Test: [ 18/600] Step 200/390 Loss 2.384 Prec@(1,5) (39.1%, 71.4%)
+08/14 03:42:07 PM | Test: [ 18/600] Step 390/390 Loss 2.394 Prec@(1,5) (38.7%, 71.3%)
+08/14 03:42:07 PM | Test: [ 18/600] Final Prec@1 38.7120%
+08/14 03:42:07 PM | Epoch 18 LR 0.024938194624515332
+08/14 03:42:08 PM | Train: [ 19/600] Step 000/390 Loss 1.788 standard Loss 1.788 Valid Loss 2.439 Prec@(1,5) (45.3%, 81.2%)
+08/14 03:44:11 PM | Train: [ 19/600] Step 200/390 Loss 1.894 standard Loss 1.894 Valid Loss 2.384 Prec@(1,5) (47.2%, 79.9%)
+08/14 03:46:08 PM | Train: [ 19/600] Step 390/390 Loss 1.895 standard Loss 1.895 Valid Loss 2.412 Prec@(1,5) (47.4%, 79.8%)
+08/14 03:46:08 PM | Train: [ 19/600] Final Prec@1 47.3600%
+08/14 03:46:08 PM | Test: [ 19/600] Step 000/390 Loss 2.576 Prec@(1,5) (31.2%, 65.6%)
+08/14 03:46:14 PM | Test: [ 19/600] Step 200/390 Loss 2.355 Prec@(1,5) (39.4%, 71.8%)
+08/14 03:46:19 PM | Test: [ 19/600] Step 390/390 Loss 2.362 Prec@(1,5) (39.3%, 71.5%)
+08/14 03:46:19 PM | Test: [ 19/600] Final Prec@1 39.2560%
+08/14 03:46:19 PM | Epoch 19 LR 0.024931523692103417
+08/14 03:46:20 PM | Train: [ 20/600] Step 000/390 Loss 1.924 standard Loss 1.924 Valid Loss 2.537 Prec@(1,5) (51.6%, 75.0%)
+08/14 03:48:30 PM | Train: [ 20/600] Step 200/390 Loss 1.858 standard Loss 1.858 Valid Loss 2.373 Prec@(1,5) (48.0%, 80.4%)
+08/14 03:50:32 PM | Train: [ 20/600] Step 390/390 Loss 1.861 standard Loss 1.861 Valid Loss 2.395 Prec@(1,5) (48.3%, 80.4%)
+08/14 03:50:32 PM | Train: [ 20/600] Final Prec@1 48.2600%
+08/14 03:50:33 PM | Test: [ 20/600] Step 000/390 Loss 2.340 Prec@(1,5) (31.2%, 68.8%)
+08/14 03:50:38 PM | Test: [ 20/600] Step 200/390 Loss 2.356 Prec@(1,5) (39.7%, 72.2%)
+08/14 03:50:44 PM | Test: [ 20/600] Step 390/390 Loss 2.368 Prec@(1,5) (39.3%, 71.8%)
+08/14 03:50:44 PM | Test: [ 20/600] Final Prec@1 39.2680%
+08/14 03:50:44 PM | Epoch 20 LR 0.02492451194318975
+08/14 03:50:45 PM | Train: [ 21/600] Step 000/390 Loss 1.879 standard Loss 1.879 Valid Loss 2.398 Prec@(1,5) (48.4%, 82.8%)
+08/14 03:53:08 PM | Train: [ 21/600] Step 200/390 Loss 1.810 standard Loss 1.810 Valid Loss 2.356 Prec@(1,5) (49.2%, 81.3%)
+08/14 03:55:17 PM | Train: [ 21/600] Step 390/390 Loss 1.809 standard Loss 1.809 Valid Loss 2.382 Prec@(1,5) (49.6%, 81.0%)
+08/14 03:55:17 PM | Train: [ 21/600] Final Prec@1 49.6200%
+08/14 03:55:18 PM | Test: [ 21/600] Step 000/390 Loss 2.421 Prec@(1,5) (28.1%, 68.8%)
+08/14 03:55:23 PM | Test: [ 21/600] Step 200/390 Loss 2.310 Prec@(1,5) (41.3%, 72.2%)
+08/14 03:55:28 PM | Test: [ 21/600] Step 390/390 Loss 2.329 Prec@(1,5) (40.9%, 72.2%)
+08/14 03:55:28 PM | Test: [ 21/600] Final Prec@1 40.8560%
+08/14 03:55:29 PM | Epoch 21 LR 0.024917159570004954
+08/14 03:55:30 PM | Train: [ 22/600] Step 000/390 Loss 1.812 standard Loss 1.812 Valid Loss 2.386 Prec@(1,5) (43.8%, 82.8%)
+08/14 03:57:35 PM | Train: [ 22/600] Step 200/390 Loss 1.774 standard Loss 1.774 Valid Loss 2.346 Prec@(1,5) (50.5%, 81.6%)
+08/14 03:59:32 PM | Train: [ 22/600] Step 390/390 Loss 1.772 standard Loss 1.772 Valid Loss 2.370 Prec@(1,5) (50.4%, 81.9%)
+08/14 03:59:32 PM | Train: [ 22/600] Final Prec@1 50.3720%
+08/14 03:59:33 PM | Test: [ 22/600] Step 000/390 Loss 2.854 Prec@(1,5) (25.0%, 59.4%)
+08/14 03:59:38 PM | Test: [ 22/600] Step 200/390 Loss 2.335 Prec@(1,5) (40.6%, 72.1%)
+08/14 03:59:45 PM | Test: [ 22/600] Step 390/390 Loss 2.359 Prec@(1,5) (40.3%, 71.6%)
+08/14 03:59:45 PM | Test: [ 22/600] Final Prec@1 40.2560%
+08/14 03:59:45 PM | Epoch 22 LR 0.02490946677411807
+08/14 03:59:46 PM | Train: [ 23/600] Step 000/390 Loss 1.668 standard Loss 1.668 Valid Loss 2.533 Prec@(1,5) (46.9%, 82.8%)
+08/14 04:01:51 PM | Train: [ 23/600] Step 200/390 Loss 1.734 standard Loss 1.734 Valid Loss 2.353 Prec@(1,5) (51.3%, 82.5%)
+08/14 04:03:47 PM | Train: [ 23/600] Step 390/390 Loss 1.730 standard Loss 1.730 Valid Loss 2.373 Prec@(1,5) (51.6%, 82.6%)
+08/14 04:03:47 PM | Train: [ 23/600] Final Prec@1 51.6280%
+08/14 04:03:47 PM | Test: [ 23/600] Step 000/390 Loss 2.404 Prec@(1,5) (34.4%, 68.8%)
+08/14 04:03:53 PM | Test: [ 23/600] Step 200/390 Loss 2.329 Prec@(1,5) (41.6%, 72.7%)
+08/14 04:03:58 PM | Test: [ 23/600] Step 390/390 Loss 2.352 Prec@(1,5) (40.8%, 72.3%)
+08/14 04:03:58 PM | Test: [ 23/600] Final Prec@1 40.8120%
+08/14 04:03:58 PM | Epoch 23 LR 0.024901433766430975
+08/14 04:03:59 PM | Train: [ 24/600] Step 000/390 Loss 1.764 standard Loss 1.764 Valid Loss 2.387 Prec@(1,5) (43.8%, 82.8%)
+08/14 04:06:10 PM | Train: [ 24/600] Step 200/390 Loss 1.699 standard Loss 1.699 Valid Loss 2.361 Prec@(1,5) (52.6%, 83.1%)
+08/14 04:08:12 PM | Train: [ 24/600] Step 390/390 Loss 1.691 standard Loss 1.691 Valid Loss 2.377 Prec@(1,5) (52.7%, 83.4%)
+08/14 04:08:12 PM | Train: [ 24/600] Final Prec@1 52.6560%
+08/14 04:08:12 PM | Test: [ 24/600] Step 000/390 Loss 2.541 Prec@(1,5) (34.4%, 68.8%)
+08/14 04:08:18 PM | Test: [ 24/600] Step 200/390 Loss 2.323 Prec@(1,5) (41.4%, 73.6%)
+08/14 04:08:24 PM | Test: [ 24/600] Step 390/390 Loss 2.338 Prec@(1,5) (41.3%, 73.0%)
+08/14 04:08:24 PM | Test: [ 24/600] Final Prec@1 41.3200%
+08/14 04:08:24 PM | Epoch 24 LR 0.02489306076717263
+08/14 04:08:25 PM | Train: [ 25/600] Step 000/390 Loss 1.558 standard Loss 1.558 Valid Loss 2.474 Prec@(1,5) (59.4%, 84.4%)
+08/14 04:10:37 PM | Train: [ 25/600] Step 200/390 Loss 1.647 standard Loss 1.647 Valid Loss 2.338 Prec@(1,5) (53.6%, 84.2%)
+08/14 04:12:35 PM | Train: [ 25/600] Step 390/390 Loss 1.644 standard Loss 1.644 Valid Loss 2.378 Prec@(1,5) (53.6%, 84.2%)
+08/14 04:12:35 PM | Train: [ 25/600] Final Prec@1 53.5720%
+08/14 04:12:35 PM | Test: [ 25/600] Step 000/390 Loss 2.565 Prec@(1,5) (32.8%, 62.5%)
+08/14 04:12:41 PM | Test: [ 25/600] Step 200/390 Loss 2.324 Prec@(1,5) (42.0%, 73.5%)
+08/14 04:12:46 PM | Test: [ 25/600] Step 390/390 Loss 2.344 Prec@(1,5) (41.5%, 73.0%)
+08/14 04:12:46 PM | Test: [ 25/600] Final Prec@1 41.5400%
+08/14 04:12:47 PM | Epoch 25 LR 0.024884348005893044
+08/14 04:12:48 PM | Train: [ 26/600] Step 000/390 Loss 1.715 standard Loss 1.715 Valid Loss 2.428 Prec@(1,5) (51.6%, 79.7%)
+08/14 04:14:54 PM | Train: [ 26/600] Step 200/390 Loss 1.626 standard Loss 1.626 Valid Loss 2.377 Prec@(1,5) (53.6%, 84.6%)
+08/14 04:16:54 PM | Train: [ 26/600] Step 390/390 Loss 1.622 standard Loss 1.622 Valid Loss 2.396 Prec@(1,5) (53.9%, 84.7%)
+08/14 04:16:54 PM | Train: [ 26/600] Final Prec@1 53.9440%
+08/14 04:16:54 PM | Test: [ 26/600] Step 000/390 Loss 2.526 Prec@(1,5) (31.2%, 68.8%)
+08/14 04:17:00 PM | Test: [ 26/600] Step 200/390 Loss 2.276 Prec@(1,5) (42.7%, 74.2%)
+08/14 04:17:05 PM | Test: [ 26/600] Step 390/390 Loss 2.300 Prec@(1,5) (42.2%, 73.6%)
+08/14 04:17:05 PM | Test: [ 26/600] Final Prec@1 42.2120%
+08/14 04:17:06 PM | Epoch 26 LR 0.024875295721456966
+08/14 04:17:07 PM | Train: [ 27/600] Step 000/390 Loss 1.749 standard Loss 1.749 Valid Loss 2.574 Prec@(1,5) (51.6%, 85.9%)
+08/14 04:19:13 PM | Train: [ 27/600] Step 200/390 Loss 1.583 standard Loss 1.583 Valid Loss 2.400 Prec@(1,5) (54.4%, 85.2%)
+08/14 04:21:10 PM | Train: [ 27/600] Step 390/390 Loss 1.575 standard Loss 1.575 Valid Loss 2.411 Prec@(1,5) (54.9%, 85.4%)
+08/14 04:21:10 PM | Train: [ 27/600] Final Prec@1 54.9120%
+08/14 04:21:10 PM | Test: [ 27/600] Step 000/390 Loss 2.707 Prec@(1,5) (34.4%, 71.9%)
+08/14 04:21:16 PM | Test: [ 27/600] Step 200/390 Loss 2.329 Prec@(1,5) (41.8%, 73.0%)
+08/14 04:21:22 PM | Test: [ 27/600] Step 390/390 Loss 2.355 Prec@(1,5) (41.3%, 72.6%)
+08/14 04:21:22 PM | Test: [ 27/600] Final Prec@1 41.3080%
+08/14 04:21:22 PM | Epoch 27 LR 0.024865904162037353
+08/14 04:21:24 PM | Train: [ 28/600] Step 000/390 Loss 1.783 standard Loss 1.783 Valid Loss 2.644 Prec@(1,5) (50.0%, 84.4%)
+08/14 04:23:31 PM | Train: [ 28/600] Step 200/390 Loss 1.575 standard Loss 1.575 Valid Loss 2.395 Prec@(1,5) (55.2%, 85.0%)
+08/14 04:25:31 PM | Train: [ 28/600] Step 390/390 Loss 1.568 standard Loss 1.568 Valid Loss 2.410 Prec@(1,5) (55.6%, 85.0%)
+08/14 04:25:31 PM | Train: [ 28/600] Final Prec@1 55.6240%
+08/14 04:25:32 PM | Test: [ 28/600] Step 000/390 Loss 2.583 Prec@(1,5) (39.1%, 68.8%)
+08/14 04:25:38 PM | Test: [ 28/600] Step 200/390 Loss 2.352 Prec@(1,5) (42.4%, 73.2%)
+08/14 04:25:43 PM | Test: [ 28/600] Step 390/390 Loss 2.358 Prec@(1,5) (42.0%, 72.8%)
+08/14 04:25:43 PM | Test: [ 28/600] Final Prec@1 42.0320%
+08/14 04:25:43 PM | Epoch 28 LR 0.02485617358510854
+08/14 04:25:44 PM | Train: [ 29/600] Step 000/390 Loss 1.721 standard Loss 1.721 Valid Loss 2.744 Prec@(1,5) (51.6%, 81.2%)
+08/14 04:27:55 PM | Train: [ 29/600] Step 200/390 Loss 1.529 standard Loss 1.529 Valid Loss 2.408 Prec@(1,5) (56.2%, 85.9%)
+08/14 04:29:53 PM | Train: [ 29/600] Step 390/390 Loss 1.525 standard Loss 1.525 Valid Loss 2.421 Prec@(1,5) (56.3%, 86.1%)
+08/14 04:29:53 PM | Train: [ 29/600] Final Prec@1 56.3480%
+08/14 04:29:54 PM | Test: [ 29/600] Step 000/390 Loss 2.675 Prec@(1,5) (26.6%, 70.3%)
+08/14 04:30:00 PM | Test: [ 29/600] Step 200/390 Loss 2.372 Prec@(1,5) (41.2%, 73.2%)
+08/14 04:30:05 PM | Test: [ 29/600] Step 390/390 Loss 2.383 Prec@(1,5) (41.1%, 72.9%)
+08/14 04:30:05 PM | Test: [ 29/600] Final Prec@1 41.0800%
+08/14 04:30:06 PM | Epoch 29 LR 0.02484610425743922
+08/14 04:30:07 PM | Train: [ 30/600] Step 000/390 Loss 1.644 standard Loss 1.644 Valid Loss 2.620 Prec@(1,5) (53.1%, 90.6%)
+08/14 04:32:17 PM | Train: [ 30/600] Step 200/390 Loss 1.488 standard Loss 1.488 Valid Loss 2.367 Prec@(1,5) (57.4%, 86.6%)
+08/14 04:34:19 PM | Train: [ 30/600] Step 390/390 Loss 1.484 standard Loss 1.484 Valid Loss 2.403 Prec@(1,5) (57.5%, 87.0%)
+08/14 04:34:19 PM | Train: [ 30/600] Final Prec@1 57.5400%
+08/14 04:34:19 PM | Test: [ 30/600] Step 000/390 Loss 2.614 Prec@(1,5) (29.7%, 67.2%)
+08/14 04:34:25 PM | Test: [ 30/600] Step 200/390 Loss 2.399 Prec@(1,5) (41.4%, 72.7%)
+08/14 04:34:30 PM | Test: [ 30/600] Step 390/390 Loss 2.407 Prec@(1,5) (41.4%, 72.6%)
+08/14 04:34:30 PM | Test: [ 30/600] Final Prec@1 41.4440%
+08/14 04:34:31 PM | Epoch 30 LR 0.02483569645508509
+08/14 04:34:32 PM | Train: [ 31/600] Step 000/390 Loss 1.499 standard Loss 1.499 Valid Loss 2.574 Prec@(1,5) (53.1%, 82.8%)
+08/14 04:36:38 PM | Train: [ 31/600] Step 200/390 Loss 1.482 standard Loss 1.482 Valid Loss 2.409 Prec@(1,5) (57.2%, 87.0%)
+08/14 04:38:35 PM | Train: [ 31/600] Step 390/390 Loss 1.472 standard Loss 1.472 Valid Loss 2.438 Prec@(1,5) (57.7%, 87.0%)
+08/14 04:38:36 PM | Train: [ 31/600] Final Prec@1 57.6560%
+08/14 04:38:36 PM | Test: [ 31/600] Step 000/390 Loss 2.523 Prec@(1,5) (35.9%, 73.4%)
+08/14 04:38:42 PM | Test: [ 31/600] Step 200/390 Loss 2.342 Prec@(1,5) (42.8%, 74.1%)
+08/14 04:38:47 PM | Test: [ 31/600] Step 390/390 Loss 2.359 Prec@(1,5) (42.4%, 73.5%)
+08/14 04:38:47 PM | Test: [ 31/600] Final Prec@1 42.4000%
+08/14 04:38:47 PM | Epoch 31 LR 0.02482495046338131
+08/14 04:38:48 PM | Train: [ 32/600] Step 000/390 Loss 1.594 standard Loss 1.594 Valid Loss 2.365 Prec@(1,5) (46.9%, 84.4%)
+08/14 04:40:57 PM | Train: [ 32/600] Step 200/390 Loss 1.453 standard Loss 1.453 Valid Loss 2.396 Prec@(1,5) (58.3%, 87.3%)
+08/14 04:42:59 PM | Train: [ 32/600] Step 390/390 Loss 1.446 standard Loss 1.446 Valid Loss 2.424 Prec@(1,5) (58.5%, 87.4%)
+08/14 04:43:00 PM | Train: [ 32/600] Final Prec@1 58.5160%
+08/14 04:43:00 PM | Test: [ 32/600] Step 000/390 Loss 2.834 Prec@(1,5) (32.8%, 68.8%)
+08/14 04:43:06 PM | Test: [ 32/600] Step 200/390 Loss 2.377 Prec@(1,5) (43.2%, 73.6%)
+08/14 04:43:11 PM | Test: [ 32/600] Step 390/390 Loss 2.384 Prec@(1,5) (42.7%, 73.6%)
+08/14 04:43:11 PM | Test: [ 32/600] Final Prec@1 42.7280%
+08/14 04:43:11 PM | Epoch 32 LR 0.024813866576934674
+08/14 04:43:12 PM | Train: [ 33/600] Step 000/390 Loss 1.504 standard Loss 1.504 Valid Loss 2.807 Prec@(1,5) (56.2%, 85.9%)
+08/14 04:45:20 PM | Train: [ 33/600] Step 200/390 Loss 1.427 standard Loss 1.427 Valid Loss 2.410 Prec@(1,5) (58.8%, 87.7%)
+08/14 04:47:17 PM | Train: [ 33/600] Step 390/390 Loss 1.415 standard Loss 1.415 Valid Loss 2.428 Prec@(1,5) (59.2%, 88.0%)
+08/14 04:47:17 PM | Train: [ 33/600] Final Prec@1 59.1960%
+08/14 04:47:17 PM | Test: [ 33/600] Step 000/390 Loss 2.483 Prec@(1,5) (39.1%, 73.4%)
+08/14 04:47:23 PM | Test: [ 33/600] Step 200/390 Loss 2.446 Prec@(1,5) (42.5%, 73.4%)
+08/14 04:47:28 PM | Test: [ 33/600] Step 390/390 Loss 2.459 Prec@(1,5) (42.4%, 73.2%)
+08/14 04:47:28 PM | Test: [ 33/600] Final Prec@1 42.4160%
+08/14 04:47:28 PM | Epoch 33 LR 0.02480244509961552
+08/14 04:47:29 PM | Train: [ 34/600] Step 000/390 Loss 1.315 standard Loss 1.315 Valid Loss 2.546 Prec@(1,5) (60.9%, 92.2%)
+08/14 04:49:44 PM | Train: [ 34/600] Step 200/390 Loss 1.403 standard Loss 1.403 Valid Loss 2.421 Prec@(1,5) (59.4%, 88.4%)
+08/14 04:51:52 PM | Train: [ 34/600] Step 390/390 Loss 1.402 standard Loss 1.402 Valid Loss 2.448 Prec@(1,5) (59.4%, 88.3%)
+08/14 04:51:52 PM | Train: [ 34/600] Final Prec@1 59.4240%
+08/14 04:51:53 PM | Test: [ 34/600] Step 000/390 Loss 2.708 Prec@(1,5) (35.9%, 62.5%)
+08/14 04:51:58 PM | Test: [ 34/600] Step 200/390 Loss 2.359 Prec@(1,5) (43.2%, 74.2%)
+08/14 04:52:04 PM | Test: [ 34/600] Step 390/390 Loss 2.365 Prec@(1,5) (43.1%, 74.0%)
+08/14 04:52:04 PM | Test: [ 34/600] Final Prec@1 43.0920%
+08/14 04:52:04 PM | Epoch 34 LR 0.024790686344549433
+08/14 04:52:05 PM | Train: [ 35/600] Step 000/390 Loss 1.256 standard Loss 1.256 Valid Loss 2.430 Prec@(1,5) (62.5%, 92.2%)
+08/14 04:54:11 PM | Train: [ 35/600] Step 200/390 Loss 1.374 standard Loss 1.374 Valid Loss 2.443 Prec@(1,5) (60.1%, 88.8%)
+08/14 04:56:09 PM | Train: [ 35/600] Step 390/390 Loss 1.386 standard Loss 1.386 Valid Loss 2.457 Prec@(1,5) (59.9%, 88.4%)
+08/14 04:56:09 PM | Train: [ 35/600] Final Prec@1 59.8600%
+08/14 04:56:09 PM | Test: [ 35/600] Step 000/390 Loss 2.641 Prec@(1,5) (32.8%, 68.8%)
+08/14 04:56:15 PM | Test: [ 35/600] Step 200/390 Loss 2.395 Prec@(1,5) (42.9%, 73.4%)
+08/14 04:56:20 PM | Test: [ 35/600] Step 390/390 Loss 2.418 Prec@(1,5) (42.6%, 73.2%)
+08/14 04:56:20 PM | Test: [ 35/600] Final Prec@1 42.5920%
+08/14 04:56:21 PM | Epoch 35 LR 0.02477859063410861
+08/14 04:56:22 PM | Train: [ 36/600] Step 000/390 Loss 1.421 standard Loss 1.421 Valid Loss 2.533 Prec@(1,5) (51.6%, 84.4%)
+08/14 04:58:31 PM | Train: [ 36/600] Step 200/390 Loss 1.354 standard Loss 1.354 Valid Loss 2.435 Prec@(1,5) (60.6%, 89.1%)
+08/14 05:00:31 PM | Train: [ 36/600] Step 390/390 Loss 1.344 standard Loss 1.344 Valid Loss 2.445 Prec@(1,5) (60.9%, 89.1%)
+08/14 05:00:31 PM | Train: [ 36/600] Final Prec@1 60.8560%
+08/14 05:00:32 PM | Test: [ 36/600] Step 000/390 Loss 2.828 Prec@(1,5) (35.9%, 59.4%)
+08/14 05:00:37 PM | Test: [ 36/600] Step 200/390 Loss 2.428 Prec@(1,5) (43.2%, 74.0%)
+08/14 05:00:42 PM | Test: [ 36/600] Step 390/390 Loss 2.451 Prec@(1,5) (42.5%, 73.5%)
+08/14 05:00:42 PM | Test: [ 36/600] Final Prec@1 42.5240%
+08/14 05:00:43 PM | Epoch 36 LR 0.02476615829990306
+08/14 05:00:44 PM | Train: [ 37/600] Step 000/390 Loss 1.201 standard Loss 1.201 Valid Loss 2.972 Prec@(1,5) (64.1%, 89.1%)
+08/14 05:02:54 PM | Train: [ 37/600] Step 200/390 Loss 1.346 standard Loss 1.346 Valid Loss 2.460 Prec@(1,5) (60.9%, 89.3%)
+08/14 05:04:56 PM | Train: [ 37/600] Step 390/390 Loss 1.342 standard Loss 1.342 Valid Loss 2.465 Prec@(1,5) (60.9%, 89.2%)
+08/14 05:04:57 PM | Train: [ 37/600] Final Prec@1 60.9080%
+08/14 05:04:57 PM | Test: [ 37/600] Step 000/390 Loss 2.244 Prec@(1,5) (39.1%, 75.0%)
+08/14 05:05:03 PM | Test: [ 37/600] Step 200/390 Loss 2.455 Prec@(1,5) (42.7%, 73.4%)
+08/14 05:05:08 PM | Test: [ 37/600] Step 390/390 Loss 2.469 Prec@(1,5) (42.4%, 72.8%)
+08/14 05:05:08 PM | Test: [ 37/600] Final Prec@1 42.4160%
+08/14 05:05:08 PM | Epoch 37 LR 0.02475338968277152
+08/14 05:05:09 PM | Train: [ 38/600] Step 000/390 Loss 1.204 standard Loss 1.204 Valid Loss 2.629 Prec@(1,5) (68.8%, 89.1%)
+08/14 05:07:19 PM | Train: [ 38/600] Step 200/390 Loss 1.320 standard Loss 1.320 Valid Loss 2.432 Prec@(1,5) (61.0%, 89.4%)
+08/14 05:09:18 PM | Train: [ 38/600] Step 390/390 Loss 1.309 standard Loss 1.309 Valid Loss 2.457 Prec@(1,5) (61.7%, 89.6%)
+08/14 05:09:19 PM | Train: [ 38/600] Final Prec@1 61.6760%
+08/14 05:09:19 PM | Test: [ 38/600] Step 000/390 Loss 2.363 Prec@(1,5) (43.8%, 73.4%)
+08/14 05:09:26 PM | Test: [ 38/600] Step 200/390 Loss 2.416 Prec@(1,5) (43.2%, 74.4%)
+08/14 05:09:31 PM | Test: [ 38/600] Step 390/390 Loss 2.415 Prec@(1,5) (43.4%, 74.6%)
+08/14 05:09:32 PM | Test: [ 38/600] Final Prec@1 43.3520%
+08/14 05:09:32 PM | Epoch 38 LR 0.02474028513277207
+08/14 05:09:33 PM | Train: [ 39/600] Step 000/390 Loss 1.177 standard Loss 1.177 Valid Loss 2.329 Prec@(1,5) (65.6%, 90.6%)
+08/14 05:11:44 PM | Train: [ 39/600] Step 200/390 Loss 1.298 standard Loss 1.298 Valid Loss 2.484 Prec@(1,5) (62.2%, 89.8%)
+08/14 05:13:41 PM | Train: [ 39/600] Step 390/390 Loss 1.293 standard Loss 1.293 Valid Loss 2.491 Prec@(1,5) (62.2%, 89.9%)
+08/14 05:13:42 PM | Train: [ 39/600] Final Prec@1 62.1840%
+08/14 05:13:42 PM | Test: [ 39/600] Step 000/390 Loss 2.763 Prec@(1,5) (35.9%, 65.6%)
+08/14 05:13:48 PM | Test: [ 39/600] Step 200/390 Loss 2.431 Prec@(1,5) (42.8%, 73.7%)
+08/14 05:13:53 PM | Test: [ 39/600] Step 390/390 Loss 2.447 Prec@(1,5) (42.5%, 73.1%)
+08/14 05:13:53 PM | Test: [ 39/600] Final Prec@1 42.5480%
+08/14 05:13:53 PM | Epoch 39 LR 0.02472684500917257
+08/14 05:13:54 PM | Train: [ 40/600] Step 000/390 Loss 1.543 standard Loss 1.543 Valid Loss 2.387 Prec@(1,5) (53.1%, 81.2%)
+08/14 05:16:01 PM | Train: [ 40/600] Step 200/390 Loss 1.263 standard Loss 1.263 Valid Loss 2.489 Prec@(1,5) (62.6%, 90.3%)
+08/14 05:18:02 PM | Train: [ 40/600] Step 390/390 Loss 1.267 standard Loss 1.267 Valid Loss 2.505 Prec@(1,5) (62.8%, 90.1%)
+08/14 05:18:02 PM | Train: [ 40/600] Final Prec@1 62.8240%
+08/14 05:18:02 PM | Test: [ 40/600] Step 000/390 Loss 2.726 Prec@(1,5) (34.4%, 67.2%)
+08/14 05:18:10 PM | Test: [ 40/600] Step 200/390 Loss 2.450 Prec@(1,5) (43.4%, 73.7%)
+08/14 05:18:17 PM | Test: [ 40/600] Step 390/390 Loss 2.478 Prec@(1,5) (42.9%, 73.4%)
+08/14 05:18:17 PM | Test: [ 40/600] Final Prec@1 42.8800%
+08/14 05:18:17 PM | Epoch 40 LR 0.024713069680440795
+08/14 05:18:18 PM | Train: [ 41/600] Step 000/390 Loss 1.393 standard Loss 1.393 Valid Loss 2.627 Prec@(1,5) (62.5%, 82.8%)
+08/14 05:20:25 PM | Train: [ 41/600] Step 200/390 Loss 1.268 standard Loss 1.268 Valid Loss 2.467 Prec@(1,5) (62.8%, 90.3%)
+08/14 05:22:22 PM | Train: [ 41/600] Step 390/390 Loss 1.258 standard Loss 1.258 Valid Loss 2.490 Prec@(1,5) (63.0%, 90.2%)
+08/14 05:22:22 PM | Train: [ 41/600] Final Prec@1 63.0400%
+08/14 05:22:22 PM | Test: [ 41/600] Step 000/390 Loss 2.645 Prec@(1,5) (29.7%, 75.0%)
+08/14 05:22:29 PM | Test: [ 41/600] Step 200/390 Loss 2.476 Prec@(1,5) (42.8%, 73.1%)
+08/14 05:22:34 PM | Test: [ 41/600] Step 390/390 Loss 2.491 Prec@(1,5) (42.4%, 73.0%)
+08/14 05:22:34 PM | Test: [ 41/600] Final Prec@1 42.4240%
+08/14 05:22:34 PM | Epoch 41 LR 0.024698959524234343
+08/14 05:22:35 PM | Train: [ 42/600] Step 000/390 Loss 1.264 standard Loss 1.264 Valid Loss 2.575 Prec@(1,5) (60.9%, 92.2%)
+08/14 05:24:43 PM | Train: [ 42/600] Step 200/390 Loss 1.243 standard Loss 1.243 Valid Loss 2.492 Prec@(1,5) (63.4%, 90.6%)
+08/14 05:26:40 PM | Train: [ 42/600] Step 390/390 Loss 1.246 standard Loss 1.246 Valid Loss 2.508 Prec@(1,5) (63.6%, 90.6%)
+08/14 05:26:40 PM | Train: [ 42/600] Final Prec@1 63.5840%
+08/14 05:26:40 PM | Test: [ 42/600] Step 000/390 Loss 3.065 Prec@(1,5) (34.4%, 65.6%)
+08/14 05:26:46 PM | Test: [ 42/600] Step 200/390 Loss 2.538 Prec@(1,5) (42.4%, 72.5%)
+08/14 05:26:51 PM | Test: [ 42/600] Step 390/390 Loss 2.554 Prec@(1,5) (42.0%, 72.2%)
+08/14 05:26:51 PM | Test: [ 42/600] Final Prec@1 41.9840%
+08/14 05:26:51 PM | Epoch 42 LR 0.02468451492739027
+08/14 05:26:52 PM | Train: [ 43/600] Step 000/390 Loss 1.356 standard Loss 1.356 Valid Loss 2.708 Prec@(1,5) (64.1%, 87.5%)
+08/14 05:29:02 PM | Train: [ 43/600] Step 200/390 Loss 1.211 standard Loss 1.211 Valid Loss 2.477 Prec@(1,5) (64.5%, 90.9%)
+08/14 05:31:02 PM | Train: [ 43/600] Step 390/390 Loss 1.214 standard Loss 1.214 Valid Loss 2.510 Prec@(1,5) (64.4%, 90.8%)
+08/14 05:31:02 PM | Train: [ 43/600] Final Prec@1 64.3920%
+08/14 05:31:03 PM | Test: [ 43/600] Step 000/390 Loss 2.855 Prec@(1,5) (39.1%, 67.2%)
+08/14 05:31:09 PM | Test: [ 43/600] Step 200/390 Loss 2.490 Prec@(1,5) (42.5%, 74.3%)
+08/14 05:31:14 PM | Test: [ 43/600] Step 390/390 Loss 2.501 Prec@(1,5) (42.3%, 74.0%)
+08/14 05:31:14 PM | Test: [ 43/600] Final Prec@1 42.3040%
+08/14 05:31:15 PM | Epoch 43 LR 0.0246697362859145
+08/14 05:31:16 PM | Train: [ 44/600] Step 000/390 Loss 1.541 standard Loss 1.541 Valid Loss 2.430 Prec@(1,5) (59.4%, 87.5%)
+08/14 05:33:22 PM | Train: [ 44/600] Step 200/390 Loss 1.213 standard Loss 1.213 Valid Loss 2.520 Prec@(1,5) (64.2%, 91.4%)
+08/14 05:35:19 PM | Train: [ 44/600] Step 390/390 Loss 1.220 standard Loss 1.220 Valid Loss 2.529 Prec@(1,5) (64.0%, 91.0%)
+08/14 05:35:19 PM | Train: [ 44/600] Final Prec@1 64.0200%
+08/14 05:35:19 PM | Test: [ 44/600] Step 000/390 Loss 2.531 Prec@(1,5) (39.1%, 67.2%)
+08/14 05:35:25 PM | Test: [ 44/600] Step 200/390 Loss 2.454 Prec@(1,5) (43.6%, 74.7%)
+08/14 05:35:31 PM | Test: [ 44/600] Step 390/390 Loss 2.461 Prec@(1,5) (43.4%, 74.3%)
+08/14 05:35:31 PM | Test: [ 44/600] Final Prec@1 43.3840%
+08/14 05:35:31 PM | Epoch 44 LR 0.024654624004970958
+08/14 05:35:32 PM | Train: [ 45/600] Step 000/390 Loss 1.212 standard Loss 1.212 Valid Loss 2.416 Prec@(1,5) (60.9%, 90.6%)
+08/14 05:37:39 PM | Train: [ 45/600] Step 200/390 Loss 1.202 standard Loss 1.202 Valid Loss 2.477 Prec@(1,5) (64.7%, 91.3%)
+08/14 05:39:35 PM | Train: [ 45/600] Step 390/390 Loss 1.193 standard Loss 1.193 Valid Loss 2.512 Prec@(1,5) (64.7%, 91.3%)
+08/14 05:39:35 PM | Train: [ 45/600] Final Prec@1 64.7160%
+08/14 05:39:35 PM | Test: [ 45/600] Step 000/390 Loss 2.682 Prec@(1,5) (34.4%, 75.0%)
+08/14 05:39:41 PM | Test: [ 45/600] Step 200/390 Loss 2.529 Prec@(1,5) (43.6%, 73.5%)
+08/14 05:39:46 PM | Test: [ 45/600] Step 390/390 Loss 2.535 Prec@(1,5) (43.1%, 73.4%)
+08/14 05:39:46 PM | Test: [ 45/600] Final Prec@1 43.1120%
+08/14 05:39:47 PM | Epoch 45 LR 0.024639178498870453
+08/14 05:39:48 PM | Train: [ 46/600] Step 000/390 Loss 1.239 standard Loss 1.239 Valid Loss 2.806 Prec@(1,5) (57.8%, 90.6%)
+08/14 05:41:50 PM | Train: [ 46/600] Step 200/390 Loss 1.194 standard Loss 1.194 Valid Loss 2.521 Prec@(1,5) (64.7%, 91.5%)
+08/14 05:43:46 PM | Train: [ 46/600] Step 390/390 Loss 1.185 standard Loss 1.185 Valid Loss 2.535 Prec@(1,5) (64.7%, 91.6%)
+08/14 05:43:46 PM | Train: [ 46/600] Final Prec@1 64.6880%
+08/14 05:43:47 PM | Test: [ 46/600] Step 000/390 Loss 2.720 Prec@(1,5) (39.1%, 70.3%)
+08/14 05:43:53 PM | Test: [ 46/600] Step 200/390 Loss 2.470 Prec@(1,5) (44.0%, 74.5%)
+08/14 05:43:58 PM | Test: [ 46/600] Step 390/390 Loss 2.481 Prec@(1,5) (43.6%, 74.3%)
+08/14 05:43:58 PM | Test: [ 46/600] Final Prec@1 43.5800%
+08/14 05:43:58 PM | Epoch 46 LR 0.02462340019105934
+08/14 05:43:59 PM | Train: [ 47/600] Step 000/390 Loss 1.359 standard Loss 1.359 Valid Loss 2.400 Prec@(1,5) (56.2%, 92.2%)
+08/14 05:46:06 PM | Train: [ 47/600] Step 200/390 Loss 1.168 standard Loss 1.168 Valid Loss 2.537 Prec@(1,5) (65.7%, 91.7%)
+08/14 05:48:02 PM | Train: [ 47/600] Step 390/390 Loss 1.170 standard Loss 1.170 Valid Loss 2.533 Prec@(1,5) (65.5%, 91.7%)
+08/14 05:48:02 PM | Train: [ 47/600] Final Prec@1 65.4880%
+08/14 05:48:02 PM | Test: [ 47/600] Step 000/390 Loss 2.912 Prec@(1,5) (29.7%, 70.3%)
+08/14 05:48:09 PM | Test: [ 47/600] Step 200/390 Loss 2.521 Prec@(1,5) (43.4%, 73.6%)
+08/14 05:48:15 PM | Test: [ 47/600] Step 390/390 Loss 2.538 Prec@(1,5) (43.2%, 73.3%)
+08/14 05:48:15 PM | Test: [ 47/600] Final Prec@1 43.2000%
+08/14 05:48:15 PM | Epoch 47 LR 0.024607289514107893
