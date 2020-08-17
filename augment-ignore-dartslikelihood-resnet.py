@@ -11,7 +11,7 @@ import copy
 from models import MODEL_DICT
 
 
-config = AugmentConfig()
+config = ResnetConfig()
 
 device = torch.device("cuda")
 
@@ -54,10 +54,15 @@ class Architect():
         ignore_crit = nn.CrossEntropyLoss(reduction='none').cuda()       
         # forward
         logits = self.net(trn_X)
-        
+         
         # sigmoid loss
-        loss = torch.dot(torch.sigmoid(Likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
+        first = torch.sigmoid(Likelihood[step*batch_size:dataIndex])
+        second = ignore_crit(logits, trn_y)
+        lossup = torch.dot(first,second )
+        lossdiv =(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
+        loss = lossup/lossdiv
         
+#         loss = torch.dot(torch.sigmoid(Likelihood[step*batch_size:dataIndex]), ignore_crit(logits, trn_y))/(torch.sigmoid(Likelihood[step*batch_size:dataIndex]).sum())
         
         # compute gradient of train loss towards likelihhod
         loss.backward()
@@ -67,7 +72,7 @@ class Architect():
         with torch.no_grad():
             # dict key is not the value, but the pointer. So original network weight have to
             # be iterated also.
-            for w, vw in zip(self.net.weights(), self.v_net.weights()):
+            for w, vw in zip(self.net.parameters(), self.v_net.parameters()):
                 m = w_optim.state[w].get('momentum_buffer', 0.) * self.w_momentum
                 
                 if w.grad is not None:
@@ -86,12 +91,12 @@ class Architect():
         self.virtual_step(trn_X, trn_y, xi, w_optim, Likelihood, batch_size, step)
         
         # calc val prediction
-        logits = self.v_net(val_X)      
+        logits = self.v_net(val_X)   
         # calc unrolled validation loss
         loss = crit(logits, val_y) # L_val(w`)
         
         # compute gradient of validation loss towards weights
-        v_weights = tuple(self.v_net.weights())
+        v_weights = tuple(self.v_net.parameters())
         # some weights not used return none
         dw = torch.autograd.grad(loss, v_weights, allow_unused=True)
            
@@ -126,7 +131,7 @@ class Architect():
         
         # w+ = w + eps*dw`
         with torch.no_grad():
-            for p, d in zip(self.net.weights(), dw):
+            for p, d in zip(self.net.parameters(), dw):
                 if d != None:
                     p += eps * d
         
@@ -144,7 +149,7 @@ class Architect():
 
         # w- = w - eps*dw`
         with torch.no_grad():
-            for p, d in zip(self.net.weights(), dw):
+            for p, d in zip(self.net.parameters(), dw):
                 if d != None:
                     p -= 2. * eps * d
         # forward
@@ -155,7 +160,7 @@ class Architect():
 
         # recover w
         with torch.no_grad():
-            for p, d in zip(self.net.weights(), dw):
+            for p, d in zip(self.net.parameters(), dw):
                 if d != None:
                     p += eps * d
 
@@ -200,9 +205,11 @@ def main():
     indices = list(range(n_train))
     
     # each train data is endowed with a weight
-    Likelihood = torch.nn.Parameter(torch.ones(len(indices[:split])).cuda(),requires_grad=True)
-    Likelihood_optim = torch.optim.SGD({Likelihood}, config.lr)
-   
+    Likelihood = torch.nn.Parameter(torch.ones(len(indices[:split])).cuda(),requires_grad=True).cuda()
+#     Likelihood_optim = torch.optim.SGD({Likelihood}, config.lr)
+    Likelihood_optim = torch.optim.Adam({Likelihood}, config.alpha_lr, betas=(0.5, 0.999))
+    
+    
     # data split
     train_data = torch.utils.data.Subset(train_val_data, indices[:split])
     valid_data = torch.utils.data.Subset(train_val_data, indices[split:])
