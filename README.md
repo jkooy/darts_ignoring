@@ -73,7 +73,7 @@ python augment-ignore-dartslikelihood.py --name cifar100-ignoring-sigmoid-test -
    [('max_pool_3x3', 0), ('skip_connect', 3)], [('skip_connect', 4), ('max_pool_3x3', 0)]], 
    normal_concat=range(2, 6), reduce=[[('max_pool_3x3', 0), ('sep_conv_5x5', 1)], 
    [('dil_conv_3x3', 0), ('max_pool_3x3', 2)], [('max_pool_3x3', 3), ('dil_conv_5x5', 0)],
-   [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))"
+   [('max_pool_3x3', 0), ('max_pool_3x3', 3)]], reduce_concat=range(2, 6))" --batch_size 64
 ```
 
 - with docker
